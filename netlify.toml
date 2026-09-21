@@ -1,0 +1,10 @@
+[build]
+  publish = "."
+
+# Optional: once the backend is deployed, replace the placeholder URL below
+# with your backend URL and uncomment the redirect if you want /api to proxy through Netlify.
+# [[redirects]]
+#   from = "/api/*"
+#   to = "https://YOUR-BACKEND.onrender.com/api/:splat"
+#   status = 200
+#   force = true
