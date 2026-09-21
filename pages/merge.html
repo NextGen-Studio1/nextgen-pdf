@@ -1,1 +1,124 @@
-<!doctype html><html lang="en" data-theme="light"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Merge PDF — NextGen PDF</title><link rel="icon" type="image/png" href="../Assests/Logo.png"><link rel="stylesheet" href="../css/style.css"><link rel="stylesheet" href="../css/components.css"><link rel="stylesheet" href="../css/responsive.css"></head><body data-tool="merge"><header class="site-header"><div class="container nav"><a class="brand" href="../index.html"><img src="../Assests/Logo-icon.png" alt="NextGen PDF Logo" class="brand-logo-icon"><span>NextGen <b>PDF</b></span></a><nav><a href="tools.html">Tools</a><a href="about.html">About</a><a href="privacy.html">Privacy</a></nav><button class="theme-toggle" data-theme-toggle>☾</button><button class="mobile-toggle" data-mobile-toggle aria-label="Toggle menu">☰</button></div></header><main class="container"><div class="page-hero"><span class="eyebrow">PDF WORKSPACE</span><h1>Merge PDF</h1><p>Combine multiple PDF files into one document.</p></div><section class="workspace"><div class="workspace-body"><div class="dropzone" id="drop"><div class="upload-icon">↑</div><h3>Drop your files here</h3><p>or choose them from your device</p><label class="btn">Choose files<input id="files" type="file" accept="application/pdf" multiple hidden></label><small>Files are processed securely by the NextGen PDF API</small></div><div id="list" class="file-list"></div><button id="process" class="btn" style="width:100%;margin-top:15px">Process files →</button><div id="result" style="display:none;margin-top:28px"><div class="workspace-body"><span class="eyebrow">COMPLETED</span><h3 style="margin-top:8px">Your file is ready.</h3><p id="resultText">Your processed file is ready to download.</p><button class="btn" id="download">Download result</button><button class="text-link" id="again" style="margin-left:15px;background:none;border:0;cursor:pointer">Process another file</button></div></div></div></section><div class="ad-container" data-ad-slot="1000000003" data-ad-format="horizontal"></div></main><footer><div class="container footer"><div><a class="brand" href="../index.html"><img src="../Assests/Logo-icon.png" alt="NextGen PDF Logo" class="brand-logo-icon"><span>NextGen <b>PDF</b></span></a><p>Simple tools for your documents.</p></div><div class="footer-links"><a href="tools.html">Tools</a><a href="about.html">About</a><a href="privacy.html">Privacy</a></div><span>© 2026 NextGen PDF</span></div></footer><script src="../js/app.js"></script><script src="../js/config.js"></script><script src="../js/firebase-config.js"></script><script src="../js/ads.js"></script><script src="../js/api.js"></script></body></html>
+<!doctype html>
+<html lang="en" data-theme="light">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Merge PDF — NextGen PDF</title>
+    <link rel="icon" type="image/png" href="../Assests/Logo.png" />
+    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="stylesheet" href="../css/components.css" />
+    <link rel="stylesheet" href="../css/responsive.css" />
+    <!-- Google AdSense -->
+    <script
+      async
+      src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5453249687281273"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body data-tool="merge">
+    <header class="site-header">
+      <div class="container nav">
+        <a class="brand" href="../index.html"
+          ><img
+            src="../Assests/Logo-icon.png"
+            alt="NextGen PDF Logo"
+            class="brand-logo-icon"
+          /><span>NextGen <b>PDF</b></span></a
+        >
+        <nav>
+          <a href="tools.html">Tools</a><a href="about.html">About</a
+          ><a href="privacy.html">Privacy</a>
+        </nav>
+        <button class="theme-toggle" data-theme-toggle>☾</button
+        ><button
+          class="mobile-toggle"
+          data-mobile-toggle
+          aria-label="Toggle menu"
+        >
+          ☰
+        </button>
+      </div>
+    </header>
+    <main class="container">
+      <div class="page-hero">
+        <span class="eyebrow">PDF WORKSPACE</span>
+        <h1>Merge PDF</h1>
+        <p>Combine multiple PDF files into one document.</p>
+      </div>
+      <section class="workspace">
+        <div class="workspace-body">
+          <div class="dropzone" id="drop">
+            <div class="upload-icon">↑</div>
+            <h3>Drop your files here</h3>
+            <p>or choose them from your device</p>
+            <label class="btn"
+              >Choose files<input
+                id="files"
+                type="file"
+                accept="application/pdf"
+                multiple
+                hidden /></label
+            ><small>Files are processed securely by the NextGen PDF API</small>
+          </div>
+          <div id="list" class="file-list"></div>
+          <button
+            id="process"
+            class="btn"
+            style="width: 100%; margin-top: 15px"
+          >
+            Process files →
+          </button>
+          <div id="result" style="display: none; margin-top: 28px">
+            <div class="workspace-body">
+              <span class="eyebrow">COMPLETED</span>
+              <h3 style="margin-top: 8px">Your file is ready.</h3>
+              <p id="resultText">Your processed file is ready to download.</p>
+              <button class="btn" id="download">Download result</button
+              ><button
+                class="text-link"
+                id="again"
+                style="
+                  margin-left: 15px;
+                  background: none;
+                  border: 0;
+                  cursor: pointer;
+                "
+              >
+                Process another file
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+      <div
+        class="ad-container"
+        data-ad-slot="1000000003"
+        data-ad-format="horizontal"
+      ></div>
+    </main>
+    <footer>
+      <div class="container footer">
+        <div>
+          <a class="brand" href="../index.html"
+            ><img
+              src="../Assests/Logo-icon.png"
+              alt="NextGen PDF Logo"
+              class="brand-logo-icon"
+            /><span>NextGen <b>PDF</b></span></a
+          >
+          <p>Simple tools for your documents.</p>
+        </div>
+        <div class="footer-links">
+          <a href="tools.html">Tools</a><a href="about.html">About</a
+          ><a href="privacy.html">Privacy</a>
+        </div>
+        <span>© 2026 NextGen PDF</span>
+      </div>
+    </footer>
+    <script src="../js/app.js"></script>
+    <script src="../js/config.js"></script>
+    <script src="../js/firebase-config.js"></script>
+    <script src="../js/ads.js"></script>
+    <script src="../js/api.js"></script>
+  </body>
+</html>
