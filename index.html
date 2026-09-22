@@ -3,10 +3,10 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
-    <title>NextGen PDF — Simple tools for your documents</title>
+    <title>NextGen PDF — Everything you need for PDFs</title>
     <meta
       name="description"
-      content="NextGen PDF — simple, fast and clear document tools."
+      content="NextGen PDF — simple, fast, privacy-first PDF and document utilities with zero learning curve."
     />
     <link rel="icon" type="image/png" href="Assests/Logo.png" />
     <link rel="stylesheet" href="css/style.css" />
@@ -31,9 +31,65 @@
           /><span>NextGen <b>PDF</b></span></a
         >
         <nav>
-          <a href="pages/tools.html">Tools</a
-          ><a href="pages/about.html">About</a
-          ><a href="pages/privacy.html">Privacy</a>
+          <div class="nav-dropdown">
+            <a href="javascript:void(0)" data-mega-toggle style="cursor: pointer;">Tools ▾</a>
+            <div class="tools-mega-menu">
+              <div class="mega-grid">
+                <div class="mega-col">
+                  <h4>🗂 Organize</h4>
+                  <a href="pages/merge.html">Merge PDF</a>
+                  <a href="pages/split.html">Split PDF</a>
+                  <a href="pages/organize.html">Organize PDF</a>
+                  <a href="pages/delete-pages.html">Delete Pages</a>
+                  <a href="pages/extract-pages.html">Extract Pages</a>
+                  <a href="pages/rotate.html">Rotate Pages</a>
+                </div>
+                <div class="mega-col">
+                  <h4>📦 Compress & Optimize</h4>
+                  <a href="pages/compress.html">Compress PDF</a>
+                  <a href="pages/repair-pdf.html">Repair PDF</a>
+                  <a href="pages/flatten-pdf.html">Flatten PDF</a>
+                  <a href="pages/pdf-to-pdfa.html">PDF → PDF/A</a>
+                </div>
+                <div class="mega-col">
+                  <h4>🔄 Convert</h4>
+                  <a href="pages/pdf-to-word.html">PDF → Word</a>
+                  <a href="pages/word-to-pdf.html">Word → PDF</a>
+                  <a href="pages/pdf-to-excel.html">PDF → Excel</a>
+                  <a href="pages/pdf-to-png.html">PDF → PNG</a>
+                  <a href="pages/pdf-to-jpg.html">PDF → JPG</a>
+                </div>
+                <div class="mega-col">
+                  <h4>✏️ Edit & Security</h4>
+                  <a href="pages/edit-pdf.html">Edit PDF</a>
+                  <a href="pages/protect-pdf.html">Protect PDF</a>
+                  <a href="pages/unlock-pdf.html">Unlock PDF</a>
+                  <a href="pages/redact-pdf.html">Redact PDF</a>
+                  <a href="pages/watermark.html">Watermark PDF</a>
+                </div>
+                <div class="mega-col">
+                  <h4>🔍 OCR & Extract</h4>
+                  <a href="pages/ocr-pdf.html">OCR PDF</a>
+                  <a href="pages/scanned-pdf-to-text.html">Scanned → Text</a>
+                  <a href="pages/extract-images.html">Extract Images</a>
+                </div>
+                <div class="mega-col">
+                  <h4>🤖 AI PDF</h4>
+                  <a href="pages/ai-summarize.html">AI PDF Summarizer</a>
+                  <a href="pages/chat-pdf.html">Chat with PDF</a>
+                  <a href="pages/translate-pdf.html">Translate PDF</a>
+                  <a href="pages/pdf-to-markdown.html">PDF → Markdown</a>
+                </div>
+              </div>
+              <div class="mega-footer">
+                <span>Everything you need for PDFs in one clean workspace.</span>
+                <a href="pages/tools.html" style="text-decoration: underline;">View All 48 Tools →</a>
+              </div>
+            </div>
+          </div>
+          <a href="pages/tools.html">All Tools</a>
+          <a href="pages/about.html">About</a>
+          <a href="pages/privacy.html">Privacy</a>
         </nav>
         <button
           class="theme-toggle"
@@ -56,22 +112,41 @@
     <main>
       <section class="hero container">
         <div class="hero-copy">
-          <span class="eyebrow">DOCUMENT TOOLS, SIMPLIFIED</span>
+          <span class="eyebrow">NEXTGEN PDF — EVERYTHING YOU NEED FOR PDFS</span>
           <h1>
             Simple tools for<br /><span class="accent">your documents.</span>
           </h1>
           <p>
-            Compress, merge, split and convert files in a clean workspace
-            designed to get the job done without the clutter.
+            Compress, merge, split, edit, redact, and convert files in a clean workspace
+            designed to get the job done without clutter.
           </p>
-          <div class="hero-actions">
-            <a class="btn" href="pages/tools.html"
-              >Choose a PDF tool <span>→</span></a
-            ><a class="text-link" href="#tools">Explore tools</a>
+          
+          <!-- Intent Search System -->
+          <div class="search-hero-wrapper">
+            <div class="search-input-box">
+              <span class="search-icon">🔍</span>
+              <input
+                type="text"
+                class="search-input"
+                placeholder="What do you want to do with your PDF?"
+                autocomplete="off"
+              />
+            </div>
+            <div class="search-results-popup"></div>
+            <div class="search-tags">
+              <span>Popular:</span>
+              <span class="search-tag-chip" data-query="compress">Compress</span>
+              <span class="search-tag-chip" data-query="merge">Merge</span>
+              <span class="search-tag-chip" data-query="split">Split</span>
+              <span class="search-tag-chip" data-query="word">PDF → Word</span>
+              <span class="search-tag-chip" data-query="summarize">AI Summarizer</span>
+              <span class="search-tag-chip" data-query="ocr">OCR PDF</span>
+            </div>
           </div>
-          <div class="trust-row">
+
+          <div class="trust-row" style="margin-top: 24px;">
             <span>✓ No account required</span><span>✓ Simple workflow</span
-            ><span>✓ Mobile friendly</span>
+            ><span>✓ In-memory security</span>
           </div>
         </div>
         <div class="hero-workspace">
@@ -86,25 +161,26 @@
             <label class="btn btn-dark"
               >Choose file<input type="file" hidden
             /></label>
-            <small>PDF, JPG and PNG · Demo upload</small>
+            <small>PDF, Word, Excel, PPTX, JPG & PNG</small>
           </div>
         </div>
       </section>
 
+      <!-- Popular Tools -->
       <section id="tools" class="section container">
         <div class="section-heading">
           <div>
             <span class="eyebrow">POPULAR TOOLS</span>
             <h2>Everything you need, right where you need it.</h2>
           </div>
-          <a class="text-link" href="pages/tools.html">View all tools →</a>
+          <a class="text-link" href="pages/tools.html">View all 48 tools →</a>
         </div>
         <div class="tool-grid">
           <a class="tool-card featured" href="pages/compress.html"
             ><span class="tool-icon">↓</span>
             <div>
               <h3>Compress PDF</h3>
-              <p>Reduce file size while keeping documents clear.</p>
+              <p>Reduce file size while keeping documents crisp and clear.</p>
             </div>
             <span class="arrow">↗</span></a
           >
@@ -120,36 +196,94 @@
             ><span class="tool-icon">✂</span>
             <div>
               <h3>Split PDF</h3>
-              <p>Separate pages or selected ranges.</p>
+              <p>Separate pages or selected page ranges.</p>
             </div>
             <span class="arrow">↗</span></a
           >
-          <a class="tool-card" href="pages/jpg-to-pdf.html"
-            ><span class="tool-icon">▧</span>
+          <a class="tool-card" href="pages/pdf-to-word.html"
+            ><span class="tool-icon">📝</span>
             <div>
-              <h3>JPG → PDF</h3>
-              <p>Turn images into a clean PDF.</p>
+              <h3>PDF → Word</h3>
+              <p>Export to editable Microsoft Word .docx.</p>
             </div>
             <span class="arrow">↗</span></a
           >
-          <a class="tool-card" href="pages/pdf-to-jpg.html"
-            ><span class="tool-icon">▤</span>
+          <a class="tool-card" href="pages/ai-summarize.html"
+            ><span class="tool-icon">🧠</span>
             <div>
-              <h3>PDF → JPG/PNG</h3>
-              <p>Convert pages into images.</p>
+              <h3>AI PDF Summarizer</h3>
+              <p>Executive summaries & key takeaways.</p>
+            </div>
+            <span class="arrow">↗</span></a
+          >
+          <a class="tool-card" href="pages/ocr-pdf.html"
+            ><span class="tool-icon">🔍</span>
+            <div>
+              <h3>OCR PDF</h3>
+              <p>Make scanned document images searchable.</p>
             </div>
             <span class="arrow">↗</span></a
           >
         </div>
-        <div
-          class="ad-container container"
-          data-ad-slot="1000000001"
-          data-ad-format="horizontal"
-        ></div>
       </section>
 
+      <!-- Browse Categories -->
       <section class="section soft">
-        <div class="container split">
+        <div class="container">
+          <div class="section-heading">
+            <div>
+              <span class="eyebrow">WORKFLOW CATEGORIES</span>
+              <h2>Browse tools by task category.</h2>
+            </div>
+          </div>
+          <div class="category-grid">
+            <a href="pages/tools.html#organize" class="category-card">
+              <span style="font-size: 28px;">🗂</span>
+              <h3>Organize PDF <span>→</span></h3>
+              <p>Merge, split, delete, extract, and reorder pages.</p>
+            </a>
+            <a href="pages/tools.html#compress" class="category-card">
+              <span style="font-size: 28px;">📦</span>
+              <h3>Compress & Optimize <span>→</span></h3>
+              <p>Reduce file size, repair corrupt PDFs, and flatten forms.</p>
+            </a>
+            <a href="pages/tools.html#convert-to" class="category-card">
+              <span style="font-size: 28px;">🔄</span>
+              <h3>Convert TO PDF <span>→</span></h3>
+              <p>Turn Word, Excel, PPTX, HTML, and images into PDF.</p>
+            </a>
+            <a href="pages/tools.html#convert-from" class="category-card">
+              <span style="font-size: 28px;">🔃</span>
+              <h3>Convert FROM PDF <span>→</span></h3>
+              <p>Export PDF to Word, Excel, PPTX, PNG, JPG, and Text.</p>
+            </a>
+            <a href="pages/tools.html#edit" class="category-card">
+              <span style="font-size: 28px;">✏️</span>
+              <h3>Edit PDF <span>→</span></h3>
+              <p>Add text overlays, signatures, watermarks, and page numbers.</p>
+            </a>
+            <a href="pages/tools.html#security" class="category-card">
+              <span style="font-size: 28px;">🔐</span>
+              <h3>Security & Privacy <span>→</span></h3>
+              <p>Protect, unlock, encrypt, and permanently redact text.</p>
+            </a>
+            <a href="pages/tools.html#ocr" class="category-card">
+              <span style="font-size: 28px;">🔍</span>
+              <h3>OCR & Extract <span>→</span></h3>
+              <p>Make scans searchable and extract images to ZIP.</p>
+            </a>
+            <a href="pages/tools.html#ai" class="category-card">
+              <span style="font-size: 28px;">🤖</span>
+              <h3>AI PDF <span>→</span></h3>
+              <p>Summarize, Chat Q&A, Translate, and PDF to Markdown.</p>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- Why NextGen PDF -->
+      <section class="section container">
+        <div class="split">
           <div>
             <span class="eyebrow">WHY NEXTGEN PDF</span>
             <h2>Less figuring out.<br />More getting done.</h2>
@@ -162,68 +296,73 @@
             <div>
               <b>01</b>
               <h3>Clear by default</h3>
-              <p>Only show the controls that matter for the task.</p>
+              <p>Only show the controls that matter for your specific document task.</p>
             </div>
             <div>
               <b>02</b>
-              <h3>Built for any screen</h3>
-              <p>Comfortable controls from desktop to phone.</p>
+              <h3>In-memory privacy</h3>
+              <p>Your files are processed securely in RAM and never saved to permanent disk storage.</p>
             </div>
             <div>
               <b>03</b>
-              <h3>Ready to grow</h3>
-              <p>
-                Tools are structured so future processing APIs can slot in
-                cleanly.
-              </p>
+              <h3>Built for speed</h3>
+              <p>High-performance native processing engines execute conversions in seconds.</p>
             </div>
           </div>
         </div>
       </section>
 
-      <section class="section container">
-        <div class="section-heading">
-          <div>
-            <span class="eyebrow">HOW IT WORKS</span>
-            <h2>Three calm steps.</h2>
+      <!-- FAQ Section -->
+      <section class="section soft">
+        <div class="container">
+          <div class="section-heading">
+            <div>
+              <span class="eyebrow">FREQUENTLY ASKED QUESTIONS</span>
+              <h2>Everything you need to know.</h2>
+            </div>
           </div>
-        </div>
-        <div class="steps">
-          <div>
-            <span>01</span>
-            <h3>Upload</h3>
-            <p>Drop a file or select it from your device.</p>
+          <div class="faq-grid">
+            <div class="faq-item is-open">
+              <div class="faq-question">
+                <span>Are my files and documents secure?</span>
+                <span class="faq-icon">▼</span>
+              </div>
+              <div class="faq-answer">
+                Yes, absolute privacy is guaranteed. NextGen PDF processes all documents securely in-memory. Files are processed immediately in system RAM and deleted automatically as soon as your download completes.
+              </div>
+            </div>
+            <div class="faq-item">
+              <div class="faq-question">
+                <span>Is NextGen PDF free to use?</span>
+                <span class="faq-icon">▼</span>
+              </div>
+              <div class="faq-answer">
+                Yes! All 48 PDF, conversion, editing, security, and AI tools are 100% free with no account registration required.
+              </div>
+            </div>
+            <div class="faq-item">
+              <div class="faq-question">
+                <span>Can I use NextGen PDF on mobile phones?</span>
+                <span class="faq-icon">▼</span>
+              </div>
+              <div class="faq-answer">
+                NextGen PDF is fully responsive and optimized for mobile browsers across iOS and Android devices.
+              </div>
+            </div>
+            <div class="faq-item">
+              <div class="faq-question">
+                <span>How does the AI PDF Summarizer work?</span>
+                <span class="faq-icon">▼</span>
+              </div>
+              <div class="faq-answer">
+                The AI PDF Summarizer extracts the document text, performs natural language topic analysis, and automatically generates an executive summary, bullet points, and key takeaways.
+              </div>
+            </div>
           </div>
-          <div>
-            <span>02</span>
-            <h3>Configure</h3>
-            <p>Choose the options that fit your document.</p>
-          </div>
-          <div>
-            <span>03</span>
-            <h3>Download</h3>
-            <p>Review the result and continue with another tool.</p>
-          </div>
-        </div>
-      </section>
-
-      <section class="privacy-band">
-        <div class="container privacy-inner">
-          <div>
-            <span class="eyebrow">YOUR FILES, YOUR CONTROL</span>
-            <h2>Privacy-first product direction.</h2>
-            <p>
-              This frontend uses demo processing only. Actual storage, deletion
-              and security behavior will be defined when the backend is
-              connected.
-            </p>
-          </div>
-          <a class="btn btn-light" href="pages/privacy.html"
-            >Read privacy approach</a
-          >
         </div>
       </section>
     </main>
+
     <footer>
       <div class="container footer">
         <div>
@@ -245,9 +384,6 @@
       </div>
     </footer>
     <script src="js/config.js"></script>
-    <script src="js/firebase-config.js"></script>
-    <script src="js/ads.js"></script>
     <script src="js/app.js"></script>
-    <script src="js/uploader.js"></script>
   </body>
 </html>

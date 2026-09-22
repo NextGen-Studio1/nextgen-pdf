@@ -1,0 +1,151 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>PDF Metadata Editor — NextGen PDF</title>
+    <link rel="icon" type="image/png" href="../Assests/Logo.png" />
+    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="stylesheet" href="../css/components.css" />
+    <link rel="stylesheet" href="../css/responsive.css" />
+  </head>
+  <body data-tool="metadata-editor">
+    <header class="site-header">
+      <div class="container nav">
+        <a class="brand" href="../index.html"
+          ><img
+            src="../Assests/Logo-icon.png"
+            alt="NextGen PDF Logo"
+            class="brand-logo-icon"
+          /><span>NextGen <b>PDF</b></span></a
+        >
+        <nav>
+          <a href="tools.html">Tools</a><a href="about.html">About</a
+          ><a href="privacy.html">Privacy</a>
+        </nav>
+        <button class="theme-toggle" data-theme-toggle>☾</button
+        ><button
+          class="mobile-toggle"
+          data-mobile-toggle
+          aria-label="Toggle menu"
+        >
+          ☰
+        </button>
+      </div>
+    </header>
+    <main class="container">
+      <div class="page-hero">
+        <span class="eyebrow">PROPERTIES & METADATA</span>
+        <h1>PDF Metadata Editor</h1>
+        <p>Edit title, author, subject, and keyword metadata properties of your PDF document.</p>
+      </div>
+      <section class="workspace">
+        <div class="workspace-body">
+          <div class="dropzone" id="drop">
+            <div class="upload-icon">↑</div>
+            <h3>Drop your PDF file here</h3>
+            <p>or choose it from your device</p>
+            <label class="btn"
+              >Choose file<input
+                id="files"
+                type="file"
+                accept="application/pdf"
+                hidden /></label
+            ><small>Files are processed securely in-memory.</small>
+          </div>
+          <div id="list" class="file-list"></div>
+
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-top: 20px;">
+            <div class="split-range-control">
+              <label for="meta-title">
+                <b>Document Title</b>
+              </label>
+              <input
+                id="meta-title"
+                type="text"
+                placeholder="e.g. Annual Financial Report"
+              />
+            </div>
+            <div class="split-range-control">
+              <label for="meta-author">
+                <b>Author Name</b>
+              </label>
+              <input
+                id="meta-author"
+                type="text"
+                placeholder="e.g. John Smith"
+              />
+            </div>
+          </div>
+
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-top: 15px;">
+            <div class="split-range-control">
+              <label for="meta-subject">
+                <b>Document Subject</b>
+              </label>
+              <input
+                id="meta-subject"
+                type="text"
+                placeholder="e.g. Quarterly Audit"
+              />
+            </div>
+            <div class="split-range-control">
+              <label for="meta-keywords">
+                <b>Keywords</b>
+              </label>
+              <input
+                id="meta-keywords"
+                type="text"
+                placeholder="e.g. Finance, Audit, 2026"
+              />
+            </div>
+          </div>
+
+          <button
+            id="process"
+            class="btn"
+            style="width: 100%; margin-top: 24px"
+          >
+            Update Metadata ⚙️ →
+          </button>
+          <div id="result" style="display: none; margin-top: 28px">
+            <div class="workspace-body">
+              <span class="eyebrow">COMPLETED</span>
+              <h3 style="margin-top: 8px">Your document with updated metadata is ready.</h3>
+              <p id="resultText">Your processed file is ready to download.</p>
+              <button class="btn" id="download">Download result</button
+              ><button
+                class="text-link"
+                id="again"
+                style="
+                  margin-left: 15px;
+                  background: none;
+                  border: 0;
+                  cursor: pointer;
+                "
+              >
+                Edit another file
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <div class="container footer">
+        <div>
+          <a class="brand" href="../index.html"
+            ><img
+              src="../Assests/Logo-icon.png"
+              alt="NextGen PDF Logo"
+              class="brand-logo-icon"
+            /><span>NextGen <b>PDF</b></span></a
+          >
+        </div>
+      </div>
+    </footer>
+    <script src="../js/theme.js"></script>
+    <script src="../js/app.js"></script>
+    <script src="../js/api.js"></script>
+  </body>
+</html>

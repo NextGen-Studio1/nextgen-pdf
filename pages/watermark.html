@@ -1,0 +1,242 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Watermark PDF — NextGen PDF</title>
+    <link rel="icon" type="image/png" href="../Assests/Logo.png" />
+    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="stylesheet" href="../css/components.css" />
+    <link rel="stylesheet" href="../css/responsive.css" />
+    <!-- Google AdSense -->
+    <script
+      async
+      src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5453249687281273"
+      crossorigin="anonymous"
+    ></script>
+    <style>
+      .preset-pills {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+        margin-top: 8px;
+        margin-bottom: 16px;
+      }
+      .preset-pill {
+        background: var(--bg-surface, #f1f5f9);
+        border: 1px solid var(--border-color, #cbd5e1);
+        padding: 4px 12px;
+        border-radius: 20px;
+        font-size: 0.85rem;
+        cursor: pointer;
+        transition: all 0.2s ease;
+      }
+      .preset-pill:hover {
+        background: var(--accent-color, #3b82f6);
+        color: white;
+        border-color: var(--accent-color, #3b82f6);
+      }
+      .watermark-input-group {
+        display: flex;
+        flex-direction: column;
+        gap: 6px;
+        margin-bottom: 20px;
+      }
+      .watermark-input-group input {
+        width: 100%;
+        padding: 12px 14px;
+        font-size: 1rem;
+        border-radius: 8px;
+        border: 1px solid var(--border-color, #cbd5e1);
+        background: var(--bg-main, #ffffff);
+      }
+      .options-group-title {
+        font-weight: 600;
+        font-size: 0.9rem;
+        margin: 16px 0 8px 0;
+        color: var(--text-muted, #64748b);
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+      }
+    </style>
+  </head>
+  <body data-tool="watermark">
+    <header class="site-header">
+      <div class="container nav">
+        <a class="brand" href="../index.html"
+          ><img
+            src="../Assests/Logo-icon.png"
+            alt="NextGen PDF Logo"
+            class="brand-logo-icon"
+          /><span>NextGen <b>PDF</b></span></a
+        >
+        <nav>
+          <a href="tools.html">Tools</a><a href="about.html">About</a
+          ><a href="privacy.html">Privacy</a>
+        </nav>
+        <button class="theme-toggle" data-theme-toggle>☾</button
+        ><button
+          class="mobile-toggle"
+          data-mobile-toggle
+          aria-label="Toggle menu"
+        >
+          ☰
+        </button>
+      </div>
+    </header>
+    <main class="container">
+      <div class="page-hero">
+        <span class="eyebrow">PDF SECURITY & STAMPING</span>
+        <h1>Watermark PDF</h1>
+        <p>Add custom text stamps, security notices, or draft tags to your PDF documents.</p>
+      </div>
+      <section class="workspace">
+        <div class="workspace-body">
+          <div class="dropzone" id="drop">
+            <div class="upload-icon">↑</div>
+            <h3>Drop your PDF file here</h3>
+            <p>or choose it from your device</p>
+            <label class="btn"
+              >Choose file<input
+                id="files"
+                type="file"
+                accept="application/pdf"
+                hidden /></label
+            ><small>Files are processed in-memory and deleted immediately.</small>
+          </div>
+          <div id="list" class="file-list"></div>
+
+          <div class="watermark-input-group">
+            <label for="watermark-text"><b>Watermark Text</b></label>
+            <input
+              id="watermark-text"
+              type="text"
+              placeholder="e.g. CONFIDENTIAL"
+              value="CONFIDENTIAL"
+            />
+            <div class="preset-pills">
+              <button type="button" class="preset-pill" onclick="document.getElementById('watermark-text').value='CONFIDENTIAL'">CONFIDENTIAL</button>
+              <button type="button" class="preset-pill" onclick="document.getElementById('watermark-text').value='DRAFT'">DRAFT</button>
+              <button type="button" class="preset-pill" onclick="document.getElementById('watermark-text').value='SAMPLE'">SAMPLE</button>
+              <button type="button" class="preset-pill" onclick="document.getElementById('watermark-text').value='TOP SECRET'">TOP SECRET</button>
+              <button type="button" class="preset-pill" onclick="document.getElementById('watermark-text').value='FOR TEACHERS ONLY'">FOR TEACHERS ONLY</button>
+              <button type="button" class="preset-pill" onclick="document.getElementById('watermark-text').value='APPROVED'">APPROVED</button>
+            </div>
+          </div>
+
+          <div class="options-group-title">Stamp Position & Orientation</div>
+          <div class="options" data-group="position">
+            <div class="option active" data-value="diagonal">
+              Diagonal (45°) <small> — standard security overlay across page</small>
+            </div>
+            <div class="option" data-value="horizontal">
+              Horizontal (0°) <small> — centered across document middle</small>
+            </div>
+          </div>
+
+          <div class="options-group-title">Stamp Color</div>
+          <div class="options" data-group="color">
+            <div class="option active" data-value="red">
+              🔴 Red <small> — high visibility alert</small>
+            </div>
+            <div class="option" data-value="blue">
+              🔵 Blue <small> — professional corporate</small>
+            </div>
+            <div class="option" data-value="gray">
+              ⚪ Dark Gray <small> — subtle background mark</small>
+            </div>
+            <div class="option" data-value="green">
+              🟢 Green <small> — approval status</small>
+            </div>
+          </div>
+
+          <div class="options-group-title">Opacity & Font Size</div>
+          <div class="options" data-group="opacity">
+            <div class="option" data-value="0.15">
+              Light (15%)
+            </div>
+            <div class="option active" data-value="0.35">
+              Medium (35%)
+            </div>
+            <div class="option" data-value="0.65">
+              Strong (65%)
+            </div>
+          </div>
+
+          <div class="options" data-group="fontsize" style="margin-top: 10px;">
+            <div class="option" data-value="32">
+              Small (32 pt)
+            </div>
+            <div class="option active" data-value="48">
+              Medium (48 pt)
+            </div>
+            <div class="option" data-value="72">
+              Large (72 pt)
+            </div>
+          </div>
+
+          <button
+            id="process"
+            class="btn"
+            style="width: 100%; margin-top: 20px"
+          >
+            Apply Watermark →
+          </button>
+          <div id="result" style="display: none; margin-top: 28px">
+            <div class="workspace-body">
+              <span class="eyebrow">STAMP APPLIED</span>
+              <h3 style="margin-top: 8px">Your watermarked PDF is ready.</h3>
+              <p id="resultText">Your processed file is ready to download.</p>
+              <button class="btn" id="download">Download result</button
+              ><button
+                class="text-link"
+                id="again"
+                style="
+                  margin-left: 15px;
+                  background: none;
+                  border: 0;
+                  cursor: pointer;
+                "
+              >
+                Watermark another file
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <div class="container footer">
+        <div>
+          <a class="brand" href="../index.html"
+            ><img
+              src="../Assests/Logo-icon.png"
+              alt="NextGen PDF Logo"
+              class="brand-logo-icon"
+            /><span>NextGen <b>PDF</b></span></a
+          >
+          <p style="margin-top: 10px">
+            Lightweight, clean PDF tools built for everyday documents.
+          </p>
+        </div>
+        <div>
+          <h4>Tools</h4>
+          <a href="compress.html">Compress PDF</a><br />
+          <a href="merge.html">Merge PDF</a><br />
+          <a href="split.html">Split PDF</a><br />
+          <a href="watermark.html">Watermark PDF</a><br />
+          <a href="jpg-to-pdf.html">JPG/PNG → PDF</a><br />
+          <a href="pdf-to-jpg.html">PDF → JPG/PNG</a>
+        </div>
+        <div>
+          <h4>Company</h4>
+          <a href="about.html">About</a><br />
+          <a href="privacy.html">Privacy Policy</a>
+        </div>
+      </div>
+    </footer>
+    <script src="../js/config.js"></script>
+    <script src="../js/app.js"></script>
+    <script src="../js/api.js"></script>
+  </body>
+</html>

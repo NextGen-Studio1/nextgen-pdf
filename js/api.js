@@ -28,6 +28,18 @@ document.addEventListener('DOMContentLoaded', () => {
     if (tool === 'images-to-pdf') {
       return type.startsWith('image/') || /\.(jpg|jpeg|png|webp)$/i.test(name);
     }
+    if (tool === 'word-to-pdf') {
+      return name.endsWith('.docx') || name.endsWith('.doc') || type.includes('wordprocessingml');
+    }
+    if (tool === 'excel-to-pdf') {
+      return name.endsWith('.xlsx') || name.endsWith('.xls') || type.includes('spreadsheetml');
+    }
+    if (tool === 'pptx-to-pdf') {
+      return name.endsWith('.pptx') || name.endsWith('.ppt') || type.includes('presentationml');
+    }
+    if (tool === 'html-to-pdf') {
+      return name.endsWith('.html') || name.endsWith('.htm') || type.includes('html');
+    }
     return type === 'application/pdf' || type === 'application/octet-stream' || type === 'application/x-pdf' || name.endsWith('.pdf');
   }
 
@@ -138,7 +150,16 @@ document.addEventListener('DOMContentLoaded', () => {
     if (!files.length) return showError('Please choose a file first.');
     if (tool === 'merge' && files.length < 2) return showError('Choose at least two PDF files to merge.');
     if (tool === 'images-to-pdf' && files.length < 1) return showError('Choose at least one image.');
-    if (tool === 'split' && selectedValue('.options', 'every') === 'ranges' && !document.querySelector('#page-ranges')?.value.trim()) return showError('Enter at least one page or page range.');
+    if (tool === 'organize' && !document.querySelector('#organize-order')?.value.trim()) return showError('Enter target page order e.g. 3, 1, 2.');
+    if (tool === 'delete-pages' && !document.querySelector('#delete-pages-input')?.value.trim()) return showError('Enter pages to delete e.g. 2, 4-6.');
+    if (tool === 'extract-pages' && !document.querySelector('#extract-pages-input')?.value.trim()) return showError('Enter pages to extract e.g. 1-3, 5.');
+    if (tool === 'protect-pdf' && !document.querySelector('#protect-password')?.value.trim()) return showError('Enter a password to protect your PDF.');
+    if (tool === 'redact-pdf' && !document.querySelector('#redact-text')?.value.trim()) return showError('Enter text or word to redact.');
+    if (tool === 'edit-pdf' && !document.querySelector('#edit-text')?.value.trim()) return showError('Enter text to add to the PDF.');
+    if (tool === 'add-image' && !document.querySelector('#image-file')?.files?.[0]) return showError('Choose an image file to stamp onto the PDF.');
+    if (tool === 'add-links' && !document.querySelector('#link-url')?.value.trim()) return showError('Enter a URL to add as a link e.g. https://example.com.');
+    if (tool === 'highlight-pdf' && !document.querySelector('#highlight-text')?.value.trim()) return showError('Enter text or phrase to highlight.');
+    if (tool === 'annotate-pdf' && !document.querySelector('#annotate-comment')?.value.trim()) return showError('Enter comment or note text.');
 
     processBtn.disabled = true;
     processBtn.textContent = 'Processing…';
@@ -161,39 +182,313 @@ document.addEventListener('DOMContentLoaded', () => {
         form.append('format', selectedValue('.options', 'jpg'));
         form.append('ranges', document.querySelector('#image-page-ranges')?.value.trim() || '');
       }
+      if (tool === 'watermark') {
+        const textVal = document.querySelector('#watermark-text')?.value.trim() || 'CONFIDENTIAL';
+        form.append('text', textVal);
+        form.append('position', selectedValue('[data-group="position"]', 'diagonal'));
+        form.append('color', selectedValue('[data-group="color"]', 'red'));
+        form.append('opacity', selectedValue('[data-group="opacity"]', '0.35'));
+        form.append('fontsize', selectedValue('[data-group="fontsize"]', '48'));
+      }
+      if (tool === 'organize') {
+        form.append('order', document.querySelector('#organize-order')?.value.trim() || '');
+      }
+      if (tool === 'delete-pages') {
+        form.append('pages', document.querySelector('#delete-pages-input')?.value.trim() || '');
+      }
+      if (tool === 'extract-pages') {
+        form.append('pages', document.querySelector('#extract-pages-input')?.value.trim() || '');
+      }
+      if (tool === 'rotate') {
+        form.append('angle', selectedValue('[data-group="angle"]', '90'));
+        form.append('pages', document.querySelector('#rotate-pages-input')?.value.trim() || 'all');
+      }
+      if (tool === 'page-numbers') {
+        form.append('position', selectedValue('[data-group="position"]', 'bottom-center'));
+        form.append('format', selectedValue('[data-group="format"]', 'Page {page} of {total}'));
+        form.append('start', document.querySelector('#pagenum-start')?.value.trim() || '1');
+        form.append('fontsize', selectedValue('[data-group="fontsize"]', '10'));
+        form.append('margin', selectedValue('[data-group="margin"]', '36'));
+        form.append('pages', document.querySelector('#pagenum-pages')?.value.trim() || 'all');
+      }
+      if (tool === 'crop') {
+        form.append('margin', selectedValue('[data-group="margin"]', '36'));
+        form.append('pages', document.querySelector('#crop-pages')?.value.trim() || 'all');
+      }
+      if (tool === 'protect-pdf') {
+        form.append('password', document.querySelector('#protect-password')?.value.trim() || '');
+      }
+      if (tool === 'unlock-pdf') {
+        form.append('password', document.querySelector('#unlock-password')?.value.trim() || '');
+      }
+      if (tool === 'encrypt-pdf') {
+        form.append('user_password', document.querySelector('#encrypt-user-password')?.value.trim() || '');
+        form.append('owner_password', document.querySelector('#encrypt-owner-password')?.value.trim() || '');
+        form.append('allow_print', document.querySelector('#encrypt-allow-print')?.checked ? 'true' : 'false');
+        form.append('allow_copy', document.querySelector('#encrypt-allow-copy')?.checked ? 'true' : 'false');
+        form.append('allow_edit', document.querySelector('#encrypt-allow-edit')?.checked ? 'true' : 'false');
+      }
+      if (tool === 'redact-pdf') {
+        form.append('text', document.querySelector('#redact-text')?.value.trim() || '');
+        form.append('pages', document.querySelector('#redact-pages')?.value.trim() || 'all');
+      }
+      if (tool === 'edit-pdf') {
+        form.append('text', document.querySelector('#edit-text')?.value.trim() || '');
+        form.append('fontsize', selectedValue('[data-group="fontsize"]', '14'));
+        form.append('color', selectedValue('[data-group="color"]', 'black'));
+        form.append('position', selectedValue('[data-group="position"]', 'top-left'));
+        form.append('pages', document.querySelector('#edit-pages')?.value.trim() || 'all');
+      }
+      if (tool === 'add-image') {
+        const imgInput = document.querySelector('#image-file');
+        if (imgInput?.files?.[0]) form.append('image_file', imgInput.files[0], imgInput.files[0].name);
+        form.append('position', selectedValue('[data-group="position"]', 'bottom-right'));
+        form.append('width', document.querySelector('#image-width')?.value.trim() || '120');
+        form.append('height', document.querySelector('#image-height')?.value.trim() || '120');
+        form.append('pages', document.querySelector('#image-pages')?.value.trim() || 'all');
+      }
+      if (tool === 'add-links') {
+        form.append('url', document.querySelector('#link-url')?.value.trim() || '');
+        form.append('target_text', document.querySelector('#link-text')?.value.trim() || '');
+        form.append('pages', document.querySelector('#link-pages')?.value.trim() || 'all');
+      }
+      if (tool === 'highlight-pdf') {
+        form.append('text', document.querySelector('#highlight-text')?.value.trim() || '');
+        form.append('color', selectedValue('[data-group="color"]', 'yellow'));
+        form.append('pages', document.querySelector('#highlight-pages')?.value.trim() || 'all');
+      }
+      if (tool === 'annotate-pdf') {
+        form.append('comment', document.querySelector('#annotate-comment')?.value.trim() || '');
+        form.append('position', selectedValue('[data-group="position"]', 'top-left'));
+        form.append('pages', document.querySelector('#annotate-pages')?.value.trim() || 'all');
+      }
+      if (tool === 'resize-pages') {
+        form.append('paper_size', selectedValue('[data-group="size"]', 'a4'));
+        form.append('orientation', selectedValue('[data-group="orientation"]', 'portrait'));
+        form.append('pages', document.querySelector('#resize-pages-input')?.value.trim() || 'all');
+      }
+      if (tool === 'ocr-pdf') {
+        form.append('language', selectedValue('[data-group="lang"]', 'eng'));
+      }
+      if (tool === 'ai-summarize') {
+        form.append('summary_type', selectedValue('[data-group="type"]', 'executive'));
+      }
+      if (tool === 'chat-pdf') {
+        form.append('question', document.querySelector('#chat-question')?.value.trim() || '');
+      }
+      if (tool === 'translate-pdf') {
+        form.append('target_lang', selectedValue('[data-group="lang"]', 'es'));
+      }
+      if (tool === 'compare-pdfs') {
+        const file2Input = document.querySelector('#file2');
+        if (file2Input?.files?.[0]) form.append('file2', file2Input.files[0], file2Input.files[0].name);
+      }
+      if (tool === 'overlay-pdf') {
+        const overlayInput = document.querySelector('#overlay-file');
+        if (overlayInput?.files?.[0]) form.append('overlay_file', overlayInput.files[0], overlayInput.files[0].name);
+      }
+      if (tool === 'pdf-bookmarks') {
+        form.append('action', selectedValue('[data-group="action"]', 'view'));
+        form.append('toc_json', document.querySelector('#toc-json')?.value.trim() || '');
+      }
+      if (tool === 'metadata-editor') {
+        form.append('title', document.querySelector('#meta-title')?.value.trim() || '');
+        form.append('author', document.querySelector('#meta-author')?.value.trim() || '');
+        form.append('subject', document.querySelector('#meta-subject')?.value.trim() || '');
+        form.append('keywords', document.querySelector('#meta-keywords')?.value.trim() || '');
+      }
 
       const endpoint = tool === 'images-to-pdf' ? 'images-to-pdf' : tool === 'pdf-to-images' ? 'pdf-to-images' : tool;
-      const response = await fetch(`${NEXTGEN_API_BASE}/${endpoint}`, { method: 'POST', body: form });
-      if (!response.ok) {
-        let message = `Processing failed (${response.status}).`;
-        try { const data = await response.json(); message = data.detail || message; } catch {}
-        throw new Error(message);
-      }
+      const actionTitle = tool.replace(/-/g, ' ').toUpperCase();
+      
+      updateProgress(0, `Uploading document...`, `0 KB transferred`);
 
-      resultBlob = await response.blob();
-      const disposition = response.headers.get('Content-Disposition') || '';
-      const match = disposition.match(/filename="?([^";]+)"?/i);
-      resultName = match?.[1] || 'nextgen-result';
+      const xhr = new XMLHttpRequest();
+      xhr.open('POST', `${NEXTGEN_API_BASE}/${endpoint}`, true);
+      xhr.responseType = 'blob';
 
-      if (!/\.[a-z0-9]+$/i.test(resultName)) {
-        if (resultBlob.type === 'application/zip') resultName += '.zip';
-        else if (resultBlob.type === 'application/pdf') resultName += '.pdf';
-        else if (resultBlob.type === 'image/png') resultName += '.png';
-        else if (resultBlob.type === 'image/jpeg') resultName += '.jpg';
-      }
+      xhr.upload.onprogress = (e) => {
+        if (e.lengthComputable && e.total > 0) {
+          const percent = Math.round((e.loaded / e.total) * 90);
+          const loadedStr = formatBytes(e.loaded);
+          const totalStr = formatBytes(e.total);
+          updateProgress(percent, `Uploading file (${percent}%)...`, `${loadedStr} of ${totalStr} transferred`);
+        }
+      };
 
-      const originalBytes = Number(response.headers.get('X-Original-Bytes'));
-      const outputBytes = Number(response.headers.get('X-Output-Bytes'));
-      const reduction = originalBytes && outputBytes && outputBytes < originalBytes ? ` · ${Math.max(0, Math.round((1 - outputBytes / originalBytes) * 100))}% smaller` : '';
+      xhr.upload.onloadend = () => {
+        updateProgress(95, `Processing & converting ${actionTitle}...`, `Executing transformations in-memory...`);
+      };
 
-      processBtn.style.display = 'none';
-      result.style.display = 'block';
-      const typeLabel = resultBlob.type === 'application/zip' ? 'ZIP archive' : resultBlob.type.split('/').pop()?.toUpperCase();
-      resultText.textContent = `${resultName} · ${formatBytes(resultBlob.size)} · ${typeLabel || 'file'}${reduction}`;
+      xhr.onload = async () => {
+        if (xhr.status >= 200 && xhr.status < 300) {
+          updateProgress(100, `Completed!`, `Processing completed successfully`, true);
+          
+          const blob = xhr.response;
+          const contentType = xhr.getResponseHeader('Content-Type') || '';
+
+          if (contentType.includes('application/json')) {
+            const text = await blob.text();
+            const json = JSON.parse(text);
+            processBtn.style.display = 'none';
+            result.style.display = 'block';
+            if (downloadBtn) downloadBtn.style.display = 'none';
+            
+            let html = '';
+            if (tool === 'ai-summarize') {
+              html = `
+                <div style="background: var(--bg); border: 1px solid var(--border); border-radius: 12px; padding: 20px; margin-top: 15px;">
+                  <h4 style="margin: 0 0 10px 0; color: var(--primary);">Summary Overview</h4>
+                  <p style="margin-bottom: 15px; font-size: 0.95rem;">${json.executive_summary}</p>
+                  <div style="display: flex; gap: 15px; flex-wrap: wrap; margin-bottom: 15px;">
+                    <span class="badge" style="padding: 4px 10px; background: rgba(0,0,0,0.05); border-radius: 6px;">📖 ${json.word_count} words</span>
+                    <span class="badge" style="padding: 4px 10px; background: rgba(0,0,0,0.05); border-radius: 6px;">⏱ ${json.reading_time_min} min read</span>
+                    <span class="badge" style="padding: 4px 10px; background: rgba(0,0,0,0.05); border-radius: 6px;">📑 ${json.page_count} pages</span>
+                  </div>
+                  <h5 style="margin: 15px 0 8px 0;">Key Topics</h5>
+                  <p style="margin: 0 0 15px 0;">${json.topics.join(' · ')}</p>
+                  <h5 style="margin: 15px 0 8px 0;">Key Takeaways</h5>
+                  <ul style="padding-left: 20px; margin: 0;">${json.key_takeaways.map(t => `<li style="margin-bottom: 6px;">${t}</li>`).join('')}</ul>
+                </div>
+              `;
+            } else if (tool === 'chat-pdf') {
+              html = `
+                <div style="background: var(--bg); border: 1px solid var(--border); border-radius: 12px; padding: 20px; margin-top: 15px;">
+                  <h4 style="margin: 0 0 10px 0; color: var(--primary);">Q: ${json.question}</h4>
+                  <p style="margin-bottom: 15px; font-size: 0.95rem;"><b>Answer:</b> ${json.answer}</p>
+                  <h5 style="margin: 15px 0 8px 0;">Page Citations</h5>
+                  <div style="display: flex; flex-direction: column; gap: 8px;">
+                    ${json.citations.map(c => `<div style="padding: 8px 12px; background: rgba(0,0,0,0.03); border-radius: 6px; font-size: 0.88rem;"><b>Page ${c.page}:</b> <i>"${c.snippet}"</i></div>`).join('')}
+                  </div>
+                </div>
+              `;
+            } else if (tool === 'pdf-bookmarks') {
+              html = `
+                <div style="background: var(--bg); border: 1px solid var(--border); border-radius: 12px; padding: 20px; margin-top: 15px;">
+                  <h4 style="margin: 0 0 10px 0;">Table of Contents / Bookmarks</h4>
+                  <pre style="background: #000; color: #0f0; padding: 12px; border-radius: 8px; font-size: 0.85rem; overflow-x: auto;">${JSON.stringify(json.toc, null, 2)}</pre>
+                </div>
+              `;
+            } else {
+              html = `<pre style="background: var(--bg); padding: 15px; border-radius: 8px;">${JSON.stringify(json, null, 2)}</pre>`;
+            }
+            resultText.innerHTML = html;
+            return;
+          }
+
+          resultBlob = blob;
+          const disposition = xhr.getResponseHeader('Content-Disposition') || '';
+          const match = disposition.match(/filename="?([^";]+)"?/i);
+          resultName = match?.[1] || 'nextgen-result';
+
+          if (!/\.[a-z0-9]+$/i.test(resultName)) {
+            if (resultBlob.type === 'application/zip') resultName += '.zip';
+            else if (resultBlob.type === 'application/pdf') resultName += '.pdf';
+            else if (resultBlob.type === 'image/png') resultName += '.png';
+            else if (resultBlob.type === 'image/jpeg') resultName += '.jpg';
+          }
+
+          const originalBytes = Number(xhr.getResponseHeader('X-Original-Bytes'));
+          const outputBytes = Number(xhr.getResponseHeader('X-Output-Bytes'));
+          const reduction = originalBytes && outputBytes && outputBytes < originalBytes ? ` · ${Math.max(0, Math.round((1 - outputBytes / originalBytes) * 100))}% smaller` : '';
+
+          processBtn.style.display = 'none';
+          result.style.display = 'block';
+          const typeLabel = resultBlob.type === 'application/zip' ? 'ZIP archive' : resultBlob.type.split('/').pop()?.toUpperCase();
+          resultText.textContent = `${resultName} · ${formatBytes(resultBlob.size)} · ${typeLabel || 'file'}${reduction}`;
+        } else {
+          let message = `Processing failed (${xhr.status}).`;
+          try {
+            const text = await xhr.response.text();
+            const data = JSON.parse(text);
+            if (data.detail) message = data.detail;
+          } catch {}
+          const wrapper = document.querySelector('.progress-wrapper');
+          if (wrapper) wrapper.style.display = 'none';
+          showError(message);
+          processBtn.disabled = false;
+          processBtn.textContent = 'Process files →';
+        }
+      };
+
+      xhr.onerror = () => {
+        const wrapper = document.querySelector('.progress-wrapper');
+        if (wrapper) wrapper.style.display = 'none';
+        showError('Network error. Please try again.');
+        processBtn.disabled = false;
+        processBtn.textContent = 'Process files →';
+      };
+
+      xhr.send(form);
     } catch (error) {
+      const wrapper = document.querySelector('.progress-wrapper');
+      if (wrapper) wrapper.style.display = 'none';
       showError(error.message || 'Something went wrong. Please try again.');
       processBtn.disabled = false;
       processBtn.textContent = 'Process files →';
+    }
+  }
+
+  function getOrCreateProgressWrapper() {
+    let wrapper = document.querySelector('.progress-wrapper');
+    if (!wrapper) {
+      wrapper = document.createElement('div');
+      wrapper.className = 'progress-wrapper';
+      wrapper.innerHTML = `
+        <div class="progress-header">
+          <div class="progress-title">
+            <span class="progress-spinner">⏳</span>
+            <span class="progress-label-text">Processing document...</span>
+          </div>
+          <div class="progress-percent">0%</div>
+        </div>
+        <div class="progress-bar-track">
+          <div class="progress-bar-fill"></div>
+        </div>
+        <div class="progress-status">
+          <span class="progress-subtext">Preparing upload...</span>
+          <span class="progress-badge">In Progress</span>
+        </div>
+      `;
+      processBtn.insertAdjacentElement('beforebegin', wrapper);
+    }
+    return wrapper;
+  }
+
+  function updateProgress(percent, label, subtext, isCompleted = false) {
+    const wrapper = getOrCreateProgressWrapper();
+    wrapper.style.display = 'block';
+    
+    if (isCompleted) {
+      wrapper.classList.add('completed');
+    } else {
+      wrapper.classList.remove('completed');
+    }
+
+    const fill = wrapper.querySelector('.progress-bar-fill');
+    const percentEl = wrapper.querySelector('.progress-percent');
+    const labelEl = wrapper.querySelector('.progress-label-text');
+    const subtextEl = wrapper.querySelector('.progress-subtext');
+    const spinnerEl = wrapper.querySelector('.progress-spinner');
+    const badgeEl = wrapper.querySelector('.progress-badge');
+
+    if (fill) fill.style.width = `${Math.min(100, Math.max(0, percent))}%`;
+    if (percentEl) percentEl.textContent = `${Math.min(100, Math.max(0, percent))}%`;
+    if (labelEl && label) labelEl.textContent = label;
+    if (subtextEl && subtext) subtextEl.textContent = subtext;
+
+    if (isCompleted) {
+      if (spinnerEl) spinnerEl.textContent = '✓';
+      if (badgeEl) {
+        badgeEl.className = 'completed-badge';
+        badgeEl.textContent = '✓ Completed';
+      }
+    } else {
+      if (spinnerEl) spinnerEl.textContent = '⚡';
+      if (badgeEl) {
+        badgeEl.className = 'progress-badge';
+        badgeEl.textContent = 'In Progress';
+      }
     }
   }
 

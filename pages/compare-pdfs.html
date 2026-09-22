@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Compare PDFs — NextGen PDF</title>
+    <link rel="icon" type="image/png" href="../Assests/Logo.png" />
+    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="stylesheet" href="../css/components.css" />
+    <link rel="stylesheet" href="../css/responsive.css" />
+  </head>
+  <body data-tool="compare-pdfs">
+    <header class="site-header">
+      <div class="container nav">
+        <a class="brand" href="../index.html"
+          ><img
+            src="../Assests/Logo-icon.png"
+            alt="NextGen PDF Logo"
+            class="brand-logo-icon"
+          /><span>NextGen <b>PDF</b></span></a
+        >
+        <nav>
+          <a href="tools.html">Tools</a><a href="about.html">About</a
+          ><a href="privacy.html">Privacy</a>
+        </nav>
+        <button class="theme-toggle" data-theme-toggle>☾</button
+        ><button
+          class="mobile-toggle"
+          data-mobile-toggle
+          aria-label="Toggle menu"
+        >
+          ☰
+        </button>
+      </div>
+    </header>
+    <main class="container">
+      <div class="page-hero">
+        <span class="eyebrow">VISUAL & TEXT COMPARISON</span>
+        <h1>Compare PDFs</h1>
+        <p>Compare two PDF documents side-by-side to highlight text and visual differences.</p>
+      </div>
+      <section class="workspace">
+        <div class="workspace-body">
+          <div class="dropzone" id="drop">
+            <div class="upload-icon">↑</div>
+            <h3>Drop your Original PDF file here</h3>
+            <p>or choose it from your device</p>
+            <label class="btn"
+              >Choose Original PDF<input
+                id="files"
+                type="file"
+                accept="application/pdf"
+                hidden /></label
+            ><small>Files are processed securely in-memory.</small>
+          </div>
+          <div id="list" class="file-list"></div>
+
+          <div class="split-range-control" style="margin-top: 20px;">
+            <label for="file2">
+              <b>Select Second PDF (Modified Version)</b>
+              <small>Choose the updated or revised PDF file to compare against.</small>
+            </label>
+            <input
+              id="file2"
+              type="file"
+              accept="application/pdf"
+              style="padding: 10px; background: var(--bg); border: 1px dashed var(--border); border-radius: 8px; width: 100%; cursor: pointer;"
+            />
+          </div>
+
+          <button
+            id="process"
+            class="btn"
+            style="width: 100%; margin-top: 24px"
+          >
+            Compare PDFs 📊 →
+          </button>
+          <div id="result" style="display: none; margin-top: 28px">
+            <div class="workspace-body">
+              <span class="eyebrow">COMPLETED</span>
+              <h3 style="margin-top: 8px">Your PDF comparison report is ready.</h3>
+              <p id="resultText">Your processed file is ready to download.</p>
+              <button class="btn" id="download">Download result</button
+              ><button
+                class="text-link"
+                id="again"
+                style="
+                  margin-left: 15px;
+                  background: none;
+                  border: 0;
+                  cursor: pointer;
+                "
+              >
+                Compare other files
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <div class="container footer">
+        <div>
+          <a class="brand" href="../index.html"
+            ><img
+              src="../Assests/Logo-icon.png"
+              alt="NextGen PDF Logo"
+              class="brand-logo-icon"
+            /><span>NextGen <b>PDF</b></span></a
+          >
+        </div>
+      </div>
+    </footer>
+    <script src="../js/theme.js"></script>
+    <script src="../js/app.js"></script>
+    <script src="../js/api.js"></script>
+  </body>
+</html>

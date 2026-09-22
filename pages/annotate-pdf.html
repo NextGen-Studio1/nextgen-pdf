@@ -1,0 +1,186 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Annotate PDF — NextGen PDF</title>
+    <link rel="icon" type="image/png" href="../Assests/Logo.png" />
+    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="stylesheet" href="../css/components.css" />
+    <link rel="stylesheet" href="../css/responsive.css" />
+    <!-- Google AdSense -->
+    <script
+      async
+      src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5453249687281273"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body data-tool="annotate-pdf">
+    <header class="site-header">
+      <div class="container nav">
+        <a class="brand" href="../index.html"
+          ><img
+            src="../Assests/Logo-icon.png"
+            alt="NextGen PDF Logo"
+            class="brand-logo-icon"
+          /><span>NextGen <b>PDF</b></span></a
+        >
+        <nav>
+          <a href="tools.html">Tools</a><a href="about.html">About</a
+          ><a href="privacy.html">Privacy</a>
+        </nav>
+        <button class="theme-toggle" data-theme-toggle>☾</button
+        ><button
+          class="mobile-toggle"
+          data-mobile-toggle
+          aria-label="Toggle menu"
+        >
+          ☰
+        </button>
+      </div>
+    </header>
+    <main class="container">
+      <div class="page-hero">
+        <span class="eyebrow">COMMENTS & ANNOTATIONS</span>
+        <h1>Annotate PDF</h1>
+        <p>Add popup sticky note comments to specific positions on your PDF pages.</p>
+      </div>
+      <section class="workspace">
+        <div class="workspace-body">
+          <div class="dropzone" id="drop">
+            <div class="upload-icon">↑</div>
+            <h3>Drop your PDF file here</h3>
+            <p>or choose it from your device</p>
+            <label class="btn"
+              >Choose file<input
+                id="files"
+                type="file"
+                accept="application/pdf"
+                hidden /></label
+            ><small>Files are processed securely in-memory.</small>
+          </div>
+          <div id="list" class="file-list"></div>
+
+          <div class="split-range-control" style="margin-top: 20px;">
+            <label for="annotate-comment">
+              <b>Comment / Note Content</b>
+              <small>Enter sticky note content to add as a PDF comment annotation.</small>
+            </label>
+            <input
+              id="annotate-comment"
+              type="text"
+              placeholder="e.g. Please review section 3 before submission."
+              autocomplete="off"
+            />
+          </div>
+
+          <div style="font-weight: 600; font-size: 0.9rem; margin: 20px 0 8px 0; color: var(--muted); text-transform: uppercase; letter-spacing: 0.05em;">Note Position</div>
+          <div class="options" data-group="position">
+            <div class="option active" data-value="top-left">Top Left</div>
+            <div class="option" data-value="top-right">Top Right</div>
+            <div class="option" data-value="bottom-left">Bottom Left</div>
+            <div class="option" data-value="bottom-right">Bottom Right</div>
+          </div>
+
+          <div class="split-range-control" style="margin-top: 20px;">
+            <label for="annotate-pages">
+              <b>Target Pages (Optional)</b>
+              <small>Leave as "all" to add notes to every page, or specify ranges (e.g. 1-3, 5).</small>
+            </label>
+            <input
+              id="annotate-pages"
+              type="text"
+              placeholder="all"
+              value="all"
+              autocomplete="off"
+            />
+          </div>
+
+          <button
+            id="process"
+            class="btn"
+            style="width: 100%; margin-top: 24px"
+          >
+            Add Annotation 💬 →
+          </button>
+          <div id="result" style="display: none; margin-top: 28px">
+            <div class="workspace-body">
+              <span class="eyebrow">COMPLETED</span>
+              <h3 style="margin-top: 8px">Your annotated PDF is ready.</h3>
+              <p id="resultText">Your processed file is ready to download.</p>
+              <button class="btn" id="download">Download result</button
+              ><button
+                class="text-link"
+                id="again"
+                style="
+                  margin-left: 15px;
+                  background: none;
+                  border: 0;
+                  cursor: pointer;
+                "
+              >
+                Annotate another file
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+      <div
+        class="ad-container"
+        data-ad-slot="1000000025"
+        data-ad-format="horizontal"
+      ></div>
+    </main>
+    <footer>
+      <div class="container footer">
+        <div>
+          <a class="brand" href="../index.html"
+            ><img
+              src="../Assests/Logo-icon.png"
+              alt="NextGen PDF Logo"
+              class="brand-logo-icon"
+            /><span>NextGen <b>PDF</b></span></a
+          >
+          <p style="margin-top: 8px; font-size: 0.88rem; color: var(--muted)">
+            Secure, private, in-browser PDF utilities built for speed.
+          </p>
+        </div>
+        <div style="display: flex; gap: 40px">
+          <div>
+            <div style="font-weight: 600; margin-bottom: 8px">Tools</div>
+            <a href="tools.html" style="display: block; margin-bottom: 4px"
+              >All Tools</a
+            >
+            <a href="edit-pdf.html" style="display: block; margin-bottom: 4px"
+              >Edit PDF</a
+            >
+            <a href="watermark.html" style="display: block">Watermark PDF</a>
+          </div>
+          <div>
+            <div style="font-weight: 600; margin-bottom: 8px">Legal</div>
+            <a href="privacy.html" style="display: block; margin-bottom: 4px"
+              >Privacy Policy</a
+            >
+            <a href="about.html" style="display: block">About NextGen</a>
+          </div>
+        </div>
+      </div>
+      <div
+        class="container"
+        style="
+          border-top: 1px solid var(--border);
+          padding-top: 20px;
+          margin-top: 20px;
+          font-size: 0.82rem;
+          color: var(--muted);
+          text-align: center;
+        "
+      >
+        © 2026 NextGen PDF. All rights reserved.
+      </div>
+    </footer>
+    <script src="../js/theme.js"></script>
+    <script src="../js/app.js"></script>
+    <script src="../js/api.js"></script>
+  </body>
+</html>

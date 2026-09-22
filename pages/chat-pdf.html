@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Chat with PDF — NextGen PDF</title>
+    <link rel="icon" type="image/png" href="../Assests/Logo.png" />
+    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="stylesheet" href="../css/components.css" />
+    <link rel="stylesheet" href="../css/responsive.css" />
+  </head>
+  <body data-tool="chat-pdf">
+    <header class="site-header">
+      <div class="container nav">
+        <a class="brand" href="../index.html"
+          ><img
+            src="../Assests/Logo-icon.png"
+            alt="NextGen PDF Logo"
+            class="brand-logo-icon"
+          /><span>NextGen <b>PDF</b></span></a
+        >
+        <nav>
+          <a href="tools.html">Tools</a><a href="about.html">About</a
+          ><a href="privacy.html">Privacy</a>
+        </nav>
+        <button class="theme-toggle" data-theme-toggle>☾</button
+        ><button
+          class="mobile-toggle"
+          data-mobile-toggle
+          aria-label="Toggle menu"
+        >
+          ☰
+        </button>
+      </div>
+    </header>
+    <main class="container">
+      <div class="page-hero">
+        <span class="eyebrow">INTERACTIVE DOCUMENT Q&A</span>
+        <h1>Chat with PDF</h1>
+        <p>Ask questions and get instant factual answers with page citations from your document.</p>
+      </div>
+      <section class="workspace">
+        <div class="workspace-body">
+          <div class="dropzone" id="drop">
+            <div class="upload-icon">↑</div>
+            <h3>Drop your PDF file here</h3>
+            <p>or choose it from your device</p>
+            <label class="btn"
+              >Choose file<input
+                id="files"
+                type="file"
+                accept="application/pdf"
+                hidden /></label
+            ><small>Files are processed securely in-memory.</small>
+          </div>
+          <div id="list" class="file-list"></div>
+
+          <div class="split-range-control" style="margin-top: 20px;">
+            <label for="chat-question">
+              <b>Your Question</b>
+              <small>Ask anything about the document content, statistics, or conclusions.</small>
+            </label>
+            <input
+              id="chat-question"
+              type="text"
+              placeholder="e.g. What is the total budget mentioned in the report?"
+              autocomplete="off"
+            />
+          </div>
+
+          <button
+            id="process"
+            class="btn"
+            style="width: 100%; margin-top: 24px"
+          >
+            Ask PDF Question 💬 →
+          </button>
+          <div id="result" style="display: none; margin-top: 28px">
+            <div class="workspace-body">
+              <span class="eyebrow">ANSWER & CITATIONS</span>
+              <div id="resultText"></div>
+              <button
+                class="text-link"
+                id="again"
+                style="
+                  margin-top: 15px;
+                  background: none;
+                  border: 0;
+                  cursor: pointer;
+                "
+              >
+                Ask another question
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <div class="container footer">
+        <div>
+          <a class="brand" href="../index.html"
+            ><img
+              src="../Assests/Logo-icon.png"
+              alt="NextGen PDF Logo"
+              class="brand-logo-icon"
+            /><span>NextGen <b>PDF</b></span></a
+          >
+        </div>
+      </div>
+    </footer>
+    <script src="../js/theme.js"></script>
+    <script src="../js/app.js"></script>
+    <script src="../js/api.js"></script>
+  </body>
+</html>

@@ -4,3 +4,8 @@ python-multipart==0.0.20
 pypdf==6.0.0
 PyMuPDF==1.26.4
 Pillow==11.3.0
+python-docx
+openpyxl
+python-pptx
+pdf2docx
+

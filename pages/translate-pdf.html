@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Translate PDF — NextGen PDF</title>
+    <link rel="icon" type="image/png" href="../Assests/Logo.png" />
+    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="stylesheet" href="../css/components.css" />
+    <link rel="stylesheet" href="../css/responsive.css" />
+  </head>
+  <body data-tool="translate-pdf">
+    <header class="site-header">
+      <div class="container nav">
+        <a class="brand" href="../index.html"
+          ><img
+            src="../Assests/Logo-icon.png"
+            alt="NextGen PDF Logo"
+            class="brand-logo-icon"
+          /><span>NextGen <b>PDF</b></span></a
+        >
+        <nav>
+          <a href="tools.html">Tools</a><a href="about.html">About</a
+          ><a href="privacy.html">Privacy</a>
+        </nav>
+        <button class="theme-toggle" data-theme-toggle>☾</button
+        ><button
+          class="mobile-toggle"
+          data-mobile-toggle
+          aria-label="Toggle menu"
+        >
+          ☰
+        </button>
+      </div>
+    </header>
+    <main class="container">
+      <div class="page-hero">
+        <span class="eyebrow">DOCUMENT TRANSLATION</span>
+        <h1>Translate PDF</h1>
+        <p>Translate document text across 10 global languages while retaining layout.</p>
+      </div>
+      <section class="workspace">
+        <div class="workspace-body">
+          <div class="dropzone" id="drop">
+            <div class="upload-icon">↑</div>
+            <h3>Drop your PDF file here</h3>
+            <p>or choose it from your device</p>
+            <label class="btn"
+              >Choose file<input
+                id="files"
+                type="file"
+                accept="application/pdf"
+                hidden /></label
+            ><small>Files are processed securely in-memory.</small>
+          </div>
+          <div id="list" class="file-list"></div>
+
+          <div style="font-weight: 600; font-size: 0.9rem; margin: 20px 0 8px 0; color: var(--muted); text-transform: uppercase; letter-spacing: 0.05em;">Target Language</div>
+          <div class="options" data-group="lang">
+            <div class="option active" data-value="es">Spanish (Español)</div>
+            <div class="option" data-value="fr">French (Français)</div>
+            <div class="option" data-value="de">German (Deutsch)</div>
+            <div class="option" data-value="zh">Chinese (中文)</div>
+            <div class="option" data-value="ja">Japanese (日本語)</div>
+            <div class="option" data-value="hi">Hindi (हिन्दी)</div>
+          </div>
+
+          <button
+            id="process"
+            class="btn"
+            style="width: 100%; margin-top: 24px"
+          >
+            Translate PDF 🌐 →
+          </button>
+          <div id="result" style="display: none; margin-top: 28px">
+            <div class="workspace-body">
+              <span class="eyebrow">COMPLETED</span>
+              <h3 style="margin-top: 8px">Your translated PDF is ready.</h3>
+              <p id="resultText">Your processed file is ready to download.</p>
+              <button class="btn" id="download">Download result</button
+              ><button
+                class="text-link"
+                id="again"
+                style="
+                  margin-left: 15px;
+                  background: none;
+                  border: 0;
+                  cursor: pointer;
+                "
+              >
+                Translate another file
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <div class="container footer">
+        <div>
+          <a class="brand" href="../index.html"
+            ><img
+              src="../Assests/Logo-icon.png"
+              alt="NextGen PDF Logo"
+              class="brand-logo-icon"
+            /><span>NextGen <b>PDF</b></span></a
+          >
+        </div>
+      </div>
+    </footer>
+    <script src="../js/theme.js"></script>
+    <script src="../js/app.js"></script>
+    <script src="../js/api.js"></script>
+  </body>
+</html>
