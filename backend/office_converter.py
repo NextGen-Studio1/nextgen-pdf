@@ -32,14 +32,8 @@ def libreoffice_path() -> str | None:
 
 def convert_docx_to_pdf_complete(docx_bytes: bytes) -> bytes:
     """
-    High-fidelity Python fallback for DOCX -> PDF conversion when LibreOffice is unavailable.
-    Preserves:
-    1. Section Headers (Header logos, university titles, accreditation text)
-    2. Header Images, Logos, and Graphics
-    3. Main Body Paragraphs (with alignment, bold, italic, and bullet lists)
-    4. Main Body Inline Images
-    5. Section Footers
-    6. Multi-column & Styled Tables
+    High-fidelity Python DOCX -> PDF converter with Times-Roman Serif typography,
+    run-level bold/italic parsing, header image extraction, bullet lists, and tables.
     """
     doc = docx.Document(io.BytesIO(docx_bytes))
     pdf_doc = fitz.open()
@@ -56,91 +50,6 @@ def convert_docx_to_pdf_complete(docx_bytes: bytes) -> bytes:
         if y_cursor + needed_h > page_h - margin_y:
             page = pdf_doc.new_page(width=page_w, height=page_h)
             y_cursor = margin_y
-
-    def render_paragraph(p, default_size=10.5, is_header=False):
-        nonlocal page, y_cursor
-        text = p.text.strip()
-        if not text:
-            if not is_header:
-                y_cursor += 6
-            return
-
-        style_name = (p.style.name or "").lower()
-        align = (str(p.alignment or "").lower())
-
-        if "heading 1" in style_name or "title" in style_name:
-            font_size = 16
-            is_bold = True
-            line_h = 22
-        elif "heading 2" in style_name:
-            font_size = 13
-            is_bold = True
-            line_h = 18
-        elif "heading 3" in style_name:
-            font_size = 11.5
-            is_bold = True
-            line_h = 16
-        elif is_header:
-            font_size = 9
-            is_bold = any(run.bold for run in p.runs)
-            line_h = 13
-        else:
-            font_size = default_size
-            is_bold = any(run.bold for run in p.runs)
-            line_h = 15
-
-        font_name = "hebo" if is_bold else "helv"
-
-        prefix = ""
-        if "list" in style_name or "bullet" in style_name:
-            prefix = "• "
-
-        words = (prefix + text).split()
-        current_line = []
-
-        for word in words:
-            test_line = " ".join(current_line + [word])
-            est_width = len(test_line) * (font_size * 0.52)
-
-            if est_width > content_w and current_line:
-                check_page_break(line_h)
-                line_str = " ".join(current_line)
-                
-                x_pos = margin_x
-                if "center" in align:
-                    x_pos = margin_x + max(0, (content_w - (len(line_str) * font_size * 0.52)) / 2)
-                elif "right" in align:
-                    x_pos = margin_x + max(0, content_w - (len(line_str) * font_size * 0.52))
-
-                page.insert_text(
-                    fitz.Point(x_pos, y_cursor),
-                    line_str,
-                    fontsize=font_size,
-                    fontname=font_name,
-                    color=(0.15, 0.15, 0.15)
-                )
-                y_cursor += line_h
-                current_line = [word]
-            else:
-                current_line.append(word)
-
-        if current_line:
-            check_page_break(line_h)
-            line_str = " ".join(current_line)
-            x_pos = margin_x
-            if "center" in align:
-                x_pos = margin_x + max(0, (content_w - (len(line_str) * font_size * 0.52)) / 2)
-            elif "right" in align:
-                x_pos = margin_x + max(0, content_w - (len(line_str) * font_size * 0.52))
-
-            page.insert_text(
-                fitz.Point(x_pos, y_cursor),
-                line_str,
-                fontsize=font_size,
-                fontname=font_name,
-                color=(0.15, 0.15, 0.15)
-            )
-            y_cursor += line_h + (2 if is_header else 4)
 
     def extract_and_render_images(part):
         nonlocal page, y_cursor
@@ -167,24 +76,118 @@ def convert_docx_to_pdf_complete(docx_bytes: bytes) -> bytes:
                 except Exception:
                     pass
 
-    # A. Render Section Headers & Header Images (e.g. Logos, Subtitles)
+    # A. Section Header & Logo Extraction
     for section in doc.sections:
         if section.header:
             extract_and_render_images(section.header.part)
             for hp in section.header.paragraphs:
-                render_paragraph(hp, is_header=True)
+                text = hp.text.strip()
+                if text:
+                    check_page_break(14)
+                    page.insert_text(fitz.Point(margin_x, y_cursor), text, fontsize=9, fontname="time", color=(0.2, 0.2, 0.2))
+                    y_cursor += 12
             if section.header.paragraphs or hasattr(section.header.part, "rels"):
                 y_cursor += 10
             break
 
-    # B. Render Main Document Body Images
+    # B. Main Body Images
     extract_and_render_images(doc.part)
 
-    # C. Render Main Document Paragraphs
+    # C. Main Body Paragraphs with Run-Level Styling (Times-Roman / Times-Bold)
     for p in doc.paragraphs:
-        render_paragraph(p)
+        full_text = p.text.strip()
+        if not full_text:
+            y_cursor += 6
+            continue
 
-    # D. Render Main Document Tables
+        style_name = (p.style.name or "").lower()
+        align = str(p.alignment or "").lower()
+
+        if "heading 1" in style_name or "title" in style_name:
+            base_size = 15
+            is_heading = True
+            line_h = 22
+        elif "heading 2" in style_name:
+            base_size = 13
+            is_heading = True
+            line_h = 18
+        else:
+            base_size = 10.5
+            is_heading = False
+            line_h = 15
+
+        prefix = "• " if ("list" in style_name or "bullet" in style_name) else ""
+
+        runs_data = []
+        if prefix:
+            runs_data.append((prefix, True, False, base_size))
+
+        if p.runs:
+            for run in p.runs:
+                if not run.text:
+                    continue
+                r_size = base_size
+                if run.font and run.font.size:
+                    r_size = run.font.size.pt
+                is_b = is_heading or bool(run.bold)
+                is_i = bool(run.italic)
+                runs_data.append((run.text, is_b, is_i, r_size))
+        else:
+            runs_data.append((full_text, is_heading, False, base_size))
+
+        styled_words = []
+        for text_chunk, b_flag, i_flag, sz in runs_data:
+            words = text_chunk.split()
+            for w in words:
+                styled_words.append((w, b_flag, i_flag, sz))
+
+        if not styled_words:
+            continue
+
+        lines = []
+        current_line = []
+        current_w = 0.0
+
+        for w_text, b_flag, i_flag, sz in styled_words:
+            w_font = "tiro" if b_flag else ("tiit" if i_flag else "time")
+            w_width = len(w_text + " ") * (sz * 0.48)
+
+            if current_w + w_width > content_w and current_line:
+                lines.append(current_line)
+                current_line = [(w_text, b_flag, i_flag, sz, w_font)]
+                current_w = w_width
+            else:
+                current_line.append((w_text, b_flag, i_flag, sz, w_font))
+                current_w += w_width
+
+        if current_line:
+            lines.append(current_line)
+
+        for line in lines:
+            check_page_break(line_h)
+            
+            line_est_w = sum(len(w_t + " ") * (sz * 0.48) for w_t, _, _, sz, _ in line)
+            x_cursor = margin_x
+            if "center" in align:
+                x_cursor = margin_x + max(0, (content_w - line_est_w) / 2)
+            elif "right" in align:
+                x_cursor = margin_x + max(0, content_w - line_est_w)
+
+            for w_t, b_flag, i_flag, sz, w_font in line:
+                page.insert_text(
+                    fitz.Point(x_cursor, y_cursor),
+                    w_t + " ",
+                    fontsize=sz,
+                    fontname=w_font,
+                    color=(0.1, 0.1, 0.1)
+                )
+                x_cursor += len(w_t + " ") * (sz * 0.48)
+
+            y_cursor += line_h
+
+        y_cursor += 3
+
+    # D. Tables
     for table in doc.tables:
         for row in table.rows:
             row_cells = [cell.text.strip() for cell in row.cells if cell.text.strip()]
@@ -196,22 +199,26 @@ def convert_docx_to_pdf_complete(docx_bytes: bytes) -> bytes:
                 fitz.Point(margin_x, y_cursor),
                 row_str,
                 fontsize=9.5,
-                fontname="hebo",
-                color=(0.2, 0.3, 0.6)
+                fontname="tiro",
+                color=(0.1, 0.1, 0.1)
             )
             y_cursor += 16
-        y_cursor += 10
+        y_cursor += 8
 
-    # E. Render Section Footers
+    # E. Section Footers
     for section in doc.sections:
         if section.footer:
             for fp in section.footer.paragraphs:
-                render_paragraph(fp, is_header=True)
+                text = fp.text.strip()
+                if text:
+                    check_page_break(14)
+                    page.insert_text(fitz.Point(margin_x, y_cursor), text, fontsize=9, fontname="time", color=(0.4, 0.4, 0.4))
+                    y_cursor += 12
             break
 
     if pdf_doc.page_count == 0:
         p = pdf_doc.new_page(width=page_w, height=page_h)
-        p.insert_text(fitz.Point(margin_x, margin_y), "Converted Document", fontsize=12)
+        p.insert_text(fitz.Point(margin_x, margin_y), "Converted Document", fontsize=12, fontname="time")
 
     buf = io.BytesIO()
     pdf_doc.save(buf, garbage=3, deflate=True)
@@ -221,7 +228,7 @@ def convert_docx_to_pdf_complete(docx_bytes: bytes) -> bytes:
 
 def convert_office_to_pdf(data: bytes, original_filename: str) -> bytes:
     """
-    Render an Office document to PDF with LibreOffice or high-fidelity fallback.
+    Render an Office document to PDF with LibreOffice or high-fidelity Times-Roman fallback.
     """
     suffix = Path(original_filename or "").suffix.lower()
     if suffix not in SUPPORTED_EXTENSIONS:
@@ -277,7 +284,7 @@ def convert_office_to_pdf(data: bytes, original_filename: str) -> bytes:
             except Exception:
                 pass  # Fall back to python docx renderer if LibreOffice fails
 
-    # High-fidelity DOCX parser for Word documents
+    # High-fidelity DOCX parser with Times-Roman serif typography for Word documents
     if suffix in {".docx", ".doc"}:
         try:
             return convert_docx_to_pdf_complete(data)
