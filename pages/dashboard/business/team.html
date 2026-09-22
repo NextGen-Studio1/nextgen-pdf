@@ -1,67 +1,93 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="light">
+
+<html data-theme="light" lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Team Management — NextGen PDF</title>
-  <link rel="icon" type="image/png" href="../../../Assests/Logo-icon.png" />
-  <link rel="stylesheet" href="../../../css/style.css" />
-</head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Team Members — Business Suite — NextGen PDF</title>
+<link href="../../../Assests/Logo-icon.png" rel="icon" type="image/png"/>
+<link href="../../../css/style.css" rel="stylesheet"/>
+<meta content="NextGen PDF online document and PDF tools." name="description"/><meta content="noindex, nofollow" name="robots"/><link href="https://nextgen-pdf.web.app/pages/dashboard/business/team" rel="canonical"/><meta content="Team Members — Business Suite — NextGen PDF" property="og:title"/><meta content="NextGen PDF online document and PDF tools." property="og:description"/><meta content="https://nextgen-pdf.web.app/pages/dashboard/business/team" property="og:url"/><meta content="website" property="og:type"/><meta content="NextGen PDF" property="og:site_name"/><meta content="https://nextgen-pdf.web.app/Assests/Logo-clean.png" property="og:image"/><meta content="summary_large_image" name="twitter:card"/><meta content="Team Members — Business Suite — NextGen PDF" name="twitter:title"/><meta content="NextGen PDF online document and PDF tools." name="twitter:description"/><meta content="https://nextgen-pdf.web.app/Assests/Logo-clean.png" name="twitter:image"/></head>
 <body>
-  <header class="site-header">
-    <div class="container nav-bar" style="width: 100%; max-width: 100%; padding: 0 24px;">
-      <a href="../../../index.html" class="brand-logo">
-        <img src="../../../Assests/Logo-icon.png" alt="NextGen PDF" />
-        <span>NextGen <b class="text-gradient">PDF</b></span>
-      </a>
-      <button class="theme-btn" data-theme-toggle aria-label="Toggle Theme">🌙</button>
-    </div>
-  </header>
-
-  <div class="dashboard-layout">
-    <aside class="sidebar-nav">
-      <a href="index.html" class="sidebar-item">🏢 Overview</a>
-      <a href="team.html" class="sidebar-item active">👥 Team Members</a>
-      <a href="api.html" class="sidebar-item">🔑 API Keys</a>
-      <a href="billing.html" class="sidebar-item">💳 Enterprise Billing</a>
-      <a href="settings.html" class="sidebar-item">⚙️ Org Settings</a>
-    </aside>
-
-    <main class="dashboard-content">
-      <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 24px;">
-        <h2>Team Members</h2>
-        <button class="btn btn-primary btn-sm" onclick="Toast.show({ message: 'Invite link copied', type: 'success' })">+ Invite Team Member</button>
-      </div>
-
-      <div class="card">
-        <table style="width: 100%; border-collapse: collapse; text-align: left; font-size: 14px;">
-          <thead>
-            <tr style="border-bottom: 1px solid var(--border); color: var(--text-muted);">
-              <th style="padding: 12px;">Member</th>
-              <th style="padding: 12px;">Role</th>
-              <th style="padding: 12px;">Joined</th>
-              <th style="padding: 12px; text-align: right;">Action</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr style="border-bottom: 1px solid var(--border);">
-              <td style="padding: 12px; font-weight: 700;">Ankush Sharma (You)</td>
-              <td style="padding: 12px;"><span class="chip">Owner</span></td>
-              <td style="padding: 12px; color: var(--text-muted);">Jan 2026</td>
-              <td style="padding: 12px; text-align: right;"><button class="btn btn-ghost btn-sm" disabled>Manage</button></td>
-            </tr>
-            <tr style="border-bottom: 1px solid var(--border);">
-              <td style="padding: 12px; font-weight: 700;">Sarah Jenkins</td>
-              <td style="padding: 12px;"><span class="chip">Admin</span></td>
-              <td style="padding: 12px; color: var(--text-muted);">Feb 2026</td>
-              <td style="padding: 12px; text-align: right;"><button class="btn btn-outline btn-sm">Manage</button></td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-    </main>
-  </div>
-
-  <script src="../../../js/components.js"></script>
+<header class="site-header">
+<div class="container nav-bar" style="width: 100%; max-width: 100%; padding: 0 24px;">
+<a class="brand-logo" href="../../../index.html">
+<img alt="NextGen PDF" src="../../../Assests/Logo-icon.png"/>
+<span>NextGen <b class="text-gradient">PDF</b> <span class="chip" style="background: var(--primary-bg); color: var(--primary); font-size: 11px;">BUSINESS</span></span>
+</a>
+<button aria-label="Toggle Theme" class="theme-btn" data-theme-toggle="">🌙</button>
+</div>
+</header>
+<div class="dashboard-layout">
+<aside class="sidebar-nav">
+<div style="font-size: 11px; font-weight: 800; letter-spacing: 0.08em; text-transform: uppercase; color: var(--text-muted); padding: 0 12px 8px 12px;">Business Suite</div>
+<a class="sidebar-item" href="index.html">🏢 Overview</a>
+<a class="sidebar-item active" href="team.html">👥 Team Members</a>
+<a class="sidebar-item" href="api.html">🔑 API Keys</a>
+<a class="sidebar-item" href="../index.html" style="margin-top: 20px;">👤 Personal Dashboard</a>
+</aside>
+<main class="dashboard-content">
+<div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 24px;">
+<div>
+<h2>Team Members</h2>
+<p style="margin-top: 4px;">Manage team access, seats, and workspace permissions.</p>
+</div>
+<button class="btn btn-primary" onclick="document.getElementById('invite-modal').style.display='grid'">+ Invite Team Member</button>
+</div>
+<!-- Team Members Table Card -->
+<div class="card">
+<table style="width: 100%; border-collapse: collapse; text-align: left; font-size: 14px;">
+<thead>
+<tr style="border-bottom: 1px solid var(--border); color: var(--text-muted);">
+<th style="padding: 12px;">Member</th>
+<th style="padding: 12px;">Role</th>
+<th style="padding: 12px;">Status</th>
+<th style="padding: 12px; text-align: right;">Action</th>
+</tr>
+</thead>
+<tbody>
+<tr style="border-bottom: 1px solid var(--border);">
+<td style="padding: 12px; font-weight: 700;">Alex Morgan<br/><small style="color: var(--text-muted); font-weight: 400;">alex@acmecorp.com</small></td>
+<td style="padding: 12px;"><span class="chip" style="background: var(--primary-bg); color: var(--primary);">Organization Admin</span></td>
+<td style="padding: 12px;"><span style="color: var(--success); font-weight: 700;">Active</span></td>
+<td style="padding: 12px; text-align: right;"><button class="btn btn-ghost btn-sm" disabled="">Owner</button></td>
+</tr>
+<tr style="border-bottom: 1px solid var(--border);">
+<td style="padding: 12px; font-weight: 700;">Sarah Chen<br/><small style="color: var(--text-muted); font-weight: 400;">sarah@acmecorp.com</small></td>
+<td style="padding: 12px;"><span class="chip">Editor</span></td>
+<td style="padding: 12px;"><span style="color: var(--success); font-weight: 700;">Active</span></td>
+<td style="padding: 12px; text-align: right;"><button class="btn btn-outline btn-sm" onclick="Toast.show({ message: 'Permissions updated', type: 'info' })">Manage</button></td>
+</tr>
+</tbody>
+</table>
+</div>
+</main>
+</div>
+<!-- Simple Invite Modal -->
+<div id="invite-modal" style="display: none; position: fixed; inset: 0; background: rgba(0,0,0,0.5); place-items: center; z-index: 1000;">
+<div class="card" style="width: 100%; max-width: 440px; padding: 28px;">
+<h3 style="margin-bottom: 8px;">Invite Team Member</h3>
+<p style="color: var(--text-muted); font-size: 14px; margin-bottom: 16px;">An invitation link will be sent to their email address.</p>
+<form onsubmit="event.preventDefault(); Toast.show({ message: 'Invitation sent successfully!', type: 'success' }); document.getElementById('invite-modal').style.display='none';">
+<div class="form-group">
+<label class="form-label">Email Address</label>
+<input class="input-text" placeholder="colleague@acmecorp.com" required="" type="email"/>
+</div>
+<div class="form-group">
+<label class="form-label">Role</label>
+<select class="input-text" style="background: var(--bg);">
+<option value="editor">Editor</option>
+<option value="viewer">Viewer</option>
+<option value="admin">Admin</option>
+</select>
+</div>
+<div style="display: flex; gap: 12px; justify-content: flex-end; margin-top: 20px;">
+<button class="btn btn-ghost" onclick="document.getElementById('invite-modal').style.display='none'" type="button">Cancel</button>
+<button class="btn btn-primary" type="submit">Send Invite</button>
+</div>
+</form>
+</div>
+</div>
+<script src="../../../js/components.js"></script>
 </body>
 </html>

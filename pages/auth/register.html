@@ -1,78 +1,108 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="light">
+
+<html data-theme="light" lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Create Account — NextGen PDF</title>
-  <meta name="robots" content="noindex, nofollow" />
-  <link rel="icon" type="image/png" href="../../Assests/Logo-icon.png" />
-  <link rel="stylesheet" href="../../css/style.css" />
-</head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Create Account — NextGen PDF</title>
+<meta content="noindex, nofollow" name="robots"/>
+<link href="../../Assests/Logo-icon.png" rel="icon" type="image/png"/>
+<link href="../../css/style.css" rel="stylesheet"/>
+<meta content="NextGen PDF online document and PDF tools." name="description"/><link href="https://nextgen-pdf.web.app/pages/auth/register" rel="canonical"/><meta content="Create Account — NextGen PDF" property="og:title"/><meta content="NextGen PDF online document and PDF tools." property="og:description"/><meta content="https://nextgen-pdf.web.app/pages/auth/register" property="og:url"/><meta content="website" property="og:type"/><meta content="NextGen PDF" property="og:site_name"/><meta content="https://nextgen-pdf.web.app/Assests/Logo-clean.png" property="og:image"/><meta content="summary_large_image" name="twitter:card"/><meta content="Create Account — NextGen PDF" name="twitter:title"/><meta content="NextGen PDF online document and PDF tools." name="twitter:description"/><meta content="https://nextgen-pdf.web.app/Assests/Logo-clean.png" name="twitter:image"/></head>
 <body style="display: flex; flex-direction: column; min-height: 100vh;">
-
-  <!-- Header -->
-  <header class="site-header">
-    <div class="container nav-bar">
-      <a href="../../index.html" class="brand-logo">
-        <img src="../../Assests/Logo-icon.png" alt="NextGen PDF Logo" width="36" height="36" />
-        <span>NextGen <b class="text-gradient">PDF</b></span>
-      </a>
-      <div style="display: flex; align-items: center; gap: 12px;">
-        <button class="theme-btn" data-theme-toggle aria-label="Toggle Theme">🌙</button>
-      </div>
-    </div>
-  </header>
-
-  <!-- Register Form Container -->
-  <main style="flex: 1; display: grid; place-items: center; padding: 40px 16px;">
-    <div class="card" style="width: min(440px, 100%); padding: 36px;">
-      <div style="text-align: center; margin-bottom: 28px;">
-        <h2>Create your account</h2>
-        <p style="margin-top: 6px;">Start processing PDFs in seconds for free</p>
-      </div>
-
-      <form id="register-form" onsubmit="event.preventDefault(); window.location.href='verify-email.html';">
-        <div class="form-group">
-          <label class="form-label" for="fullname">Full name</label>
-          <input type="text" id="fullname" class="input-text" placeholder="Ankush Sharma" required />
-        </div>
-
-        <div class="form-group">
-          <label class="form-label" for="email">Email address</label>
-          <input type="email" id="email" class="input-text" placeholder="name@company.com" required />
-        </div>
-
-        <div class="form-group">
-          <label class="form-label" for="password">Password</label>
-          <input type="password" id="password" class="input-text" placeholder="At least 8 characters" required />
-        </div>
-
-        <div class="form-group">
-          <label class="checkbox-label">
-            <input type="checkbox" required /> I agree to the <a href="../privacy.html" style="color: var(--primary);">Terms of Service</a> and Privacy Policy
+<!-- Header -->
+<header class="site-header">
+<div class="container nav-bar">
+<a class="brand-logo" href="../../index.html">
+<img alt="NextGen PDF Logo" height="36" src="../../Assests/Logo-icon.png" width="36"/>
+<span>NextGen <b class="text-gradient">PDF</b></span>
+</a>
+<div style="display: flex; align-items: center; gap: 12px;">
+<button aria-label="Toggle Theme" class="theme-btn" data-theme-toggle="">🌙</button>
+</div>
+</div>
+</header>
+<!-- Register Form Container -->
+<main style="flex: 1; display: grid; place-items: center; padding: 40px 16px;">
+<div class="card" style="width: min(440px, 100%); padding: 36px;">
+<div style="text-align: center; margin-bottom: 28px;">
+<h2>Create your account</h2>
+<p style="margin-top: 6px;">Start processing PDFs in seconds for free</p>
+</div>
+<form id="register-form">
+<div class="form-group">
+<label class="form-label" for="fullname">Full name</label>
+<input class="input-text" id="fullname" placeholder="Ankush Sharma" required="" type="text"/>
+</div>
+<div class="form-group">
+<label class="form-label" for="email">Email address</label>
+<input class="input-text" id="email" placeholder="name@company.com" required="" type="email"/>
+</div>
+<div class="form-group">
+<label class="form-label" for="password">Password</label>
+<input class="input-text" id="password" minlength="6" placeholder="At least 6 characters" required="" type="password"/>
+</div>
+<div class="form-group">
+<label class="checkbox-label">
+<input required="" type="checkbox"/> I agree to the <a href="../privacy.html" style="color: var(--primary);">Terms of Service</a> and Privacy Policy
           </label>
-        </div>
-
-        <button type="submit" class="btn btn-primary btn-lg" style="width: 100%; margin-top: 8px;">Create Free Account</button>
-      </form>
-
-      <div style="display: flex; align-items: center; gap: 12px; margin: 24px 0; color: var(--text-muted); font-size: 13px;">
-        <div style="flex: 1; height: 1px; background: var(--border);"></div>
-        <span>OR</span>
-        <div style="flex: 1; height: 1px; background: var(--border);"></div>
-      </div>
-
-      <button type="button" class="btn btn-secondary btn-lg" style="width: 100%; justify-content: center;" onclick="Toast.show({ message: 'Google Auth Ready', type: 'info' })">
-        <img src="https://www.gstatic.com/firebasejs/ui/2.0.0/images/auth/google.svg" alt="Google" style="width: 18px; height: 18px;" />
+</div>
+<button class="btn btn-primary btn-lg" id="register-btn" style="width: 100%; margin-top: 8px;" type="submit">Create Free Account</button>
+</form>
+<div style="display: flex; align-items: center; gap: 12px; margin: 24px 0; color: var(--text-muted); font-size: 13px;">
+<div style="flex: 1; height: 1px; background: var(--border);"></div>
+<span>OR</span>
+<div style="flex: 1; height: 1px; background: var(--border);"></div>
+</div>
+<button class="btn btn-secondary btn-lg" id="google-register-btn" style="width: 100%; justify-content: center;" type="button">
+<img alt="Google" src="https://www.gstatic.com/firebasejs/ui/2.0.0/images/auth/google.svg" style="width: 18px; height: 18px;"/>
         Sign up with Google
       </button>
-
-      <div style="text-align: center; margin-top: 24px; font-size: 14px; color: var(--text-muted);">
+<div style="text-align: center; margin-top: 24px; font-size: 14px; color: var(--text-muted);">
         Already have an account? <a href="login.html" style="color: var(--primary); font-weight: 700;">Log in</a>
-      </div>
-    </div>
-  </main>
+</div>
+</div>
+</main>
+<script src="../../js/config.js"></script>
+<script src="../../js/firebase-config.js"></script>
+<script src="../../js/auth.js"></script>
+<script src="../../js/components.js"></script>
+<script>
+    document.getElementById('register-form').addEventListener('submit', async (e) => {
+      e.preventDefault();
+      const btn = document.getElementById('register-btn');
+      const fullName = document.getElementById('fullname').value.trim();
+      const email = document.getElementById('email').value.trim();
+      const password = document.getElementById('password').value;
 
-  <script src="../../js/components.js"></script>
+      try {
+        btn.disabled = true;
+        btn.textContent = 'Creating account...';
+        await NextGenAuth.register({ email, password, fullName });
+        Toast.show({ message: 'Account created! Redirecting to email verification...', type: 'success' });
+        setTimeout(() => {
+          window.location.href = 'verify-email.html';
+        }, 1200);
+      } catch (err) {
+        btn.disabled = false;
+        btn.textContent = 'Create Free Account';
+        console.error('Registration error:', err);
+        Toast.show({ message: err.message || 'Registration failed.', type: 'error' });
+      }
+    });
+
+    document.getElementById('google-register-btn').addEventListener('click', async () => {
+      try {
+        await NextGenAuth.googleLogin();
+        Toast.show({ message: 'Google sign-in successful! Redirecting...', type: 'success' });
+        setTimeout(() => {
+          window.location.href = '../dashboard/index.html';
+        }, 1000);
+      } catch (err) {
+        console.error('Google Auth Error:', err);
+        Toast.show({ message: err.message || 'Google sign-in failed.', type: 'error' });
+      }
+    });
+  </script>
 </body>
 </html>

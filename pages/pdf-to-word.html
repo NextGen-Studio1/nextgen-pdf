@@ -1,124 +1,120 @@
-<!doctype html>
-<html lang="en" data-theme="light">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width,initial-scale=1" />
-    <title>PDF to Word — NextGen PDF</title>
-    <link rel="icon" type="image/png" href="../Assests/Logo.png" />
-    <link rel="stylesheet" href="../css/style.css" />
-    <link rel="stylesheet" href="../css/components.css" />
-    <link rel="stylesheet" href="../css/responsive.css" />
-    <!-- Google AdSense -->
-    <script
-      async
-      src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5453249687281273"
-      crossorigin="anonymous"
-    ></script>
-  </head>
-  <body data-tool="pdf-to-word">
-    <header class="site-header">
-      <div class="container nav">
-        <a class="brand" href="../index.html"
-          ><img
-            src="../Assests/Logo-icon.png"
-            alt="NextGen PDF Logo"
-            class="brand-logo-icon"
-          /><span>NextGen <b>PDF</b></span></a
-        >
-        <nav>
-          <a href="tools.html">Tools</a><a href="about.html">About</a
-          ><a href="privacy.html">Privacy</a>
-        </nav>
-        <button class="theme-toggle" data-theme-toggle>☾</button
-        ><button
-          class="mobile-toggle"
-          data-mobile-toggle
-          aria-label="Toggle menu"
-        >
-          ☰
-        </button>
-      </div>
-    </header>
-    <main class="container">
-      <div class="page-hero">
-        <span class="eyebrow">DOCUMENT CONVERSION</span>
-        <h1>PDF to Word</h1>
-        <p>Convert your PDF documents into fully editable Microsoft Word (.docx) files.</p>
-      </div>
-      <section class="workspace">
-        <div class="workspace-body">
-          <div class="dropzone" id="drop">
-            <div class="upload-icon">↑</div>
-            <h3>Drop your PDF file here</h3>
-            <p>or choose it from your device</p>
-            <label class="btn"
-              >Choose file<input
-                id="files"
-                type="file"
-                accept="application/pdf"
-                hidden /></label
-            ><small>Files are processed securely in-memory.</small>
-          </div>
-          <div id="list" class="file-list"></div>
+<!DOCTYPE html>
 
-          <button
-            id="process"
-            class="btn"
-            style="width: 100%; margin-top: 24px"
-          >
-            Convert to Word (.docx) →
-          </button>
-          <div id="result" style="display: none; margin-top: 28px">
-            <div class="workspace-body">
-              <span class="eyebrow">COMPLETED</span>
-              <h3 style="margin-top: 8px">Your Word document is ready.</h3>
-              <p id="resultText">Your processed file is ready to download.</p>
-              <button class="btn" id="download">Download result</button
-              ><button
-                class="text-link"
-                id="again"
-                style="
-                  margin-left: 15px;
-                  background: none;
-                  border: 0;
-                  cursor: pointer;
-                "
-              >
-                Convert another file
-              </button>
-            </div>
-          </div>
-        </div>
-      </section>
-      <div
-        class="ad-container"
-        data-ad-slot="1000000009"
-        data-ad-format="horizontal"
-      ></div>
-    </main>
-    <footer>
-      <div class="container footer">
-        <div>
-          <a class="brand" href="../index.html"
-            ><img
-              src="../Assests/Logo-icon.png"
-              alt="NextGen PDF Logo"
-              class="brand-logo-icon"
-            /><span>NextGen <b>PDF</b></span></a
-          >
-          <p>Simple tools for your documents.</p>
-        </div>
-        <div class="footer-links">
-          <a href="tools.html">Tools</a><a href="about.html">About</a
-          ><a href="privacy.html">Privacy</a>
-        </div>
-        <span>© 2026 NextGen PDF</span>
-      </div>
-    </footer>
-    <script src="../js/app.js"></script>
-    <script src="../js/config.js"></script>
-    <script src="../js/firebase-config.js"></script>
-    <script src="../js/ads.js"></script>
-    <script src="../js/api.js"></script>
-  </body>
+<html data-theme="light" lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>PDF to Word Converter | NextGen PDF</title>
+<meta content="Convert PDF documents to editable Word files with NextGen PDF." name="description"/>
+<link href="https://nextgen-pdf.web.app/pages/pdf-to-word" rel="canonical"/>
+<link href="../Assests/Logo-icon.png" rel="icon" type="image/png"/>
+<meta content="website" property="og:type"/>
+<meta content="https://nextgen-pdf.web.app/pages/pdf-to-word" property="og:url"/>
+<meta content="PDF to Word Converter | NextGen PDF" property="og:title"/>
+<meta content="Convert PDF documents to editable Word files with NextGen PDF." property="og:description"/>
+<link href="../css/style.css" rel="stylesheet"/>
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://nextgen-pdf.web.app/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Tools",
+            "item": "https://nextgen-pdf.web.app/pages/tools.html"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "PDF to Word",
+            "item": "https://nextgen-pdf.web.app/pages/pdf-to-word.html"
+          }
+        ]
+      },
+      {
+        "@type": "SoftwareApplication",
+        "name": "NextGen PDF to Word Converter",
+        "operatingSystem": "All",
+        "applicationCategory": "BusinessApplication"
+      }
+    ]
+  }
+  </script>
+<script async="" crossorigin="anonymous" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5453249687281273"></script>
+<meta content="index, follow" name="robots"/><meta content="NextGen PDF" property="og:site_name"/><meta content="https://nextgen-pdf.web.app/Assests/Logo-clean.png" property="og:image"/><meta content="summary_large_image" name="twitter:card"/><meta content="PDF to Word Converter | NextGen PDF" name="twitter:title"/><meta content="Convert PDF documents to editable Word files with NextGen PDF." name="twitter:description"/><meta content="https://nextgen-pdf.web.app/Assests/Logo-clean.png" name="twitter:image"/><script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebApplication", "name": "PDF to Word Converter", "url": "https://nextgen-pdf.web.app/pages/pdf-to-word", "description": "Convert PDF documents to editable Word files with NextGen PDF.", "applicationCategory": "BusinessApplication", "operatingSystem": "Web Browser"}</script><script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://nextgen-pdf.web.app/"}, {"@type": "ListItem", "position": 2, "name": "PDF Tools", "item": "https://nextgen-pdf.web.app/pages/tools"}, {"@type": "ListItem", "position": 3, "name": "PDF to Word Converter", "item": "https://nextgen-pdf.web.app/pages/pdf-to-word"}]}</script></head>
+<body data-tool="pdf-to-word">
+<!-- Header -->
+<!-- Header -->
+<header class="site-header">
+<div class="container nav-bar">
+<a class="brand-logo" href="../index.html">
+<img alt="NextGen PDF Logo" height="36" src="../Assests/Logo-icon.png" style="height:36px !important; max-height:36px !important; width:auto !important; display:inline-block;" width="36"/>
+<span>NextGen <b class="text-gradient">PDF</b></span>
+</a>
+<nav class="nav-links nav-links-desktop">
+<a href="../index.html">Home</a>
+<a href="tools.html">All Tools</a>
+<a href="pricing.html">Pricing</a>
+<a href="faq.html">FAQ</a>
+</nav>
+<div style="display: flex; align-items: center; gap: 12px;">
+<button aria-label="Toggle Theme" class="theme-btn" data-theme-toggle="">🌙</button>
+<a class="btn btn-ghost btn-sm" href="auth/login.html">Log in</a>
+<a class="btn btn-primary btn-sm" href="auth/register.html">Get Started</a>
+</div>
+</div>
+</header>
+<!-- Breadcrumbs Bar -->
+<div style="background: var(--surface); border-bottom: 1px solid var(--border); padding: 12px 0; font-size: 13px; color: var(--text-muted);">
+<div class="container" style="display: flex; gap: 8px; align-items: center;">
+<a href="../index.html">Home</a> <span>›</span>
+<a href="tools.html">Tools</a> <span>›</span>
+<span style="color: var(--text-primary); font-weight: 700;">PDF to Word</span>
+</div>
+</div>
+<!-- Hero & Upload -->
+<section style="padding: 50px 0 30px;">
+<div class="container" style="max-width: 800px; text-align: center;">
+<span class="hero-eyebrow">📝 CONVERT PDF TO WORD</span>
+<h1 style="margin-top: 12px;">Convert PDF to Editable Word (DOCX)</h1>
+<p style="font-size: var(--text-body-lg); color: var(--text-muted); margin-top: 12px;">
+        Turn PDF documents into editable Microsoft Word files with layout preservation.
+      </p>
+<div id="pdf-to-word-uploader-container" style="margin-top: 32px; text-align: left;"></div>
+</div>
+</section>
+<!-- Related Tools Topic Cluster -->
+<section style="padding: 40px 0; border-top: 1px solid var(--border);">
+<div class="container" style="text-align: center;">
+<h3 style="margin-bottom: 16px;">Related PDF Tools</h3>
+<div style="display: flex; gap: 12px; justify-content: center; flex-wrap: wrap;">
+<a class="chip" href="word-to-pdf.html">📄 Word to PDF</a>
+<a class="chip" href="compress.html">📦 Compress PDF</a>
+<a class="chip" href="ocr-pdf.html">🔍 OCR PDF</a>
+<a class="chip" href="pdf-to-excel.html">📊 PDF to Excel</a>
+</div>
+</div>
+</section>
+<script src="../js/components.js"></script>
+<script src="../js/uploader.js"></script>
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+      window.activeUploader = new PDFUploader('pdf-to-word-uploader-container', {
+        onFilesSelected: (files) => {
+          Toast.show({ message: `Converting ${files[0].name} to DOCX`, type: 'success' });
+          window.activeUploader.simulateProgress();
+        }
+      });
+    });
+  </script>
+<section aria-label="About PDF to Word Converter" class="seo-copy"><h2>PDF to Word Converter Online</h2><p>Convert PDF documents to editable Word files with NextGen PDF. NextGen PDF is designed to make common document tasks straightforward on desktop and mobile.</p><h3>How to use PDF to Word Converter</h3><ol><li>Choose or upload the document you want to process.</li><li>Select the options required for your task.</li><li>Start processing and download the resulting file when it is ready.</li></ol><h3>Related PDF tools</h3><nav aria-label="Related PDF tools" class="related-tools"><a href="word-to-pdf.html">Word to PDF Converter</a><a href="pdf-to-excel.html">PDF to Excel Converter</a><a href="pdf-to-jpg.html">PDF to JPG Converter</a><a href="ocr-pdf.html">OCR PDF Online</a></nav></section></body>
 </html>

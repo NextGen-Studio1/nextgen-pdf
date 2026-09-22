@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+
+<html data-theme="light" lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Contact NextGen PDF</title>
+<meta content="Contact NextGen PDF for product questions, support and feedback." name="description"/>
+<link href="../Assests/Logo-icon.png" rel="icon" type="image/png"/>
+<link href="../css/style.css" rel="stylesheet"/>
+<meta content="index, follow" name="robots"/><link href="https://nextgen-pdf.web.app/pages/contact" rel="canonical"/><meta content="Contact NextGen PDF" property="og:title"/><meta content="Contact NextGen PDF for product questions, support and feedback." property="og:description"/><meta content="https://nextgen-pdf.web.app/pages/contact" property="og:url"/><meta content="website" property="og:type"/><meta content="NextGen PDF" property="og:site_name"/><meta content="https://nextgen-pdf.web.app/Assests/Logo-clean.png" property="og:image"/><meta content="summary_large_image" name="twitter:card"/><meta content="Contact NextGen PDF" name="twitter:title"/><meta content="Contact NextGen PDF for product questions, support and feedback." name="twitter:description"/><meta content="https://nextgen-pdf.web.app/Assests/Logo-clean.png" name="twitter:image"/></head>
+<body>
+<!-- Top Navbar -->
+<header class="site-header">
+<div class="container nav-bar">
+<a class="brand-logo" href="../index.html">
+<img alt="NextGen PDF Logo" height="36" src="../Assests/Logo-icon.png" width="36"/>
+<span>NextGen <b class="text-gradient">PDF</b></span>
+</a>
+<nav class="nav-links">
+<a href="../index.html">Home</a>
+<a href="tools.html">Tools</a>
+<a href="pricing.html">Pricing</a>
+<a href="about.html">About</a>
+<a href="faq.html">FAQ</a>
+<a class="active" href="contact.html">Contact</a>
+</nav>
+<div style="display: flex; align-items: center; gap: 16px;">
+<button aria-label="Toggle Theme" class="theme-btn" data-theme-toggle="">🌙</button>
+<a class="btn btn-outline btn-sm" href="auth/login.html">Sign In</a>
+<a class="btn btn-primary btn-sm" href="auth/register.html">Get Started</a>
+</div>
+</div>
+</header>
+<!-- Hero Banner -->
+<section class="hero-section" style="padding: 60px 0 30px 0; text-align: center;">
+<div class="container">
+<span class="chip">24/7 Help &amp; Support</span>
+<h1 style="margin-top: 16px; font-size: 2.5rem;">We’re Here to Help</h1>
+<p style="max-width: 620px; margin: 12px auto 0 auto; color: var(--text-muted);">
+        Have questions, feedback, or need technical assistance with document processing? Send us a message and our team will get back to you shortly.
+      </p>
+</div>
+</section>
+<!-- Contact Section -->
+<section style="padding: 20px 0 80px 0;">
+<div class="container" style="max-width: 1000px; display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 32px;">
+<!-- Contact Info Cards -->
+<div>
+<div class="card" style="margin-bottom: 24px; padding: 28px;">
+<div style="font-size: 28px; margin-bottom: 12px;">📧</div>
+<h3 style="margin-bottom: 8px;">Email Support</h3>
+<p style="color: var(--text-muted); font-size: 14px; margin-bottom: 12px;">Direct assistance for technical queries, account issues, or enterprise options.</p>
+<a href="mailto:support@nextgenpdf.com" style="color: var(--primary); font-weight: 700; font-size: 15px;">support@nextgenpdf.com</a>
+</div>
+<div class="card" style="margin-bottom: 24px; padding: 28px;">
+<div style="font-size: 28px; margin-bottom: 12px;">⚡</div>
+<h3 style="margin-bottom: 8px;">Response Time</h3>
+<p style="color: var(--text-muted); font-size: 14px;">We typically respond to all inquiries within <strong>2 to 12 hours</strong> on business days.</p>
+</div>
+<div class="card" style="padding: 28px;">
+<div style="font-size: 28px; margin-bottom: 12px;">❓</div>
+<h3 style="margin-bottom: 8px;">Frequently Asked Questions</h3>
+<p style="color: var(--text-muted); font-size: 14px; margin-bottom: 12px;">Looking for quick answers about file limits, safety, or features?</p>
+<a class="btn btn-outline btn-sm" href="faq.html">Browse FAQ Page →</a>
+</div>
+</div>
+<!-- Contact Form Card -->
+<div class="card" style="padding: 36px;">
+<h2 style="font-size: 1.5rem; margin-bottom: 8px;">Send a Message</h2>
+<p style="color: var(--text-muted); font-size: 14px; margin-bottom: 24px;">Fill out the form below to reach our team.</p>
+<form id="contact-form">
+<div class="form-group">
+<label class="form-label" for="contact-name">Your Name</label>
+<input class="input-text" id="contact-name" placeholder="John Doe" required="" type="text"/>
+</div>
+<div class="form-group">
+<label class="form-label" for="contact-email">Email Address</label>
+<input class="input-text" id="contact-email" placeholder="john@example.com" required="" type="email"/>
+</div>
+<div class="form-group">
+<label class="form-label" for="contact-category">Inquiry Category</label>
+<select class="input-text" id="contact-category" required="" style="background: var(--bg);">
+<option value="general">General Inquiry</option>
+<option value="bug">Technical Issue / Bug Report</option>
+<option value="billing">Billing &amp; Subscription</option>
+<option value="enterprise">Business &amp; Enterprise Sales</option>
+<option value="feature">Feature Request</option>
+</select>
+</div>
+<div class="form-group">
+<label class="form-label" for="contact-subject">Subject</label>
+<input class="input-text" id="contact-subject" placeholder="How can we help you?" required="" type="text"/>
+</div>
+<div class="form-group">
+<label class="form-label" for="contact-message">Message</label>
+<textarea class="input-text" id="contact-message" placeholder="Describe your question or issue in detail..." required="" rows="5" style="resize: vertical;"></textarea>
+</div>
+<button class="btn btn-primary" id="contact-submit-btn" style="width: 100%; margin-top: 12px;" type="submit">Send Message →</button>
+</form>
+</div>
+</div>
+</section>
+<!-- Footer -->
+<footer class="site-footer" style="padding: 40px 0; border-top: 1px solid var(--border); text-align: center;">
+<div class="container">
+<p style="color: var(--text-muted); font-size: 14px;">
+        © 2026 NextGen PDF. All rights reserved. · <a href="privacy.html">Privacy Policy</a> · <a href="terms.html">Terms of Service</a> · <a href="contact.html">Contact Us</a>
+</p>
+</div>
+</footer>
+<script src="../js/config.js"></script>
+<script src="../js/firebase-config.js"></script>
+<script src="../js/components.js"></script>
+<script>
+    document.getElementById('contact-form').addEventListener('submit', (e) => {
+      e.preventDefault();
+      const btn = document.getElementById('contact-submit-btn');
+      btn.disabled = true;
+      btn.textContent = 'Sending...';
+
+      setTimeout(() => {
+        Toast.show({ message: 'Thank you! Your message has been sent to our support team.', type: 'success' });
+        document.getElementById('contact-form').reset();
+        btn.disabled = false;
+        btn.textContent = 'Send Message →';
+      }, 600);
+    });
+  </script>
+</body>
+</html>

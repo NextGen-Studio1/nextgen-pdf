@@ -1,169 +1,392 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="light">
+
+<html data-theme="light" lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>All 48 PDF Tools — NextGen PDF</title>
-  <link rel="icon" type="image/png" href="../Assests/Logo-icon.png" />
-  <link rel="stylesheet" href="../css/style.css" />
-</head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>PDF Tools - Online PDF Tools &amp; Converters | NextGen PDF</title>
+<meta content="Explore NextGen PDF tools for merging, splitting, compressing, converting, editing, OCR and managing PDF documents." name="description"/>
+<link href="https://nextgen-pdf.web.app/pages/tools" rel="canonical"/>
+<link href="../Assests/Logo-icon.png" rel="icon" type="image/png"/>
+<link href="../css/style.css" rel="stylesheet"/>
+<script async="" crossorigin="anonymous" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5453249687281273"></script>
+<meta content="index, follow" name="robots"/><meta content="PDF Tools - Online PDF Tools &amp; Converters | NextGen PDF" property="og:title"/><meta content="Explore NextGen PDF tools for merging, splitting, compressing, converting, editing, OCR and managing PDF documents." property="og:description"/><meta content="https://nextgen-pdf.web.app/pages/tools" property="og:url"/><meta content="website" property="og:type"/><meta content="NextGen PDF" property="og:site_name"/><meta content="https://nextgen-pdf.web.app/Assests/Logo-clean.png" property="og:image"/><meta content="summary_large_image" name="twitter:card"/><meta content="PDF Tools - Online PDF Tools &amp; Converters | NextGen PDF" name="twitter:title"/><meta content="Explore NextGen PDF tools for merging, splitting, compressing, converting, editing, OCR and managing PDF documents." name="twitter:description"/><meta content="https://nextgen-pdf.web.app/Assests/Logo-clean.png" name="twitter:image"/></head>
 <body>
-
-  <!-- Header -->
-  <header class="site-header">
-    <div class="container nav-bar">
-      <a href="../index.html" class="brand-logo">
-        <img src="../Assests/Logo-icon.png" alt="NextGen PDF" />
-        <span>NextGen <b class="text-gradient">PDF</b></span>
-      </a>
-
-      <nav class="nav-links nav-links-desktop">
-        <a href="../index.html">Home</a>
-        <a href="tools.html" style="color: var(--primary);">All Tools</a>
-        <a href="pricing.html">Pricing</a>
-        <a href="faq.html">FAQ</a>
-      </nav>
-
-      <div style="display: flex; align-items: center; gap: 12px;">
-        <button class="theme-btn" data-theme-toggle aria-label="Toggle Theme">🌙</button>
-        <a href="auth/login.html" class="btn btn-ghost btn-sm">Log in</a>
-        <a href="auth/register.html" class="btn btn-primary btn-sm">Get Started</a>
-      </div>
-    </div>
-  </header>
-
-  <!-- Tools Catalog Header -->
-  <section style="padding: 60px 0 40px; text-align: center;">
-    <div class="container">
-      <h1>All PDF & Document Tools</h1>
-      <p style="font-size: var(--text-body-lg); color: var(--text-muted); max-width: 600px; margin: 12px auto 28px;">
-        Explore all 48 utilities to edit, organize, compress, convert, and process PDFs effortlessly.
+<!-- Header -->
+<header class="site-header">
+<div class="container nav-bar">
+<a class="brand-logo" href="../index.html">
+<img alt="NextGen PDF Logo" height="36" src="../Assests/Logo-icon.png" style="height:36px !important; max-height:36px !important; width:auto !important; display:inline-block;" width="36"/>
+<span>NextGen <b class="text-gradient">PDF</b></span>
+</a>
+<nav class="nav-links nav-links-desktop">
+<a href="../index.html">Home</a>
+<a href="tools.html" style="color: var(--primary);">All Tools</a>
+<a href="pricing.html">Pricing</a>
+<a href="faq.html">FAQ</a>
+</nav>
+<div style="display: flex; align-items: center; gap: 12px;">
+<button aria-label="Toggle Theme" class="theme-btn" data-theme-toggle="">🌙</button>
+<a class="btn btn-ghost btn-sm" href="auth/login.html">Log in</a>
+<a class="btn btn-primary btn-sm" href="auth/register.html">Get Started</a>
+</div>
+</div>
+</header>
+<!-- Tools Catalog Header -->
+<section style="padding: 60px 0 30px; text-align: center;">
+<div class="container">
+<span class="eyebrow">COMPLETE PDF SUITE</span>
+<h1 style="margin-top: 12px;">All 48 PDF &amp; Document Tools</h1>
+<p style="font-size: var(--text-body-lg); color: var(--text-muted); max-width: 680px; margin: 12px auto 28px;">
+        Explore all 48 utilities to edit, organize, compress, convert, protect, and AI-summarize PDFs effortlessly.
       </p>
-
-      <!-- Live Search Box -->
-      <div style="max-width: 540px; margin: 0 auto;">
-        <input type="text" id="tool-search" class="input-text" placeholder="🔍 Search PDF tools (e.g., merge, compress, word, ocr)..." style="font-size: 16px; padding: 14px 20px; border-radius: var(--radius-pill);" />
-      </div>
-
-      <!-- Category Chips -->
-      <div class="popular-chips" style="justify-content: center; margin-top: 28px;">
-        <button class="chip active-tab" data-filter="all">All Tools</button>
-        <button class="chip" data-filter="convert">Convert</button>
-        <button class="chip" data-filter="organize">Organize</button>
-        <button class="chip" data-filter="compress">Compress</button>
-        <button class="chip" data-filter="security">Security</button>
-        <button class="chip" data-filter="ai">AI PDF</button>
-      </div>
+<!-- Live Search Box -->
+<div style="max-width: 600px; margin: 0 auto;">
+<input class="input-text" id="tool-search" placeholder="🔍 Search all 48 PDF tools (e.g., merge, compress, word, ocr, translate)..." style="font-size: 16px; padding: 14px 24px; border-radius: var(--radius-pill);" type="text"/>
+</div>
+<!-- Category Chips -->
+<div class="popular-chips" style="justify-content: center; margin-top: 28px;">
+<button class="chip active-chip" data-filter="all">All 48 Tools</button>
+<button class="chip" data-filter="organize">Organize (11)</button>
+<button class="chip" data-filter="compress">Compress (4)</button>
+<button class="chip" data-filter="convert">Convert (13)</button>
+<button class="chip" data-filter="edit">Edit (7)</button>
+<button class="chip" data-filter="security">Security (6)</button>
+<button class="chip" data-filter="ocr">OCR (3)</button>
+<button class="chip" data-filter="ai">AI PDF (4)</button>
+</div>
+</div>
+</section>
+<!-- Tools Grid -->
+<section style="padding: 20px 0 80px;">
+<div class="container">
+<div class="tool-grid" id="tools-container" style="display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 24px;">
+<a class="tool-card" data-category="organize" href="merge.html">
+<div class="tool-card-icon">📑</div>
+<div class="tool-card-title">Merge PDF</div>
+<p class="tool-card-desc">Combine multiple PDFs into a single file in any order.</p>
+<div class="tool-card-arrow">Open tool →</div>
+</a>
+<a class="tool-card" data-category="organize" href="split.html">
+<div class="tool-card-icon">✂️</div>
+<div class="tool-card-title">Split PDF</div>
+<p class="tool-card-desc">Separate pages or split PDF into independent files.</p>
+<div class="tool-card-arrow">Open tool →</div>
+</a>
+<a class="tool-card" data-category="organize" href="organize.html">
+<div class="tool-card-icon">🗂️</div>
+<div class="tool-card-title">Organize PDF</div>
+<p class="tool-card-desc">Rearrange, reorder, or delete pages in your PDF.</p>
+<div class="tool-card-arrow">Open tool →</div>
+</a>
+<a class="tool-card" data-category="organize" href="delete-pages.html">
+<div class="tool-card-icon">🗑️</div>
+<div class="tool-card-title">Delete Pages</div>
+<p class="tool-card-desc">Remove unwanted pages from your PDF document.</p>
+<div class="tool-card-arrow">Open tool →</div>
+</a>
+<a class="tool-card" data-category="organize" href="extract-pages.html">
+<div class="tool-card-icon">📤</div>
+<div class="tool-card-title">Extract Pages</div>
+<p class="tool-card-desc">Extract selected pages into a new PDF document.</p>
+<div class="tool-card-arrow">Open tool →</div>
+</a>
+<a class="tool-card" data-category="organize" href="rotate.html">
+<div class="tool-card-icon">🔄</div>
+<div class="tool-card-title">Rotate PDF</div>
+<p class="tool-card-desc">Rotate PDF pages clockwise or counterclockwise easily.</p>
+<div class="tool-card-arrow">Open tool →</div>
+</a>
+<a class="tool-card" data-category="organize" href="resize-pages.html">
+<div class="tool-card-icon">📐</div>
+<div class="tool-card-title">Resize Pages</div>
+<p class="tool-card-desc">Adjust page dimensions and canvas sizes.</p>
+<div class="tool-card-arrow">Open tool →</div>
+</a>
+<a class="tool-card" data-category="organize" href="crop.html">
+<div class="tool-card-icon">✂️</div>
+<div class="tool-card-title">Crop PDF</div>
+<p class="tool-card-desc">Trim PDF page margins and custom crop areas.</p>
+<div class="tool-card-arrow">Open tool →</div>
+</a>
+<a class="tool-card" data-category="organize" href="page-numbers.html">
+<div class="tool-card-icon">🔢</div>
+<div class="tool-card-title">Page Numbers</div>
+<p class="tool-card-desc">Insert custom page numbers, headers, or footers.</p>
+<div class="tool-card-arrow">Open tool →</div>
+</a>
+<a class="tool-card" data-category="organize" href="deskew-pdf.html">
+<div class="tool-card-icon">📐</div>
+<div class="tool-card-title">Deskew PDF</div>
+<p class="tool-card-desc">Straighten tilted scanned PDF pages automatically.</p>
+<div class="tool-card-arrow">Open tool →</div>
+</a>
+<a class="tool-card" data-category="organize" href="pdf-bookmarks.html">
+<div class="tool-card-icon">🔖</div>
+<div class="tool-card-title">PDF Bookmarks</div>
+<p class="tool-card-desc">Add or manage outline bookmarks in PDF documents.</p>
+<div class="tool-card-arrow">Open tool →</div>
+</a>
+<a class="tool-card" data-category="compress" href="compress.html">
+<div class="tool-card-icon">📦</div>
+<div class="tool-card-title">Compress PDF</div>
+<p class="tool-card-desc">Shrink PDF file size while optimizing quality.</p>
+<div class="tool-card-arrow">Open tool →</div>
+</a>
+<a class="tool-card" data-category="compress" href="repair-pdf.html">
+<div class="tool-card-icon">🛠️</div>
+<div class="tool-card-title">Repair PDF</div>
+<p class="tool-card-desc">Recover and repair damaged or corrupted PDF files.</p>
+<div class="tool-card-arrow">Open tool →</div>
+</a>
+<a class="tool-card" data-category="compress" href="flatten-pdf.html">
+<div class="tool-card-icon">📑</div>
+<div class="tool-card-title">Flatten PDF</div>
+<p class="tool-card-desc">Lock annotations, form fields, and layers into page content.</p>
+<div class="tool-card-arrow">Open tool →</div>
+</a>
+<a class="tool-card" data-category="compress" href="pdf-to-pdfa.html">
+<div class="tool-card-icon">🏛️</div>
+<div class="tool-card-title">PDF to PDF/A</div>
+<p class="tool-card-desc">Convert documents to ISO standard PDF/A for long-term archiving.</p>
+<div class="tool-card-arrow">Open tool →</div>
+</a>
+<a class="tool-card" data-category="convert" href="pdf-to-word.html">
+<div class="tool-card-icon">📝</div>
+<div class="tool-card-title">PDF to Word</div>
+<p class="tool-card-desc">Convert PDF files to editable Microsoft Word documents.</p>
+<div class="tool-card-arrow">Open tool →</div>
+</a>
+<a class="tool-card" data-category="convert" href="word-to-pdf.html">
+<div class="tool-card-icon">📄</div>
+<div class="tool-card-title">Word to PDF</div>
+<p class="tool-card-desc">Convert DOC and DOCX files into PDF format.</p>
+<div class="tool-card-arrow">Open tool →</div>
+</a>
+<a class="tool-card" data-category="convert" href="pdf-to-excel.html">
+<div class="tool-card-icon">📊</div>
+<div class="tool-card-title">PDF to Excel</div>
+<p class="tool-card-desc">Extract tables and spreadsheets from PDF into XLS format.</p>
+<div class="tool-card-arrow">Open tool →</div>
+</a>
+<a class="tool-card" data-category="convert" href="excel-to-pdf.html">
+<div class="tool-card-icon">📈</div>
+<div class="tool-card-title">Excel to PDF</div>
+<p class="tool-card-desc">Convert XLSX spreadsheets to clean PDF files.</p>
+<div class="tool-card-arrow">Open tool →</div>
+</a>
+<a class="tool-card" data-category="convert" href="pdf-to-jpg.html">
+<div class="tool-card-icon">🖼️</div>
+<div class="tool-card-title">PDF to JPG</div>
+<p class="tool-card-desc">Extract images or save PDF pages as high quality JPGs.</p>
+<div class="tool-card-arrow">Open tool →</div>
+</a>
+<a class="tool-card" data-category="convert" href="jpg-to-pdf.html">
+<div class="tool-card-icon">🖼️</div>
+<div class="tool-card-title">JPG to PDF</div>
+<p class="tool-card-desc">Convert JPG and PNG images into a PDF document.</p>
+<div class="tool-card-arrow">Open tool →</div>
+</a>
+<a class="tool-card" data-category="convert" href="pdf-to-png.html">
+<div class="tool-card-icon">🎨</div>
+<div class="tool-card-title">PDF to PNG</div>
+<p class="tool-card-desc">Save PDF pages as transparent or high-res PNG images.</p>
+<div class="tool-card-arrow">Open tool →</div>
+</a>
+<a class="tool-card" data-category="convert" href="pdf-to-pptx.html">
+<div class="tool-card-icon">📊</div>
+<div class="tool-card-title">PDF to PPTX</div>
+<p class="tool-card-desc">Convert PDF slides to PowerPoint presentations.</p>
+<div class="tool-card-arrow">Open tool →</div>
+</a>
+<a class="tool-card" data-category="convert" href="pptx-to-pdf.html">
+<div class="tool-card-icon">💻</div>
+<div class="tool-card-title">PPTX to PDF</div>
+<p class="tool-card-desc">Convert PowerPoint slides into PDF files.</p>
+<div class="tool-card-arrow">Open tool →</div>
+</a>
+<a class="tool-card" data-category="convert" href="pdf-to-txt.html">
+<div class="tool-card-icon">📜</div>
+<div class="tool-card-title">PDF to TXT</div>
+<p class="tool-card-desc">Extract raw plain text from PDF documents.</p>
+<div class="tool-card-arrow">Open tool →</div>
+</a>
+<a class="tool-card" data-category="convert" href="pdf-to-html.html">
+<div class="tool-card-icon">🌐</div>
+<div class="tool-card-title">PDF to HTML</div>
+<p class="tool-card-desc">Convert PDF pages to responsive HTML code.</p>
+<div class="tool-card-arrow">Open tool →</div>
+</a>
+<a class="tool-card" data-category="convert" href="html-to-pdf.html">
+<div class="tool-card-icon">🌐</div>
+<div class="tool-card-title">HTML to PDF</div>
+<p class="tool-card-desc">Convert web pages or HTML code to PDF format.</p>
+<div class="tool-card-arrow">Open tool →</div>
+</a>
+<a class="tool-card" data-category="convert" href="pdf-to-markdown.html">
+<div class="tool-card-icon">✍️</div>
+<div class="tool-card-title">PDF to Markdown</div>
+<p class="tool-card-desc">Convert PDF content to formatted Markdown syntax.</p>
+<div class="tool-card-arrow">Open tool →</div>
+</a>
+<a class="tool-card" data-category="edit" href="edit-pdf.html">
+<div class="tool-card-icon">✏️</div>
+<div class="tool-card-title">Edit PDF</div>
+<p class="tool-card-desc">Add text, shapes, signatures, and drawings to PDFs.</p>
+<div class="tool-card-arrow">Open tool →</div>
+</a>
+<a class="tool-card" data-category="edit" href="annotate-pdf.html">
+<div class="tool-card-icon">💬</div>
+<div class="tool-card-title">Annotate PDF</div>
+<p class="tool-card-desc">Add comments, notes, and callouts to document pages.</p>
+<div class="tool-card-arrow">Open tool →</div>
+</a>
+<a class="tool-card" data-category="edit" href="highlight-pdf.html">
+<div class="tool-card-icon">🖊️</div>
+<div class="tool-card-title">Highlight PDF</div>
+<p class="tool-card-desc">Highlight key text passages in your PDF.</p>
+<div class="tool-card-arrow">Open tool →</div>
+</a>
+<a class="tool-card" data-category="edit" href="add-image.html">
+<div class="tool-card-icon">🖼️</div>
+<div class="tool-card-title">Add Image to PDF</div>
+<p class="tool-card-desc">Insert logos, stamps, or photos into PDF pages.</p>
+<div class="tool-card-arrow">Open tool →</div>
+</a>
+<a class="tool-card" data-category="edit" href="add-links.html">
+<div class="tool-card-icon">🔗</div>
+<div class="tool-card-title">Add Links to PDF</div>
+<p class="tool-card-desc">Insert clickable web links or internal page links.</p>
+<div class="tool-card-arrow">Open tool →</div>
+</a>
+<a class="tool-card" data-category="edit" href="metadata-editor.html">
+<div class="tool-card-icon">🏷️</div>
+<div class="tool-card-title">Metadata Editor</div>
+<p class="tool-card-desc">Edit PDF author, title, keywords, and creation date.</p>
+<div class="tool-card-arrow">Open tool →</div>
+</a>
+<a class="tool-card" data-category="edit" href="remove-metadata.html">
+<div class="tool-card-icon">🧹</div>
+<div class="tool-card-title">Remove Metadata</div>
+<p class="tool-card-desc">Strip hidden metadata and properties for privacy.</p>
+<div class="tool-card-arrow">Open tool →</div>
+</a>
+<a class="tool-card" data-category="security" href="protect-pdf.html">
+<div class="tool-card-icon">🔒</div>
+<div class="tool-card-title">Protect PDF</div>
+<p class="tool-card-desc">Add passwords and permissions to restrict access.</p>
+<div class="tool-card-arrow">Open tool →</div>
+</a>
+<a class="tool-card" data-category="security" href="unlock-pdf.html">
+<div class="tool-card-icon">🔓</div>
+<div class="tool-card-title">Unlock PDF</div>
+<p class="tool-card-desc">Remove password security from protected PDF files.</p>
+<div class="tool-card-arrow">Open tool →</div>
+</a>
+<a class="tool-card" data-category="security" href="redact-pdf.html">
+<div class="tool-card-icon">⬛</div>
+<div class="tool-card-title">Redact PDF</div>
+<p class="tool-card-desc">Permanently black out sensitive text and figures.</p>
+<div class="tool-card-arrow">Open tool →</div>
+</a>
+<a class="tool-card" data-category="security" href="watermark.html">
+<div class="tool-card-icon">💧</div>
+<div class="tool-card-title">Watermark PDF</div>
+<p class="tool-card-desc">Stamp custom text or image watermarks across pages.</p>
+<div class="tool-card-arrow">Open tool →</div>
+</a>
+<a class="tool-card" data-category="security" href="encrypt-pdf.html">
+<div class="tool-card-icon">🔑</div>
+<div class="tool-card-title">Encrypt PDF</div>
+<p class="tool-card-desc">Apply 256-bit AES encryption to sensitive PDFs.</p>
+<div class="tool-card-arrow">Open tool →</div>
+</a>
+<a class="tool-card" data-category="security" href="overlay-pdf.html">
+<div class="tool-card-icon">🥞</div>
+<div class="tool-card-title">Overlay PDF</div>
+<p class="tool-card-desc">Superimpose one PDF over another as a template background.</p>
+<div class="tool-card-arrow">Open tool →</div>
+</a>
+<a class="tool-card" data-category="ocr" href="ocr-pdf.html">
+<div class="tool-card-icon">🔍</div>
+<div class="tool-card-title">OCR PDF</div>
+<p class="tool-card-desc">Convert scanned PDFs and images into searchable text.</p>
+<div class="tool-card-arrow">Open tool →</div>
+</a>
+<a class="tool-card" data-category="ocr" href="scanned-pdf-to-text.html">
+<div class="tool-card-icon">📖</div>
+<div class="tool-card-title">Scanned to Text</div>
+<p class="tool-card-desc">Extract editable text from scanned document photos.</p>
+<div class="tool-card-arrow">Open tool →</div>
+</a>
+<a class="tool-card" data-category="ocr" href="extract-images.html">
+<div class="tool-card-icon">🖼️</div>
+<div class="tool-card-title">Extract Images</div>
+<p class="tool-card-desc">Extract all embedded images from a PDF file.</p>
+<div class="tool-card-arrow">Open tool →</div>
+</a>
+<a class="tool-card" data-category="ai" href="ai-summarize.html">
+<div class="tool-card-icon">⚡</div>
+<div class="tool-card-title">AI Summarizer</div>
+<p class="tool-card-desc">Generate instant key takeaways and summaries using AI.</p>
+<div class="tool-card-arrow">Open tool →</div>
+</a>
+<a class="tool-card" data-category="ai" href="chat-pdf.html">
+<div class="tool-card-icon">💬</div>
+<div class="tool-card-title">Chat with PDF</div>
+<p class="tool-card-desc">Ask questions and analyze documents interactively.</p>
+<div class="tool-card-arrow">Open tool →</div>
+</a>
+<a class="tool-card" data-category="ai" href="translate-pdf.html">
+<div class="tool-card-icon">🌐</div>
+<div class="tool-card-title">Translate PDF</div>
+<p class="tool-card-desc">Translate PDF documents into 50+ languages effortlessly.</p>
+<div class="tool-card-arrow">Open tool →</div>
+</a>
+<a class="tool-card" data-category="ai" href="compare-pdfs.html">
+<div class="tool-card-icon">⚖️</div>
+<div class="tool-card-title">Compare PDFs</div>
+<p class="tool-card-desc">Compare two PDFs side-by-side to highlight differences.</p>
+<div class="tool-card-arrow">Open tool →</div>
+</a>
+</div>
+</div>
+</section>
+<!-- Footer -->
+<footer style="padding: 60px 0 30px 0; border-top: 1px solid var(--border); background: var(--bg);">
+<div class="container" style="display: flex; flex-wrap: wrap; justify-content: space-between; gap: 32px;">
+<div>
+<a class="brand-logo" href="../index.html" style="margin-bottom: 12px; display: inline-flex;">
+<img alt="NextGen PDF Logo" height="36" src="../Assests/Logo-icon.png" style="height:36px !important; max-height:36px !important; width:auto !important;" width="36"/>
+<span>NextGen <b class="text-gradient">PDF</b></span>
+</a>
+<p style="max-width: 300px; margin-top: 8px; color: var(--text-muted);">Simple, fast, and secure PDF tools for creators, students, and businesses worldwide.</p>
+</div>
+<div style="display: flex; gap: 48px; flex-wrap: wrap;">
+<div>
+<h4 style="margin-bottom: 16px;">Product</h4>
+<div style="display: flex; flex-direction: column; gap: 8px;">
+<a href="tools.html">All Tools</a>
+<a href="pricing.html">Pricing</a>
+<a href="dashboard/index.html">Dashboard</a>
+</div>
+</div>
+<div>
+<h4 style="margin-bottom: 16px;">Company</h4>
+<div style="display: flex; flex-direction: column; gap: 8px;">
+<a href="about.html">About Us</a>
+<a href="faq.html">FAQ</a>
+<a href="privacy.html">Privacy Policy</a>
+</div>
+</div>
+</div>
+</div>
+<div class="container" style="margin-top: 40px; padding-top: 20px; border-top: 1px solid var(--border); text-align: center; color: var(--text-muted); font-size: 13px;">
+      © 2026 NextGen PDF. All rights reserved.
     </div>
-  </section>
-
-  <!-- Tools Grid -->
-  <section style="padding: 20px 0 80px;">
-    <div class="container">
-      <div class="tool-grid" id="tools-container" style="display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 24px;">
-
-        <!-- Convert -->
-        <a href="pdf-to-word.html" class="tool-card" data-category="convert">
-          <div class="tool-card-icon">📝</div>
-          <div class="tool-card-title">PDF to Word</div>
-          <p class="tool-card-desc">Convert PDF files to editable Microsoft Word documents.</p>
-          <div class="tool-card-arrow">Open tool →</div>
-        </a>
-
-        <a href="word-to-pdf.html" class="tool-card" data-category="convert">
-          <div class="tool-card-icon">📄</div>
-          <div class="tool-card-title">Word to PDF</div>
-          <p class="tool-card-desc">Convert DOC and DOCX files into PDF format.</p>
-          <div class="tool-card-arrow">Open tool →</div>
-        </a>
-
-        <a href="pdf-to-excel.html" class="tool-card" data-category="convert">
-          <div class="tool-card-icon">📊</div>
-          <div class="tool-card-title">PDF to Excel</div>
-          <p class="tool-card-desc">Extract tables and spreadsheets from PDF into XLS format.</p>
-          <div class="tool-card-arrow">Open tool →</div>
-        </a>
-
-        <a href="pdf-to-jpg.html" class="tool-card" data-category="convert">
-          <div class="tool-card-icon">🖼️</div>
-          <div class="tool-card-title">PDF to JPG</div>
-          <p class="tool-card-desc">Extract images or save PDF pages as high quality JPGs.</p>
-          <div class="tool-card-arrow">Open tool →</div>
-        </a>
-
-        <!-- Organize -->
-        <a href="merge.html" class="tool-card" data-category="organize">
-          <div class="tool-card-icon">📑</div>
-          <div class="tool-card-title">Merge PDF</div>
-          <p class="tool-card-desc">Combine multiple PDFs into a single file in any order.</p>
-          <div class="tool-card-arrow">Open tool →</div>
-        </a>
-
-        <a href="split.html" class="tool-card" data-category="organize">
-          <div class="tool-card-icon">✂️</div>
-          <div class="tool-card-title">Split PDF</div>
-          <p class="tool-card-desc">Separate pages or split PDF into independent files.</p>
-          <div class="tool-card-arrow">Open tool →</div>
-        </a>
-
-        <a href="rotate.html" class="tool-card" data-category="organize">
-          <div class="tool-card-icon">🔄</div>
-          <div class="tool-card-title">Rotate PDF</div>
-          <p class="tool-card-desc">Rotate PDF pages clockwise or counterclockwise easily.</p>
-          <div class="tool-card-arrow">Open tool →</div>
-        </a>
-
-        <a href="delete-pages.html" class="tool-card" data-category="organize">
-          <div class="tool-card-icon">🗑️</div>
-          <div class="tool-card-title">Delete Pages</div>
-          <p class="tool-card-desc">Remove unwanted pages from your PDF document.</p>
-          <div class="tool-card-arrow">Open tool →</div>
-        </a>
-
-        <!-- Compress -->
-        <a href="compress.html" class="tool-card" data-category="compress">
-          <div class="tool-card-icon">📦</div>
-          <div class="tool-card-title">Compress PDF</div>
-          <p class="tool-card-desc">Shrink PDF file size while optimizing quality.</p>
-          <div class="tool-card-arrow">Open tool →</div>
-        </a>
-
-        <!-- Security -->
-        <a href="protect-pdf.html" class="tool-card" data-category="security">
-          <div class="tool-card-icon">🔒</div>
-          <div class="tool-card-title">Protect PDF</div>
-          <p class="tool-card-desc">Add passwords and permissions to restrict access.</p>
-          <div class="tool-card-arrow">Open tool →</div>
-        </a>
-
-        <a href="unlock-pdf.html" class="tool-card" data-category="security">
-          <div class="tool-card-icon">🔓</div>
-          <div class="tool-card-title">Unlock PDF</div>
-          <p class="tool-card-desc">Remove password security from protected PDF files.</p>
-          <div class="tool-card-arrow">Open tool →</div>
-        </a>
-
-        <!-- AI PDF -->
-        <a href="ai-summarize.html" class="tool-card" data-category="ai">
-          <div class="tool-card-icon">⚡</div>
-          <div class="tool-card-title">AI Summarizer</div>
-          <p class="tool-card-desc">Generate instant key takeaways and summaries using AI.</p>
-          <div class="tool-card-arrow">Open tool →</div>
-        </a>
-
-        <a href="chat-pdf.html" class="tool-card" data-category="ai">
-          <div class="tool-card-icon">💬</div>
-          <div class="tool-card-title">Chat with PDF</div>
-          <p class="tool-card-desc">Ask questions and analyze documents interactively.</p>
-          <div class="tool-card-arrow">Open tool →</div>
-        </a>
-
-      </div>
-    </div>
-  </section>
-
-  <script src="../js/components.js"></script>
-  <script>
+</footer>
+<script src="../js/components.js"></script>
+<script>
     document.addEventListener('DOMContentLoaded', () => {
       const searchInput = document.getElementById('tool-search');
       const cards = document.querySelectorAll('.tool-card');
@@ -179,6 +402,9 @@
 
       filterChips.forEach(chip => {
         chip.addEventListener('click', () => {
+          filterChips.forEach(c => c.style.background = 'var(--surface)');
+          chip.style.background = 'var(--primary-bg)';
+          
           const category = chip.getAttribute('data-filter');
           cards.forEach(card => {
             if (category === 'all' || card.getAttribute('data-category') === category) {

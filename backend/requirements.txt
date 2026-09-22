@@ -8,3 +8,6 @@ python-docx
 openpyxl
 python-pptx
 pdf2docx
+firebase-admin
+psycopg2-binary
+alembic

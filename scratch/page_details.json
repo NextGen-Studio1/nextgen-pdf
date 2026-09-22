@@ -1,0 +1,1450 @@
+{
+  "404.html": {
+    "title": "404 \u2014 Page Not Found | NextGen PDF",
+    "description": "MISSING",
+    "scripts": [
+      "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5453249687281273",
+      "js/components.js"
+    ],
+    "stylesheets": [
+      "css/style.css"
+    ],
+    "missing_scripts": [],
+    "missing_stylesheets": [],
+    "missing_links": []
+  },
+  "google9e92fa48642e65a1.html": {
+    "title": "MISSING",
+    "description": "MISSING",
+    "scripts": [],
+    "stylesheets": [],
+    "missing_scripts": [],
+    "missing_stylesheets": [],
+    "missing_links": []
+  },
+  "index.html": {
+    "title": "NextGen PDF \u2014 Free Online PDF Tools & AI Document Suite",
+    "description": "Convert, compress, merge, split, edit, and AI-summarize PDF files online with NextGen PDF. 100% private, fast, and free document tools.",
+    "scripts": [
+      "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5453249687281273",
+      "js/config.js",
+      "js/firebase-config.js",
+      "js/components.js",
+      "js/uploader.js"
+    ],
+    "stylesheets": [
+      "css/style.css"
+    ],
+    "missing_scripts": [],
+    "missing_stylesheets": [],
+    "missing_links": []
+  },
+  "pages/about.html": {
+    "title": "About Us \u2014 NextGen PDF",
+    "description": "MISSING",
+    "scripts": [
+      "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5453249687281273",
+      "../js/components.js"
+    ],
+    "stylesheets": [
+      "../css/style.css"
+    ],
+    "missing_scripts": [],
+    "missing_stylesheets": [],
+    "missing_links": []
+  },
+  "pages/add-image.html": {
+    "title": "Add Image to PDF \u2014 NextGen PDF",
+    "description": "MISSING",
+    "scripts": [
+      "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5453249687281273",
+      "../js/theme.js",
+      "../js/app.js",
+      "../js/api.js"
+    ],
+    "stylesheets": [
+      "../css/style.css",
+      "../css/components.css",
+      "../css/responsive.css"
+    ],
+    "missing_scripts": [
+      [
+        "../js/theme.js",
+        "js/theme.js"
+      ]
+    ],
+    "missing_stylesheets": [],
+    "missing_links": []
+  },
+  "pages/add-links.html": {
+    "title": "Add Links to PDF \u2014 NextGen PDF",
+    "description": "MISSING",
+    "scripts": [
+      "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5453249687281273",
+      "../js/theme.js",
+      "../js/app.js",
+      "../js/api.js"
+    ],
+    "stylesheets": [
+      "../css/style.css",
+      "../css/components.css",
+      "../css/responsive.css"
+    ],
+    "missing_scripts": [
+      [
+        "../js/theme.js",
+        "js/theme.js"
+      ]
+    ],
+    "missing_stylesheets": [],
+    "missing_links": []
+  },
+  "pages/ai-summarize.html": {
+    "title": "AI PDF Summarizer \u2014 NextGen PDF",
+    "description": "MISSING",
+    "scripts": [
+      "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5453249687281273",
+      "../js/theme.js",
+      "../js/app.js",
+      "../js/api.js"
+    ],
+    "stylesheets": [
+      "../css/style.css",
+      "../css/components.css",
+      "../css/responsive.css"
+    ],
+    "missing_scripts": [
+      [
+        "../js/theme.js",
+        "js/theme.js"
+      ]
+    ],
+    "missing_stylesheets": [],
+    "missing_links": []
+  },
+  "pages/annotate-pdf.html": {
+    "title": "Annotate PDF \u2014 NextGen PDF",
+    "description": "MISSING",
+    "scripts": [
+      "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5453249687281273",
+      "../js/theme.js",
+      "../js/app.js",
+      "../js/api.js"
+    ],
+    "stylesheets": [
+      "../css/style.css",
+      "../css/components.css",
+      "../css/responsive.css"
+    ],
+    "missing_scripts": [
+      [
+        "../js/theme.js",
+        "js/theme.js"
+      ]
+    ],
+    "missing_stylesheets": [],
+    "missing_links": []
+  },
+  "pages/auth/forgot-password.html": {
+    "title": "Forgot Password \u2014 NextGen PDF",
+    "description": "MISSING",
+    "scripts": [
+      "../../js/config.js",
+      "../../js/firebase-config.js",
+      "../../js/auth.js",
+      "../../js/components.js"
+    ],
+    "stylesheets": [
+      "../../css/style.css"
+    ],
+    "missing_scripts": [],
+    "missing_stylesheets": [],
+    "missing_links": []
+  },
+  "pages/auth/login.html": {
+    "title": "Log in \u2014 NextGen PDF",
+    "description": "MISSING",
+    "scripts": [
+      "../../js/config.js",
+      "../../js/firebase-config.js",
+      "../../js/auth.js",
+      "../../js/components.js"
+    ],
+    "stylesheets": [
+      "../../css/style.css"
+    ],
+    "missing_scripts": [],
+    "missing_stylesheets": [],
+    "missing_links": []
+  },
+  "pages/auth/register.html": {
+    "title": "Create Account \u2014 NextGen PDF",
+    "description": "MISSING",
+    "scripts": [
+      "../../js/config.js",
+      "../../js/firebase-config.js",
+      "../../js/auth.js",
+      "../../js/components.js"
+    ],
+    "stylesheets": [
+      "../../css/style.css"
+    ],
+    "missing_scripts": [],
+    "missing_stylesheets": [],
+    "missing_links": []
+  },
+  "pages/auth/reset-password.html": {
+    "title": "Reset Password \u2014 NextGen PDF",
+    "description": "MISSING",
+    "scripts": [
+      "../../js/config.js",
+      "../../js/firebase-config.js",
+      "../../js/auth.js",
+      "../../js/components.js"
+    ],
+    "stylesheets": [
+      "../../css/style.css"
+    ],
+    "missing_scripts": [],
+    "missing_stylesheets": [],
+    "missing_links": []
+  },
+  "pages/auth/verify-email.html": {
+    "title": "Verify Email \u2014 NextGen PDF",
+    "description": "MISSING",
+    "scripts": [
+      "../../js/config.js",
+      "../../js/firebase-config.js",
+      "../../js/auth.js",
+      "../../js/components.js"
+    ],
+    "stylesheets": [
+      "../../css/style.css"
+    ],
+    "missing_scripts": [],
+    "missing_stylesheets": [],
+    "missing_links": []
+  },
+  "pages/chat-pdf.html": {
+    "title": "Chat with PDF \u2014 NextGen PDF",
+    "description": "MISSING",
+    "scripts": [
+      "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5453249687281273",
+      "../js/theme.js",
+      "../js/app.js",
+      "../js/api.js"
+    ],
+    "stylesheets": [
+      "../css/style.css",
+      "../css/components.css",
+      "../css/responsive.css"
+    ],
+    "missing_scripts": [
+      [
+        "../js/theme.js",
+        "js/theme.js"
+      ]
+    ],
+    "missing_stylesheets": [],
+    "missing_links": []
+  },
+  "pages/compare-pdfs.html": {
+    "title": "Compare PDFs \u2014 NextGen PDF",
+    "description": "MISSING",
+    "scripts": [
+      "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5453249687281273",
+      "../js/theme.js",
+      "../js/app.js",
+      "../js/api.js"
+    ],
+    "stylesheets": [
+      "../css/style.css",
+      "../css/components.css",
+      "../css/responsive.css"
+    ],
+    "missing_scripts": [
+      [
+        "../js/theme.js",
+        "js/theme.js"
+      ]
+    ],
+    "missing_stylesheets": [],
+    "missing_links": []
+  },
+  "pages/compress.html": {
+    "title": "Compress PDF Online \u2014 Reduce PDF File Size Free | NextGen PDF",
+    "description": "Compress PDF files online for free while preserving maximum document quality. Reduce PDF file size instantly with NextGen PDF compression tool.",
+    "scripts": [
+      "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5453249687281273",
+      "../js/components.js",
+      "../js/uploader.js"
+    ],
+    "stylesheets": [
+      "../css/style.css"
+    ],
+    "missing_scripts": [],
+    "missing_stylesheets": [],
+    "missing_links": []
+  },
+  "pages/contact.html": {
+    "title": "Contact & Support \u2014 NextGen PDF",
+    "description": "Get in touch with the NextGen PDF support team for inquiries, bug reports, and assistance.",
+    "scripts": [
+      "../js/config.js",
+      "../js/firebase-config.js",
+      "../js/components.js"
+    ],
+    "stylesheets": [
+      "../css/style.css"
+    ],
+    "missing_scripts": [],
+    "missing_stylesheets": [],
+    "missing_links": []
+  },
+  "pages/cookie-policy.html": {
+    "title": "Cookie Policy \u2014 NextGen PDF",
+    "description": "NextGen PDF Cookie Policy and User Tracking Disclosure.",
+    "scripts": [
+      "../js/config.js",
+      "../js/firebase-config.js",
+      "../js/components.js"
+    ],
+    "stylesheets": [
+      "../css/style.css"
+    ],
+    "missing_scripts": [],
+    "missing_stylesheets": [],
+    "missing_links": []
+  },
+  "pages/crop.html": {
+    "title": "Crop PDF \u2014 NextGen PDF",
+    "description": "MISSING",
+    "scripts": [
+      "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5453249687281273",
+      "../js/app.js",
+      "../js/config.js",
+      "../js/firebase-config.js",
+      "../js/ads.js",
+      "../js/api.js"
+    ],
+    "stylesheets": [
+      "../css/style.css",
+      "../css/components.css",
+      "../css/responsive.css"
+    ],
+    "missing_scripts": [],
+    "missing_stylesheets": [],
+    "missing_links": []
+  },
+  "pages/dashboard/ai-usage.html": {
+    "title": "AI Usage \u2014 NextGen PDF",
+    "description": "MISSING",
+    "scripts": [
+      "../../js/config.js",
+      "../../js/firebase-config.js",
+      "../../js/auth.js",
+      "../../js/components.js"
+    ],
+    "stylesheets": [
+      "../../css/style.css"
+    ],
+    "missing_scripts": [],
+    "missing_stylesheets": [],
+    "missing_links": []
+  },
+  "pages/dashboard/billing.html": {
+    "title": "Billing & Invoices \u2014 NextGen PDF",
+    "description": "MISSING",
+    "scripts": [
+      "../../js/config.js",
+      "../../js/firebase-config.js",
+      "../../js/auth.js",
+      "../../js/components.js"
+    ],
+    "stylesheets": [
+      "../../css/style.css"
+    ],
+    "missing_scripts": [],
+    "missing_stylesheets": [],
+    "missing_links": []
+  },
+  "pages/dashboard/business/api.html": {
+    "title": "API Keys \u2014 Business Suite \u2014 NextGen PDF",
+    "description": "MISSING",
+    "scripts": [
+      "../../../js/components.js"
+    ],
+    "stylesheets": [
+      "../../../css/style.css"
+    ],
+    "missing_scripts": [],
+    "missing_stylesheets": [],
+    "missing_links": []
+  },
+  "pages/dashboard/business/billing.html": {
+    "title": "Enterprise Billing \u2014 NextGen PDF",
+    "description": "MISSING",
+    "scripts": [
+      "../../../js/components.js"
+    ],
+    "stylesheets": [
+      "../../../css/style.css"
+    ],
+    "missing_scripts": [],
+    "missing_stylesheets": [],
+    "missing_links": []
+  },
+  "pages/dashboard/business/index.html": {
+    "title": "Business Dashboard \u2014 NextGen PDF",
+    "description": "MISSING",
+    "scripts": [
+      "../../../js/components.js"
+    ],
+    "stylesheets": [
+      "../../../css/style.css"
+    ],
+    "missing_scripts": [],
+    "missing_stylesheets": [],
+    "missing_links": []
+  },
+  "pages/dashboard/business/settings.html": {
+    "title": "Organization Settings \u2014 NextGen PDF",
+    "description": "MISSING",
+    "scripts": [
+      "../../../js/components.js"
+    ],
+    "stylesheets": [
+      "../../../css/style.css"
+    ],
+    "missing_scripts": [],
+    "missing_stylesheets": [],
+    "missing_links": []
+  },
+  "pages/dashboard/business/team.html": {
+    "title": "Team Members \u2014 Business Suite \u2014 NextGen PDF",
+    "description": "MISSING",
+    "scripts": [
+      "../../../js/components.js"
+    ],
+    "stylesheets": [
+      "../../../css/style.css"
+    ],
+    "missing_scripts": [],
+    "missing_stylesheets": [],
+    "missing_links": []
+  },
+  "pages/dashboard/files.html": {
+    "title": "Files \u2014 Dashboard \u2014 NextGen PDF",
+    "description": "MISSING",
+    "scripts": [
+      "../../js/config.js",
+      "../../js/firebase-config.js",
+      "../../js/auth.js",
+      "../../js/components.js",
+      "../../js/dashboard.js"
+    ],
+    "stylesheets": [
+      "../../css/style.css"
+    ],
+    "missing_scripts": [],
+    "missing_stylesheets": [],
+    "missing_links": []
+  },
+  "pages/dashboard/history.html": {
+    "title": "Conversion History \u2014 NextGen PDF",
+    "description": "MISSING",
+    "scripts": [
+      "../../js/config.js",
+      "../../js/firebase-config.js",
+      "../../js/auth.js",
+      "../../js/components.js",
+      "../../js/dashboard.js"
+    ],
+    "stylesheets": [
+      "../../css/style.css"
+    ],
+    "missing_scripts": [],
+    "missing_stylesheets": [],
+    "missing_links": []
+  },
+  "pages/dashboard/index.html": {
+    "title": "Dashboard Overview \u2014 NextGen PDF",
+    "description": "MISSING",
+    "scripts": [
+      "../../js/config.js",
+      "../../js/firebase-config.js",
+      "../../js/auth.js",
+      "../../js/components.js",
+      "../../js/dashboard.js"
+    ],
+    "stylesheets": [
+      "../../css/style.css"
+    ],
+    "missing_scripts": [],
+    "missing_stylesheets": [],
+    "missing_links": []
+  },
+  "pages/dashboard/profile.html": {
+    "title": "User Profile \u2014 NextGen PDF",
+    "description": "MISSING",
+    "scripts": [
+      "../../js/config.js",
+      "../../js/firebase-config.js",
+      "../../js/auth.js",
+      "../../js/components.js"
+    ],
+    "stylesheets": [
+      "../../css/style.css"
+    ],
+    "missing_scripts": [],
+    "missing_stylesheets": [],
+    "missing_links": []
+  },
+  "pages/dashboard/security.html": {
+    "title": "Security Settings \u2014 NextGen PDF",
+    "description": "MISSING",
+    "scripts": [
+      "../../js/config.js",
+      "../../js/firebase-config.js",
+      "../../js/auth.js",
+      "../../js/components.js"
+    ],
+    "stylesheets": [
+      "../../css/style.css"
+    ],
+    "missing_scripts": [],
+    "missing_stylesheets": [],
+    "missing_links": []
+  },
+  "pages/dashboard/subscription.html": {
+    "title": "Subscription Plan \u2014 NextGen PDF",
+    "description": "MISSING",
+    "scripts": [
+      "../../js/config.js",
+      "../../js/firebase-config.js",
+      "../../js/auth.js",
+      "../../js/components.js"
+    ],
+    "stylesheets": [
+      "../../css/style.css"
+    ],
+    "missing_scripts": [],
+    "missing_stylesheets": [],
+    "missing_links": []
+  },
+  "pages/dashboard/usage.html": {
+    "title": "Usage Analytics \u2014 NextGen PDF",
+    "description": "MISSING",
+    "scripts": [
+      "../../js/config.js",
+      "../../js/firebase-config.js",
+      "../../js/auth.js",
+      "../../js/components.js",
+      "../../js/dashboard.js"
+    ],
+    "stylesheets": [
+      "../../css/style.css"
+    ],
+    "missing_scripts": [],
+    "missing_stylesheets": [],
+    "missing_links": []
+  },
+  "pages/delete-pages.html": {
+    "title": "Delete Pages \u2014 NextGen PDF",
+    "description": "MISSING",
+    "scripts": [
+      "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5453249687281273",
+      "../js/app.js",
+      "../js/config.js",
+      "../js/firebase-config.js",
+      "../js/ads.js",
+      "../js/api.js"
+    ],
+    "stylesheets": [
+      "../css/style.css",
+      "../css/components.css",
+      "../css/responsive.css"
+    ],
+    "missing_scripts": [],
+    "missing_stylesheets": [],
+    "missing_links": []
+  },
+  "pages/deskew-pdf.html": {
+    "title": "Deskew PDF \u2014 NextGen PDF",
+    "description": "MISSING",
+    "scripts": [
+      "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5453249687281273",
+      "../js/theme.js",
+      "../js/app.js",
+      "../js/api.js"
+    ],
+    "stylesheets": [
+      "../css/style.css",
+      "../css/components.css",
+      "../css/responsive.css"
+    ],
+    "missing_scripts": [
+      [
+        "../js/theme.js",
+        "js/theme.js"
+      ]
+    ],
+    "missing_stylesheets": [],
+    "missing_links": []
+  },
+  "pages/edit-pdf.html": {
+    "title": "Edit PDF \u2014 Add Text \u2014 NextGen PDF",
+    "description": "MISSING",
+    "scripts": [
+      "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5453249687281273",
+      "../js/theme.js",
+      "../js/app.js",
+      "../js/api.js"
+    ],
+    "stylesheets": [
+      "../css/style.css",
+      "../css/components.css",
+      "../css/responsive.css"
+    ],
+    "missing_scripts": [
+      [
+        "../js/theme.js",
+        "js/theme.js"
+      ]
+    ],
+    "missing_stylesheets": [],
+    "missing_links": []
+  },
+  "pages/encrypt-pdf.html": {
+    "title": "Encrypt PDF \u2014 NextGen PDF",
+    "description": "MISSING",
+    "scripts": [
+      "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5453249687281273",
+      "../js/app.js",
+      "../js/config.js",
+      "../js/firebase-config.js",
+      "../js/ads.js",
+      "../js/api.js"
+    ],
+    "stylesheets": [
+      "../css/style.css",
+      "../css/components.css",
+      "../css/responsive.css"
+    ],
+    "missing_scripts": [],
+    "missing_stylesheets": [],
+    "missing_links": []
+  },
+  "pages/excel-to-pdf.html": {
+    "title": "Excel to PDF \u2014 NextGen PDF",
+    "description": "MISSING",
+    "scripts": [
+      "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5453249687281273",
+      "../js/app.js",
+      "../js/config.js",
+      "../js/firebase-config.js",
+      "../js/ads.js",
+      "../js/api.js"
+    ],
+    "stylesheets": [
+      "../css/style.css",
+      "../css/components.css",
+      "../css/responsive.css"
+    ],
+    "missing_scripts": [],
+    "missing_stylesheets": [],
+    "missing_links": []
+  },
+  "pages/extract-images.html": {
+    "title": "Extract Images \u2014 NextGen PDF",
+    "description": "MISSING",
+    "scripts": [
+      "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5453249687281273",
+      "../js/theme.js",
+      "../js/app.js",
+      "../js/api.js"
+    ],
+    "stylesheets": [
+      "../css/style.css",
+      "../css/components.css",
+      "../css/responsive.css"
+    ],
+    "missing_scripts": [
+      [
+        "../js/theme.js",
+        "js/theme.js"
+      ]
+    ],
+    "missing_stylesheets": [],
+    "missing_links": []
+  },
+  "pages/extract-pages.html": {
+    "title": "Extract Pages \u2014 NextGen PDF",
+    "description": "MISSING",
+    "scripts": [
+      "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5453249687281273",
+      "../js/app.js",
+      "../js/config.js",
+      "../js/firebase-config.js",
+      "../js/ads.js",
+      "../js/api.js"
+    ],
+    "stylesheets": [
+      "../css/style.css",
+      "../css/components.css",
+      "../css/responsive.css"
+    ],
+    "missing_scripts": [],
+    "missing_stylesheets": [],
+    "missing_links": []
+  },
+  "pages/faq.html": {
+    "title": "Frequently Asked Questions \u2014 PDF Security & Features | NextGen PDF",
+    "description": "Find answers to common questions about PDF security, file conversion limits, AI summarization features, and subscription plans on NextGen PDF.",
+    "scripts": [
+      "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5453249687281273",
+      "../js/components.js"
+    ],
+    "stylesheets": [
+      "../css/style.css"
+    ],
+    "missing_scripts": [],
+    "missing_stylesheets": [],
+    "missing_links": []
+  },
+  "pages/flatten-pdf.html": {
+    "title": "Flatten PDF \u2014 NextGen PDF",
+    "description": "MISSING",
+    "scripts": [
+      "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5453249687281273",
+      "../js/theme.js",
+      "../js/app.js",
+      "../js/api.js"
+    ],
+    "stylesheets": [
+      "../css/style.css",
+      "../css/components.css",
+      "../css/responsive.css"
+    ],
+    "missing_scripts": [
+      [
+        "../js/theme.js",
+        "js/theme.js"
+      ]
+    ],
+    "missing_stylesheets": [],
+    "missing_links": []
+  },
+  "pages/highlight-pdf.html": {
+    "title": "Highlight PDF \u2014 NextGen PDF",
+    "description": "MISSING",
+    "scripts": [
+      "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5453249687281273",
+      "../js/theme.js",
+      "../js/app.js",
+      "../js/api.js"
+    ],
+    "stylesheets": [
+      "../css/style.css",
+      "../css/components.css",
+      "../css/responsive.css"
+    ],
+    "missing_scripts": [
+      [
+        "../js/theme.js",
+        "js/theme.js"
+      ]
+    ],
+    "missing_stylesheets": [],
+    "missing_links": []
+  },
+  "pages/html-to-pdf.html": {
+    "title": "HTML to PDF \u2014 NextGen PDF",
+    "description": "MISSING",
+    "scripts": [
+      "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5453249687281273",
+      "../js/app.js",
+      "../js/config.js",
+      "../js/firebase-config.js",
+      "../js/ads.js",
+      "../js/api.js"
+    ],
+    "stylesheets": [
+      "../css/style.css",
+      "../css/components.css",
+      "../css/responsive.css"
+    ],
+    "missing_scripts": [],
+    "missing_stylesheets": [],
+    "missing_links": []
+  },
+  "pages/jpg-to-pdf.html": {
+    "title": "JPG / PNG \u2192 PDF \u2014 NextGen PDF",
+    "description": "MISSING",
+    "scripts": [
+      "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5453249687281273",
+      "../js/app.js",
+      "../js/config.js",
+      "../js/firebase-config.js",
+      "../js/ads.js",
+      "../js/api.js"
+    ],
+    "stylesheets": [
+      "../css/style.css",
+      "../css/components.css",
+      "../css/responsive.css"
+    ],
+    "missing_scripts": [],
+    "missing_stylesheets": [],
+    "missing_links": []
+  },
+  "pages/merge.html": {
+    "title": "Merge PDF Online \u2014 Combine PDF Files Free | NextGen PDF",
+    "description": "Merge multiple PDF files into one single document online for free. Reorder pages and combine PDFs easily with NextGen PDF.",
+    "scripts": [
+      "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5453249687281273",
+      "../js/components.js",
+      "../js/uploader.js"
+    ],
+    "stylesheets": [
+      "../css/style.css"
+    ],
+    "missing_scripts": [],
+    "missing_stylesheets": [],
+    "missing_links": []
+  },
+  "pages/metadata-editor.html": {
+    "title": "PDF Metadata Editor \u2014 NextGen PDF",
+    "description": "MISSING",
+    "scripts": [
+      "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5453249687281273",
+      "../js/theme.js",
+      "../js/app.js",
+      "../js/api.js"
+    ],
+    "stylesheets": [
+      "../css/style.css",
+      "../css/components.css",
+      "../css/responsive.css"
+    ],
+    "missing_scripts": [
+      [
+        "../js/theme.js",
+        "js/theme.js"
+      ]
+    ],
+    "missing_stylesheets": [],
+    "missing_links": []
+  },
+  "pages/ocr-pdf.html": {
+    "title": "OCR PDF Online Free \u2014 Recognize Text in PDF | NextGen PDF",
+    "description": "Convert scanned PDF documents and images into searchable, selectable text online with NextGen PDF OCR tool.",
+    "scripts": [
+      "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5453249687281273",
+      "../js/components.js",
+      "../js/uploader.js"
+    ],
+    "stylesheets": [
+      "../css/style.css"
+    ],
+    "missing_scripts": [],
+    "missing_stylesheets": [],
+    "missing_links": []
+  },
+  "pages/organize.html": {
+    "title": "Organize PDF \u2014 NextGen PDF",
+    "description": "MISSING",
+    "scripts": [
+      "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5453249687281273",
+      "../js/app.js",
+      "../js/config.js",
+      "../js/firebase-config.js",
+      "../js/ads.js",
+      "../js/api.js"
+    ],
+    "stylesheets": [
+      "../css/style.css",
+      "../css/components.css",
+      "../css/responsive.css"
+    ],
+    "missing_scripts": [],
+    "missing_stylesheets": [],
+    "missing_links": []
+  },
+  "pages/overlay-pdf.html": {
+    "title": "PDF Overlay \u2014 NextGen PDF",
+    "description": "MISSING",
+    "scripts": [
+      "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5453249687281273",
+      "../js/theme.js",
+      "../js/app.js",
+      "../js/api.js"
+    ],
+    "stylesheets": [
+      "../css/style.css",
+      "../css/components.css",
+      "../css/responsive.css"
+    ],
+    "missing_scripts": [
+      [
+        "../js/theme.js",
+        "js/theme.js"
+      ]
+    ],
+    "missing_stylesheets": [],
+    "missing_links": []
+  },
+  "pages/page-numbers.html": {
+    "title": "Page Numbers \u2014 NextGen PDF",
+    "description": "MISSING",
+    "scripts": [
+      "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5453249687281273",
+      "../js/app.js",
+      "../js/config.js",
+      "../js/firebase-config.js",
+      "../js/ads.js",
+      "../js/api.js"
+    ],
+    "stylesheets": [
+      "../css/style.css",
+      "../css/components.css",
+      "../css/responsive.css"
+    ],
+    "missing_scripts": [],
+    "missing_stylesheets": [],
+    "missing_links": []
+  },
+  "pages/pdf-bookmarks.html": {
+    "title": "PDF Bookmarks \u2014 NextGen PDF",
+    "description": "MISSING",
+    "scripts": [
+      "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5453249687281273",
+      "../js/theme.js",
+      "../js/app.js",
+      "../js/api.js"
+    ],
+    "stylesheets": [
+      "../css/style.css",
+      "../css/components.css",
+      "../css/responsive.css"
+    ],
+    "missing_scripts": [
+      [
+        "../js/theme.js",
+        "js/theme.js"
+      ]
+    ],
+    "missing_stylesheets": [],
+    "missing_links": []
+  },
+  "pages/pdf-to-excel.html": {
+    "title": "PDF to Excel \u2014 NextGen PDF",
+    "description": "MISSING",
+    "scripts": [
+      "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5453249687281273",
+      "../js/app.js",
+      "../js/config.js",
+      "../js/firebase-config.js",
+      "../js/ads.js",
+      "../js/api.js"
+    ],
+    "stylesheets": [
+      "../css/style.css",
+      "../css/components.css",
+      "../css/responsive.css"
+    ],
+    "missing_scripts": [],
+    "missing_stylesheets": [],
+    "missing_links": []
+  },
+  "pages/pdf-to-html.html": {
+    "title": "PDF to HTML \u2014 NextGen PDF",
+    "description": "MISSING",
+    "scripts": [
+      "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5453249687281273",
+      "../js/app.js",
+      "../js/config.js",
+      "../js/firebase-config.js",
+      "../js/ads.js",
+      "../js/api.js"
+    ],
+    "stylesheets": [
+      "../css/style.css",
+      "../css/components.css",
+      "../css/responsive.css"
+    ],
+    "missing_scripts": [],
+    "missing_stylesheets": [],
+    "missing_links": []
+  },
+  "pages/pdf-to-jpg.html": {
+    "title": "PDF \u2192 JPG / PNG \u2014 NextGen PDF",
+    "description": "MISSING",
+    "scripts": [
+      "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5453249687281273",
+      "../js/app.js",
+      "../js/config.js",
+      "../js/firebase-config.js",
+      "../js/ads.js",
+      "../js/api.js"
+    ],
+    "stylesheets": [
+      "../css/style.css",
+      "../css/components.css",
+      "../css/responsive.css"
+    ],
+    "missing_scripts": [],
+    "missing_stylesheets": [],
+    "missing_links": []
+  },
+  "pages/pdf-to-markdown.html": {
+    "title": "PDF \u2192 Markdown \u2014 NextGen PDF",
+    "description": "MISSING",
+    "scripts": [
+      "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5453249687281273",
+      "../js/theme.js",
+      "../js/app.js",
+      "../js/api.js"
+    ],
+    "stylesheets": [
+      "../css/style.css",
+      "../css/components.css",
+      "../css/responsive.css"
+    ],
+    "missing_scripts": [
+      [
+        "../js/theme.js",
+        "js/theme.js"
+      ]
+    ],
+    "missing_stylesheets": [],
+    "missing_links": []
+  },
+  "pages/pdf-to-pdfa.html": {
+    "title": "PDF to PDF/A \u2014 NextGen PDF",
+    "description": "MISSING",
+    "scripts": [
+      "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5453249687281273",
+      "../js/app.js",
+      "../js/config.js",
+      "../js/firebase-config.js",
+      "../js/ads.js",
+      "../js/api.js"
+    ],
+    "stylesheets": [
+      "../css/style.css",
+      "../css/components.css",
+      "../css/responsive.css"
+    ],
+    "missing_scripts": [],
+    "missing_stylesheets": [],
+    "missing_links": []
+  },
+  "pages/pdf-to-png.html": {
+    "title": "PDF to PNG \u2014 NextGen PDF",
+    "description": "MISSING",
+    "scripts": [
+      "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5453249687281273",
+      "../js/app.js",
+      "../js/config.js",
+      "../js/firebase-config.js",
+      "../js/ads.js",
+      "../js/api.js"
+    ],
+    "stylesheets": [
+      "../css/style.css",
+      "../css/components.css",
+      "../css/responsive.css"
+    ],
+    "missing_scripts": [],
+    "missing_stylesheets": [],
+    "missing_links": []
+  },
+  "pages/pdf-to-pptx.html": {
+    "title": "PDF to PowerPoint \u2014 NextGen PDF",
+    "description": "MISSING",
+    "scripts": [
+      "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5453249687281273",
+      "../js/app.js",
+      "../js/config.js",
+      "../js/firebase-config.js",
+      "../js/ads.js",
+      "../js/api.js"
+    ],
+    "stylesheets": [
+      "../css/style.css",
+      "../css/components.css",
+      "../css/responsive.css"
+    ],
+    "missing_scripts": [],
+    "missing_stylesheets": [],
+    "missing_links": []
+  },
+  "pages/pdf-to-txt.html": {
+    "title": "PDF to Text \u2014 NextGen PDF",
+    "description": "MISSING",
+    "scripts": [
+      "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5453249687281273",
+      "../js/app.js",
+      "../js/config.js",
+      "../js/firebase-config.js",
+      "../js/ads.js",
+      "../js/api.js"
+    ],
+    "stylesheets": [
+      "../css/style.css",
+      "../css/components.css",
+      "../css/responsive.css"
+    ],
+    "missing_scripts": [],
+    "missing_stylesheets": [],
+    "missing_links": []
+  },
+  "pages/pdf-to-word.html": {
+    "title": "PDF to Word Converter Online Free \u2014 NextGen PDF",
+    "description": "Convert PDF documents to editable Microsoft Word (DOCX) files online for free with NextGen PDF.",
+    "scripts": [
+      "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5453249687281273",
+      "../js/components.js",
+      "../js/uploader.js"
+    ],
+    "stylesheets": [
+      "../css/style.css"
+    ],
+    "missing_scripts": [],
+    "missing_stylesheets": [],
+    "missing_links": []
+  },
+  "pages/pptx-to-pdf.html": {
+    "title": "PowerPoint to PDF \u2014 NextGen PDF",
+    "description": "MISSING",
+    "scripts": [
+      "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5453249687281273",
+      "../js/app.js",
+      "../js/config.js",
+      "../js/firebase-config.js",
+      "../js/ads.js",
+      "../js/api.js"
+    ],
+    "stylesheets": [
+      "../css/style.css",
+      "../css/components.css",
+      "../css/responsive.css"
+    ],
+    "missing_scripts": [],
+    "missing_stylesheets": [],
+    "missing_links": []
+  },
+  "pages/pricing.html": {
+    "title": "Pricing Plans \u2014 NextGen PDF",
+    "description": "MISSING",
+    "scripts": [
+      "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5453249687281273",
+      "../js/components.js"
+    ],
+    "stylesheets": [
+      "../css/style.css"
+    ],
+    "missing_scripts": [],
+    "missing_stylesheets": [],
+    "missing_links": []
+  },
+  "pages/privacy.html": {
+    "title": "Privacy \u2014 NextGen PDF",
+    "description": "MISSING",
+    "scripts": [
+      "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5453249687281273",
+      "../js/app.js",
+      "../js/config.js",
+      "../js/firebase-config.js",
+      "../js/ads.js"
+    ],
+    "stylesheets": [
+      "../css/style.css",
+      "../css/components.css",
+      "../css/responsive.css"
+    ],
+    "missing_scripts": [],
+    "missing_stylesheets": [],
+    "missing_links": []
+  },
+  "pages/protect-pdf.html": {
+    "title": "Protect PDF Online Free \u2014 Password Protect PDF | NextGen PDF",
+    "description": "Encrypt and password-protect your PDF documents online for free with NextGen PDF protect tool.",
+    "scripts": [
+      "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5453249687281273",
+      "../js/components.js",
+      "../js/uploader.js"
+    ],
+    "stylesheets": [
+      "../css/style.css"
+    ],
+    "missing_scripts": [],
+    "missing_stylesheets": [],
+    "missing_links": []
+  },
+  "pages/redact-pdf.html": {
+    "title": "Redact PDF \u2014 NextGen PDF",
+    "description": "MISSING",
+    "scripts": [
+      "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5453249687281273",
+      "../js/app.js",
+      "../js/config.js",
+      "../js/firebase-config.js",
+      "../js/ads.js",
+      "../js/api.js"
+    ],
+    "stylesheets": [
+      "../css/style.css",
+      "../css/components.css",
+      "../css/responsive.css"
+    ],
+    "missing_scripts": [],
+    "missing_stylesheets": [],
+    "missing_links": []
+  },
+  "pages/refund-policy.html": {
+    "title": "Refund Policy \u2014 NextGen PDF",
+    "description": "NextGen PDF Refund and Subscription Cancellation Terms.",
+    "scripts": [
+      "../js/config.js",
+      "../js/firebase-config.js",
+      "../js/components.js"
+    ],
+    "stylesheets": [
+      "../css/style.css"
+    ],
+    "missing_scripts": [],
+    "missing_stylesheets": [],
+    "missing_links": []
+  },
+  "pages/remove-metadata.html": {
+    "title": "Remove PDF Metadata \u2014 NextGen PDF",
+    "description": "MISSING",
+    "scripts": [
+      "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5453249687281273",
+      "../js/app.js",
+      "../js/config.js",
+      "../js/firebase-config.js",
+      "../js/ads.js",
+      "../js/api.js"
+    ],
+    "stylesheets": [
+      "../css/style.css",
+      "../css/components.css",
+      "../css/responsive.css"
+    ],
+    "missing_scripts": [],
+    "missing_stylesheets": [],
+    "missing_links": []
+  },
+  "pages/repair-pdf.html": {
+    "title": "Repair PDF \u2014 NextGen PDF",
+    "description": "MISSING",
+    "scripts": [
+      "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5453249687281273",
+      "../js/theme.js",
+      "../js/app.js",
+      "../js/api.js"
+    ],
+    "stylesheets": [
+      "../css/style.css",
+      "../css/components.css",
+      "../css/responsive.css"
+    ],
+    "missing_scripts": [
+      [
+        "../js/theme.js",
+        "js/theme.js"
+      ]
+    ],
+    "missing_stylesheets": [],
+    "missing_links": []
+  },
+  "pages/resize-pages.html": {
+    "title": "Resize PDF Pages \u2014 NextGen PDF",
+    "description": "MISSING",
+    "scripts": [
+      "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5453249687281273",
+      "../js/theme.js",
+      "../js/app.js",
+      "../js/api.js"
+    ],
+    "stylesheets": [
+      "../css/style.css",
+      "../css/components.css",
+      "../css/responsive.css"
+    ],
+    "missing_scripts": [
+      [
+        "../js/theme.js",
+        "js/theme.js"
+      ]
+    ],
+    "missing_stylesheets": [],
+    "missing_links": []
+  },
+  "pages/rotate.html": {
+    "title": "Rotate PDF Online Free \u2014 Turn PDF Pages | NextGen PDF",
+    "description": "Rotate PDF pages clockwise or counterclockwise online for free with NextGen PDF rotate tool.",
+    "scripts": [
+      "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5453249687281273",
+      "../js/components.js",
+      "../js/uploader.js"
+    ],
+    "stylesheets": [
+      "../css/style.css"
+    ],
+    "missing_scripts": [],
+    "missing_stylesheets": [],
+    "missing_links": []
+  },
+  "pages/scanned-pdf-to-text.html": {
+    "title": "Scanned PDF \u2192 Text \u2014 NextGen PDF",
+    "description": "MISSING",
+    "scripts": [
+      "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5453249687281273",
+      "../js/theme.js",
+      "../js/app.js",
+      "../js/api.js"
+    ],
+    "stylesheets": [
+      "../css/style.css",
+      "../css/components.css",
+      "../css/responsive.css"
+    ],
+    "missing_scripts": [
+      [
+        "../js/theme.js",
+        "js/theme.js"
+      ]
+    ],
+    "missing_stylesheets": [],
+    "missing_links": []
+  },
+  "pages/split.html": {
+    "title": "Split PDF Online Free \u2014 Separate PDF Pages | NextGen PDF",
+    "description": "Split PDF files into separate pages or extract specific page ranges online for free with NextGen PDF split tool.",
+    "scripts": [
+      "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5453249687281273",
+      "../js/components.js",
+      "../js/uploader.js"
+    ],
+    "stylesheets": [
+      "../css/style.css"
+    ],
+    "missing_scripts": [],
+    "missing_stylesheets": [],
+    "missing_links": []
+  },
+  "pages/terms.html": {
+    "title": "Terms of Service \u2014 NextGen PDF",
+    "description": "NextGen PDF Terms of Service and End User Agreement.",
+    "scripts": [
+      "../js/config.js",
+      "../js/firebase-config.js",
+      "../js/components.js"
+    ],
+    "stylesheets": [
+      "../css/style.css"
+    ],
+    "missing_scripts": [],
+    "missing_stylesheets": [],
+    "missing_links": []
+  },
+  "pages/tools.html": {
+    "title": "All 48 PDF Tools \u2014 Convert, Compress, Edit & AI | NextGen PDF",
+    "description": "Explore all 48 PDF tools on NextGen PDF. Merge, split, compress, convert, edit, OCR, protect, and AI-summarize documents online for free.",
+    "scripts": [
+      "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5453249687281273",
+      "../js/components.js"
+    ],
+    "stylesheets": [
+      "../css/style.css"
+    ],
+    "missing_scripts": [],
+    "missing_stylesheets": [],
+    "missing_links": []
+  },
+  "pages/translate-pdf.html": {
+    "title": "Translate PDF \u2014 NextGen PDF",
+    "description": "MISSING",
+    "scripts": [
+      "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5453249687281273",
+      "../js/theme.js",
+      "../js/app.js",
+      "../js/api.js"
+    ],
+    "stylesheets": [
+      "../css/style.css",
+      "../css/components.css",
+      "../css/responsive.css"
+    ],
+    "missing_scripts": [
+      [
+        "../js/theme.js",
+        "js/theme.js"
+      ]
+    ],
+    "missing_stylesheets": [],
+    "missing_links": []
+  },
+  "pages/unlock-pdf.html": {
+    "title": "Unlock PDF \u2014 NextGen PDF",
+    "description": "MISSING",
+    "scripts": [
+      "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5453249687281273",
+      "../js/app.js",
+      "../js/config.js",
+      "../js/firebase-config.js",
+      "../js/ads.js",
+      "../js/api.js"
+    ],
+    "stylesheets": [
+      "../css/style.css",
+      "../css/components.css",
+      "../css/responsive.css"
+    ],
+    "missing_scripts": [],
+    "missing_stylesheets": [],
+    "missing_links": []
+  },
+  "pages/watermark.html": {
+    "title": "Watermark PDF \u2014 NextGen PDF",
+    "description": "MISSING",
+    "scripts": [
+      "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5453249687281273",
+      "../js/config.js",
+      "../js/app.js",
+      "../js/api.js"
+    ],
+    "stylesheets": [
+      "../css/style.css",
+      "../css/components.css",
+      "../css/responsive.css"
+    ],
+    "missing_scripts": [],
+    "missing_stylesheets": [],
+    "missing_links": []
+  },
+  "pages/word-to-pdf.html": {
+    "title": "Word to PDF \u2014 NextGen PDF",
+    "description": "MISSING",
+    "scripts": [
+      "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5453249687281273",
+      "../js/app.js",
+      "../js/config.js",
+      "../js/firebase-config.js",
+      "../js/ads.js",
+      "../js/api.js"
+    ],
+    "stylesheets": [
+      "../css/style.css",
+      "../css/components.css",
+      "../css/responsive.css"
+    ],
+    "missing_scripts": [],
+    "missing_stylesheets": [],
+    "missing_links": []
+  }
+}

@@ -1,58 +1,103 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="light">
+
+<html data-theme="light" lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>User Profile — NextGen PDF</title>
-  <link rel="icon" type="image/png" href="../../Assests/Logo-icon.png" />
-  <link rel="stylesheet" href="../../css/style.css" />
-</head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>User Profile — NextGen PDF</title>
+<link href="../../Assests/Logo-icon.png" rel="icon" type="image/png"/>
+<link href="../../css/style.css" rel="stylesheet"/>
+<meta content="NextGen PDF online document and PDF tools." name="description"/><meta content="noindex, nofollow" name="robots"/><link href="https://nextgen-pdf.web.app/pages/dashboard/profile" rel="canonical"/><meta content="User Profile — NextGen PDF" property="og:title"/><meta content="NextGen PDF online document and PDF tools." property="og:description"/><meta content="https://nextgen-pdf.web.app/pages/dashboard/profile" property="og:url"/><meta content="website" property="og:type"/><meta content="NextGen PDF" property="og:site_name"/><meta content="https://nextgen-pdf.web.app/Assests/Logo-clean.png" property="og:image"/><meta content="summary_large_image" name="twitter:card"/><meta content="User Profile — NextGen PDF" name="twitter:title"/><meta content="NextGen PDF online document and PDF tools." name="twitter:description"/><meta content="https://nextgen-pdf.web.app/Assests/Logo-clean.png" name="twitter:image"/></head>
 <body>
-  <header class="site-header">
-    <div class="container nav-bar" style="width: 100%; max-width: 100%; padding: 0 24px;">
-      <a href="../../index.html" class="brand-logo">
-        <img src="../../Assests/Logo-icon.png" alt="NextGen PDF" />
-        <span>NextGen <b class="text-gradient">PDF</b></span>
-      </a>
-      <button class="theme-btn" data-theme-toggle aria-label="Toggle Theme">🌙</button>
-    </div>
-  </header>
+<header class="site-header">
+<div class="container nav-bar" style="width: 100%; max-width: 100%; padding: 0 24px;">
+<a class="brand-logo" href="../../index.html">
+<img alt="NextGen PDF" src="../../Assests/Logo-icon.png"/>
+<span>NextGen <b class="text-gradient">PDF</b></span>
+</a>
+<div style="display: flex; align-items: center; gap: 16px;">
+<button aria-label="Toggle Theme" class="theme-btn" data-theme-toggle="">🌙</button>
+<div style="display: flex; align-items: center; gap: 10px;">
+<div data-user-avatar-initial="" style="width: 36px; height: 36px; border-radius: 50%; background: var(--primary-bg); color: var(--primary); display: grid; place-items: center; font-weight: 800;">U</div>
+<span data-user-name="" style="font-weight: 700; font-size: 14px;">Loading...</span>
+<button class="btn btn-ghost btn-sm" onclick="NextGenAuth.logout()" style="padding: 4px 8px;" title="Logout">Log out</button>
+</div>
+</div>
+</div>
+</header>
+<div class="dashboard-layout">
+<aside class="sidebar-nav">
+<div style="font-size: 11px; font-weight: 800; letter-spacing: 0.08em; text-transform: uppercase; color: var(--text-muted); padding: 0 12px 8px 12px;">User Account</div>
+<a class="sidebar-item" href="index.html">📊 Overview</a>
+<a class="sidebar-item" href="files.html">📁 Files</a>
+<a class="sidebar-item" href="history.html">📜 History</a>
+<a class="sidebar-item" href="usage.html">📈 Usage</a>
+<a class="sidebar-item" href="ai-usage.html">🤖 AI Usage</a>
+<a class="sidebar-item" href="subscription.html">⭐ Subscription</a>
+<a class="sidebar-item" href="billing.html">💳 Billing</a>
+<a class="sidebar-item active" href="profile.html">👤 Profile</a>
+<a class="sidebar-item" href="security.html">🔒 Security</a>
+<div style="margin-top: 24px; font-size: 11px; font-weight: 800; letter-spacing: 0.08em; text-transform: uppercase; color: var(--text-muted); padding: 0 12px 8px 12px;">Organization</div>
+<a class="sidebar-item" href="business/index.html">🏢 Business Suite</a>
+</aside>
+<main class="dashboard-content">
+<h2>Profile Settings</h2>
+<p style="margin-top: 4px; margin-bottom: 24px;">Update your personal info and preferences.</p>
+<div class="card" style="max-width: 560px;">
+<form id="profile-form">
+<div class="form-group">
+<label class="form-label" for="prof-name">Full Name</label>
+<input class="input-text" id="prof-name" required="" type="text"/>
+</div>
+<div class="form-group">
+<label class="form-label" for="prof-email">Email Address</label>
+<input class="input-text" disabled="" id="prof-email" type="email"/>
+<small style="color: var(--text-muted); font-size: 12px; margin-top: 4px;">Primary account email cannot be edited directly.</small>
+</div>
+<button class="btn btn-primary" id="save-profile-btn" style="margin-top: 12px;" type="submit">Save Changes</button>
+</form>
+</div>
+</main>
+</div>
+<script src="../../js/config.js"></script>
+<script src="../../js/firebase-config.js"></script>
+<script src="../../js/auth.js"></script>
+<script src="../../js/components.js"></script>
+<script>
+    NextGenAuth.requireAuth().then(async (user) => {
+      const nameInput = document.getElementById('prof-name');
+      const emailInput = document.getElementById('prof-email');
+      
+      emailInput.value = user.email || '';
+      const profile = await NextGenAuth.getUserProfile(user.uid);
+      nameInput.value = user.displayName || profile?.name || '';
+    });
 
-  <div class="dashboard-layout">
-    <aside class="sidebar-nav">
-      <a href="index.html" class="sidebar-item">📊 Overview</a>
-      <a href="files.html" class="sidebar-item">📁 Files</a>
-      <a href="history.html" class="sidebar-item">📜 History</a>
-      <a href="usage.html" class="sidebar-item">📈 Usage</a>
-      <a href="ai-usage.html" class="sidebar-item">🤖 AI Usage</a>
-      <a href="subscription.html" class="sidebar-item">⭐ Subscription</a>
-      <a href="billing.html" class="sidebar-item">💳 Billing</a>
-      <a href="profile.html" class="sidebar-item active">👤 Profile</a>
-      <a href="security.html" class="sidebar-item">🔒 Security</a>
-    </aside>
+    document.getElementById('profile-form').addEventListener('submit', async (e) => {
+      e.preventDefault();
+      const btn = document.getElementById('save-profile-btn');
+      const newName = document.getElementById('prof-name').value.trim();
 
-    <main class="dashboard-content">
-      <h2>Profile Settings</h2>
-      <p style="margin-top: 4px; margin-bottom: 24px;">Update your personal info and preferences.</p>
-
-      <div class="card" style="max-width: 560px;">
-        <form onsubmit="event.preventDefault(); Toast.show({ message: 'Profile updated!', type: 'success' });">
-          <div class="form-group">
-            <label class="form-label" for="prof-name">Full Name</label>
-            <input type="text" id="prof-name" class="input-text" value="Ankush Sharma" />
-          </div>
-
-          <div class="form-group">
-            <label class="form-label" for="prof-email">Email Address</label>
-            <input type="email" id="prof-email" class="input-text" value="ankush@example.com" />
-          </div>
-
-          <button type="submit" class="btn btn-primary" style="margin-top: 12px;">Save Changes</button>
-        </form>
-      </div>
-    </main>
-  </div>
-
-  <script src="../../js/components.js"></script>
+      try {
+        btn.disabled = true;
+        btn.textContent = 'Saving...';
+        const user = NextGenAuth.getCurrentUser();
+        const { updateProfile } = await NextGenAuth.waitForFirebase();
+        
+        if (user && newName) {
+          await updateProfile(user, { displayName: newName });
+          await NextGenAuth.syncUserProfile(user, { fullName: newName });
+          NextGenAuth.updateDashboardUI(user);
+          Toast.show({ message: 'Profile updated successfully!', type: 'success' });
+        }
+      } catch (err) {
+        console.error('Profile update error:', err);
+        Toast.show({ message: err.message || 'Failed to update profile.', type: 'error' });
+      } finally {
+        btn.disabled = false;
+        btn.textContent = 'Save Changes';
+      }
+    });
+  </script>
 </body>
 </html>

@@ -307,6 +307,16 @@ document.addEventListener('DOMContentLoaded', () => {
       xhr.open('POST', `${NEXTGEN_API_BASE}/${endpoint}`, true);
       xhr.responseType = 'blob';
 
+      // Attach Firebase ID token if user is signed in
+      if (window.nextgenFirebase?.auth?.currentUser) {
+        try {
+          const idToken = await window.nextgenFirebase.auth.currentUser.getIdToken();
+          xhr.setRequestHeader('Authorization', `Bearer ${idToken}`);
+        } catch (tokenErr) {
+          console.warn('[API] Failed to retrieve Firebase ID token:', tokenErr);
+        }
+      }
+
       xhr.upload.onprogress = (e) => {
         if (e.lengthComputable && e.total > 0) {
           const percent = Math.round((e.loaded / e.total) * 90);

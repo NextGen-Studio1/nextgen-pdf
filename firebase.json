@@ -5,16 +5,42 @@
       "firebase.json",
       "**/.*",
       "**/node_modules/**",
-      "backend/**"
+      "backend/**",
+      "scratch/**"
     ],
     "cleanUrls": true,
     "headers": [
+      {
+        "source": "**",
+        "headers": [
+          {
+            "key": "X-Content-Type-Options",
+            "value": "nosniff"
+          },
+          {
+            "key": "X-Frame-Options",
+            "value": "SAMEORIGIN"
+          },
+          {
+            "key": "Referrer-Policy",
+            "value": "strict-origin-when-cross-origin"
+          },
+          {
+            "key": "Permissions-Policy",
+            "value": "geolocation=(), camera=(), microphone=()"
+          },
+          {
+            "key": "Strict-Transport-Security",
+            "value": "max-age=31536000; includeSubDomains"
+          }
+        ]
+      },
       {
         "source": "**/*.@(css|js)",
         "headers": [
           {
             "key": "Cache-Control",
-            "value": "public, max-age=31536000, immutable"
+            "value": "public, max-age=3600"
           }
         ]
       },

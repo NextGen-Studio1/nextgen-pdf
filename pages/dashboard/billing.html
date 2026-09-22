@@ -1,53 +1,53 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="light">
+
+<html data-theme="light" lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Billing & Invoices — NextGen PDF</title>
-  <link rel="icon" type="image/png" href="../../Assests/Logo-icon.png" />
-  <link rel="stylesheet" href="../../css/style.css" />
-</head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Billing &amp; Invoices — NextGen PDF</title>
+<link href="../../Assests/Logo-icon.png" rel="icon" type="image/png"/>
+<link href="../../css/style.css" rel="stylesheet"/>
+<meta content="NextGen PDF online document and PDF tools." name="description"/><meta content="noindex, nofollow" name="robots"/><link href="https://nextgen-pdf.web.app/pages/dashboard/billing" rel="canonical"/><meta content="Billing &amp; Invoices — NextGen PDF" property="og:title"/><meta content="NextGen PDF online document and PDF tools." property="og:description"/><meta content="https://nextgen-pdf.web.app/pages/dashboard/billing" property="og:url"/><meta content="website" property="og:type"/><meta content="NextGen PDF" property="og:site_name"/><meta content="https://nextgen-pdf.web.app/Assests/Logo-clean.png" property="og:image"/><meta content="summary_large_image" name="twitter:card"/><meta content="Billing &amp; Invoices — NextGen PDF" name="twitter:title"/><meta content="NextGen PDF online document and PDF tools." name="twitter:description"/><meta content="https://nextgen-pdf.web.app/Assests/Logo-clean.png" name="twitter:image"/></head>
 <body>
-  <header class="site-header">
-    <div class="container nav-bar" style="width: 100%; max-width: 100%; padding: 0 24px;">
-      <a href="../../index.html" class="brand-logo">
-        <img src="../../Assests/Logo-icon.png" alt="NextGen PDF" />
-        <span>NextGen <b class="text-gradient">PDF</b></span>
-      </a>
-      <button class="theme-btn" data-theme-toggle aria-label="Toggle Theme">🌙</button>
-    </div>
-  </header>
-
-  <div class="dashboard-layout">
-    <aside class="sidebar-nav">
-      <a href="index.html" class="sidebar-item">📊 Overview</a>
-      <a href="files.html" class="sidebar-item">📁 Files</a>
-      <a href="history.html" class="sidebar-item">📜 History</a>
-      <a href="usage.html" class="sidebar-item">📈 Usage</a>
-      <a href="ai-usage.html" class="sidebar-item">🤖 AI Usage</a>
-      <a href="subscription.html" class="sidebar-item">⭐ Subscription</a>
-      <a href="billing.html" class="sidebar-item active">💳 Billing</a>
-      <a href="profile.html" class="sidebar-item">👤 Profile</a>
-      <a href="security.html" class="sidebar-item">🔒 Security</a>
-    </aside>
-
-    <main class="dashboard-content">
-      <h2>Billing & Payment Methods</h2>
-      <p style="margin-top: 4px; margin-bottom: 24px;">Manage payment details and download invoices.</p>
-
-      <div class="card" style="margin-bottom: 24px;">
-        <h3>Payment Methods</h3>
-        <p style="margin-top: 8px;">No active credit card saved for Free plan.</p>
-        <button class="btn btn-secondary btn-sm" style="margin-top: 12px;">+ Add Payment Method</button>
-      </div>
-
-      <div class="card">
-        <h3>Invoice History</h3>
-        <p style="margin-top: 8px; color: var(--text-muted);">No invoices yet.</p>
-      </div>
-    </main>
-  </div>
-
-  <script src="../../js/components.js"></script>
+<header class="site-header">
+<div class="container nav-bar" style="width: 100%; max-width: 100%; padding: 0 24px;">
+<a class="brand-logo" href="../../index.html">
+<img alt="NextGen PDF" src="../../Assests/Logo-icon.png"/>
+<span>NextGen <b class="text-gradient">PDF</b></span>
+</a>
+<button aria-label="Toggle Theme" class="theme-btn" data-theme-toggle="">🌙</button>
+</div>
+</header>
+<div class="dashboard-layout">
+<aside class="sidebar-nav">
+<a class="sidebar-item" href="index.html">📊 Overview</a>
+<a class="sidebar-item" href="files.html">📁 Files</a>
+<a class="sidebar-item" href="history.html">📜 History</a>
+<a class="sidebar-item" href="usage.html">📈 Usage</a>
+<a class="sidebar-item" href="ai-usage.html">🤖 AI Usage</a>
+<a class="sidebar-item" href="subscription.html">⭐ Subscription</a>
+<a class="sidebar-item active" href="billing.html">💳 Billing</a>
+<a class="sidebar-item" href="profile.html">👤 Profile</a>
+<a class="sidebar-item" href="security.html">🔒 Security</a>
+</aside>
+<main class="dashboard-content">
+<h2>Billing &amp; Payment Methods</h2>
+<p style="margin-top: 4px; margin-bottom: 24px;">Manage payment details and download invoices.</p>
+<div class="card" style="margin-bottom: 24px;">
+<h3>Payment Methods</h3>
+<p style="margin-top: 8px;">No active credit card saved for Free plan.</p>
+<button class="btn btn-secondary btn-sm" style="margin-top: 12px;">+ Add Payment Method</button>
+</div>
+<div class="card">
+<h3>Invoice History</h3>
+<p style="margin-top: 8px; color: var(--text-muted);">No invoices yet.</p>
+</div>
+</main>
+</div>
+<script src="../../js/config.js"></script>
+<script src="../../js/firebase-config.js"></script>
+<script src="../../js/auth.js"></script>
+<script src="../../js/components.js"></script>
+<script>NextGenAuth.requireAuth();</script>
 </body>
 </html>

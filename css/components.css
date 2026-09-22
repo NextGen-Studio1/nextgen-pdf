@@ -35,13 +35,13 @@
 }
 
 .btn-primary {
-  background: var(--primary-gradient);
+  background: var(--primary-gradient) !important;
   color: #ffffff !important;
   box-shadow: 0 4px 14px rgba(37, 99, 235, 0.25);
 }
 
 .btn-primary:hover {
-  background: var(--primary-gradient-hover);
+  background: var(--primary-gradient-hover) !important;
   transform: translateY(-1px);
   box-shadow: 0 6px 20px rgba(37, 99, 235, 0.35);
 }
@@ -164,7 +164,195 @@
 }
 
 /* ==========================================================================
-   3. CARDS SYSTEM
+   3. WORKSPACE CARD & PAGE HERO
+   ========================================================================== */
+.page-hero {
+  text-align: center;
+  max-width: 1000px;
+  margin: 40px auto 28px auto;
+}
+
+.page-hero h1 {
+  font-size: var(--text-h1);
+  font-weight: 800;
+  margin: 12px 0;
+  color: var(--text-primary);
+}
+
+.page-hero p {
+  font-size: var(--text-body-lg);
+  color: var(--text-muted);
+}
+
+.eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 4px 14px;
+  border-radius: var(--radius-pill);
+  background: var(--primary-bg);
+  color: var(--primary);
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.workspace {
+  width: 100%;
+  max-width: 1200px;
+  margin: 24px auto 48px auto;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-xl);
+  padding: 32px;
+  box-shadow: var(--shadow-lg);
+}
+
+.workspace-body {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* Dropzone Upgrade */
+.dropzone {
+  min-height: 280px;
+  width: 100%;
+  border: 2px dashed var(--primary);
+  border-radius: var(--radius-xl);
+  background: var(--surface);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 48px 24px;
+  cursor: pointer;
+  transition: var(--transition-smooth);
+}
+
+.dropzone:hover, .dropzone.is-dragover, .dropzone.is-dragging {
+  border-color: var(--primary-hover);
+  background: var(--primary-bg);
+  transform: translateY(-2px);
+}
+
+.upload-icon {
+  width: 64px;
+  height: 64px;
+  border-radius: var(--radius-lg);
+  background: var(--primary-bg);
+  color: var(--primary);
+  display: grid;
+  place-items: center;
+  font-size: 30px;
+  font-weight: 800;
+  margin-bottom: 16px;
+  transition: var(--transition-fast);
+}
+
+.dropzone:hover .upload-icon {
+  transform: scale(1.08);
+}
+
+.dropzone h3 {
+  font-size: var(--text-h3);
+  font-weight: 800;
+  color: var(--text-primary);
+  margin-bottom: 6px;
+}
+
+.dropzone p {
+  font-size: var(--text-body-sm);
+  color: var(--text-muted);
+  margin-bottom: 20px;
+}
+
+.dropzone label.btn, .dropzone .btn {
+  background: var(--primary-gradient);
+  color: #ffffff !important;
+  font-weight: 700;
+  padding: 12px 26px;
+  border-radius: var(--radius-md);
+  box-shadow: 0 4px 14px rgba(37, 99, 235, 0.25);
+  cursor: pointer;
+}
+
+.dropzone small {
+  margin-top: 14px;
+  font-size: var(--text-caption);
+  color: var(--text-muted);
+}
+
+/* Tool Options Grid */
+.options {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 16px;
+  margin: 20px 0;
+  width: 100%;
+}
+
+.option {
+  padding: 16px 20px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  background: var(--surface);
+  color: var(--text-primary);
+  cursor: pointer;
+  font-weight: 700;
+  transition: var(--transition-fast);
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.option small {
+  font-weight: 500;
+  color: var(--text-muted);
+}
+
+.option:hover {
+  border-color: var(--primary);
+  background: var(--primary-bg);
+}
+
+.option.active {
+  border-color: var(--primary);
+  background: var(--primary-bg);
+  color: var(--primary);
+  box-shadow: 0 0 0 2px var(--primary);
+}
+
+/* Universal Process Button Upgrade */
+#process, .btn-process {
+  width: 100%;
+  padding: 16px 28px !important;
+  font-family: var(--font-body);
+  font-size: 16px !important;
+  font-weight: 800 !important;
+  border-radius: var(--radius-lg) !important;
+  background: var(--primary-gradient) !important;
+  color: #ffffff !important;
+  border: none !important;
+  cursor: pointer;
+  box-shadow: 0 4px 16px rgba(37, 99, 235, 0.3) !important;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+#process:hover, .btn-process:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 24px rgba(37, 99, 235, 0.4) !important;
+}
+
+/* ==========================================================================
+   4. CARDS SYSTEM
    ========================================================================== */
 .card {
   background: var(--surface);
@@ -216,7 +404,6 @@
   font-size: var(--text-h4);
   font-weight: 700;
   color: var(--text-primary);
-
 }
 
 .tool-card-desc {
@@ -329,7 +516,7 @@
 }
 
 /* ==========================================================================
-   4. REUSABLE PDF UPLOAD SYSTEM
+   5. REUSABLE PDF UPLOAD SYSTEM
    ========================================================================== */
 .upload-system {
   width: 100%;
@@ -386,14 +573,14 @@
 }
 
 /* File Ready & Progress Cards */
-.upload-file-list {
+.upload-file-list, .file-list {
   display: flex;
   flex-direction: column;
   gap: var(--space-12);
   margin-top: var(--space-16);
 }
 
-.upload-file-item {
+.upload-file-item, .file-row {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -459,7 +646,7 @@
 }
 
 /* ==========================================================================
-   5. MODAL & TOAST OVERLAYS
+   6. MODAL & TOAST OVERLAYS
    ========================================================================== */
 .modal-overlay {
   position: fixed;
@@ -548,7 +735,7 @@
   to { opacity: 1; transform: translateY(0); }
 }
 
-/* Navigation & Header Overhaul */
+/* Navigation & Header Sizing Rule (Fixes Giant Image Logo Bug) */
 .site-header {
   position: sticky;
   top: 0;
@@ -558,7 +745,7 @@
   border-bottom: 1px solid var(--border);
 }
 
-.nav-bar {
+.nav-bar, .nav {
   height: 72px;
   display: flex;
   align-items: center;
@@ -566,7 +753,7 @@
   gap: var(--space-24);
 }
 
-.brand-logo {
+.brand-logo, .brand {
   display: flex;
   align-items: center;
   gap: var(--space-12);
@@ -574,30 +761,36 @@
   font-weight: 800;
   font-size: 20px;
   color: var(--text-primary);
+  text-decoration: none;
 }
 
-.brand-logo img {
-  height: 36px;
-  width: auto;
+.brand-logo img, .brand img, .brand-logo-icon {
+  height: 36px !important;
+  width: auto !important;
+  max-height: 36px !important;
+  max-width: 180px !important;
+  object-fit: contain;
+  display: block;
 }
 
-.nav-links {
+.nav-links, .nav nav {
   display: flex;
   align-items: center;
   gap: var(--space-24);
 }
 
-.nav-links a {
+.nav-links a, .nav nav a {
   font-size: var(--text-body-sm);
   font-weight: 600;
   color: var(--text-secondary);
+  text-decoration: none;
 }
 
-.nav-links a:hover {
+.nav-links a:hover, .nav nav a:hover {
   color: var(--primary);
 }
 
-.theme-btn {
+.theme-btn, .theme-toggle {
   background: var(--surface);
   border: 1px solid var(--border);
   color: var(--text-primary);
@@ -611,7 +804,20 @@
   transition: var(--transition-fast);
 }
 
-.theme-btn:hover {
+.theme-btn:hover, .theme-toggle:hover {
   border-color: var(--primary);
   color: var(--primary);
+}
+
+.mobile-toggle {
+  display: none;
+  width: 38px;
+  height: 38px;
+  border: 1px solid var(--border);
+  background: var(--surface);
+  color: var(--text-primary);
+  border-radius: var(--radius-md);
+  cursor: pointer;
+  font-size: 18px;
+  place-items: center;
 }

@@ -84,7 +84,7 @@ def convert_docx_to_pdf_complete(docx_bytes: bytes) -> bytes:
                 text = hp.text.strip()
                 if text:
                     check_page_break(14)
-                    page.insert_text(fitz.Point(margin_x, y_cursor), text, fontsize=9, fontname="time", color=(0.2, 0.2, 0.2))
+                    page.insert_text(fitz.Point(margin_x, y_cursor), text, fontsize=9, fontname="times-roman", color=(0.2, 0.2, 0.2))
                     y_cursor += 12
             if section.header.paragraphs or hasattr(section.header.part, "rels"):
                 y_cursor += 10
@@ -149,7 +149,7 @@ def convert_docx_to_pdf_complete(docx_bytes: bytes) -> bytes:
         current_w = 0.0
 
         for w_text, b_flag, i_flag, sz in styled_words:
-            w_font = "tiro" if b_flag else ("tiit" if i_flag else "time")
+            w_font = "times-bolditalic" if (b_flag and i_flag) else ("times-bold" if b_flag else ("times-italic" if i_flag else "times-roman"))
             w_width = len(w_text + " ") * (sz * 0.48)
 
             if current_w + w_width > content_w and current_line:
@@ -199,7 +199,7 @@ def convert_docx_to_pdf_complete(docx_bytes: bytes) -> bytes:
                 fitz.Point(margin_x, y_cursor),
                 row_str,
                 fontsize=9.5,
-                fontname="tiro",
+                fontname="times-bold",
                 color=(0.1, 0.1, 0.1)
             )
             y_cursor += 16
@@ -212,13 +212,78 @@ def convert_docx_to_pdf_complete(docx_bytes: bytes) -> bytes:
                 text = fp.text.strip()
                 if text:
                     check_page_break(14)
-                    page.insert_text(fitz.Point(margin_x, y_cursor), text, fontsize=9, fontname="time", color=(0.4, 0.4, 0.4))
+                    page.insert_text(fitz.Point(margin_x, y_cursor), text, fontsize=9, fontname="times-roman", color=(0.4, 0.4, 0.4))
                     y_cursor += 12
             break
 
     if pdf_doc.page_count == 0:
         p = pdf_doc.new_page(width=page_w, height=page_h)
-        p.insert_text(fitz.Point(margin_x, margin_y), "Converted Document", fontsize=12, fontname="time")
+        p.insert_text(fitz.Point(margin_x, margin_y), "Converted Document", fontsize=12, fontname="times-roman")
+
+    buf = io.BytesIO()
+    pdf_doc.save(buf, garbage=3, deflate=True)
+    pdf_doc.close()
+    return buf.getvalue()
+
+
+def convert_xlsx_to_pdf_complete(xlsx_bytes: bytes) -> bytes:
+    import openpyxl
+    wb = openpyxl.load_workbook(io.BytesIO(xlsx_bytes), data_only=True)
+    pdf_doc = fitz.open()
+    page_w, page_h = 595, 842
+    margin_x, margin_y = 54, 54
+    page = pdf_doc.new_page(width=page_w, height=page_h)
+    y_cursor = margin_y
+    page.insert_text(fitz.Point(margin_x, y_cursor), "Spreadsheet Document", fontsize=14, fontname="times-bold")
+    y_cursor += 24
+
+    for sheet_name in wb.sheetnames:
+        sheet = wb[sheet_name]
+        page.insert_text(fitz.Point(margin_x, y_cursor), f"Sheet: {sheet_name}", fontsize=11, fontname="times-bold")
+        y_cursor += 16
+        for row in sheet.iter_rows(values_only=True):
+            vals = [str(v) for v in row if v is not None]
+            if not vals:
+                continue
+            row_str = " | ".join(vals[:6])
+            if y_cursor > page_h - margin_y:
+                page = pdf_doc.new_page(width=page_w, height=page_h)
+                y_cursor = margin_y
+            page.insert_text(fitz.Point(margin_x, y_cursor), row_str[:80], fontsize=9, fontname="times-roman")
+            y_cursor += 14
+        y_cursor += 10
+
+    buf = io.BytesIO()
+    pdf_doc.save(buf, garbage=3, deflate=True)
+    pdf_doc.close()
+    return buf.getvalue()
+
+
+def convert_pptx_to_pdf_complete(pptx_bytes: bytes) -> bytes:
+    from pptx import Presentation
+    prs = Presentation(io.BytesIO(pptx_bytes))
+    pdf_doc = fitz.open()
+    page_w, page_h = 792, 612
+    margin_x, margin_y = 54, 54
+
+    for idx, slide in enumerate(prs.slides, 1):
+        page = pdf_doc.new_page(width=page_w, height=page_h)
+        y_cursor = margin_y
+        page.insert_text(fitz.Point(margin_x, y_cursor), f"Slide {idx}", fontsize=14, fontname="times-bold")
+        y_cursor += 24
+        for shape in slide.shapes:
+            if shape.has_text_frame and shape.text.strip():
+                for paragraph in shape.text_frame.paragraphs:
+                    txt = paragraph.text.strip()
+                    if txt:
+                        if y_cursor > page_h - margin_y:
+                            break
+                        page.insert_text(fitz.Point(margin_x, y_cursor), txt[:100], fontsize=10, fontname="times-roman")
+                        y_cursor += 16
+
+    if pdf_doc.page_count == 0:
+        p = pdf_doc.new_page(width=page_w, height=page_h)
+        p.insert_text(fitz.Point(margin_x, margin_y), "Presentation Slide", fontsize=14, fontname="times-bold")
 
     buf = io.BytesIO()
     pdf_doc.save(buf, garbage=3, deflate=True)
@@ -284,11 +349,22 @@ def convert_office_to_pdf(data: bytes, original_filename: str) -> bytes:
             except Exception:
                 pass  # Fall back to python docx renderer if LibreOffice fails
 
-    # High-fidelity DOCX parser with Times-Roman serif typography for Word documents
+    # High-fidelity fallback parsers when LibreOffice is unavailable
     if suffix in {".docx", ".doc"}:
         try:
             return convert_docx_to_pdf_complete(data)
         except Exception as exc:
             raise RuntimeError(f"Could not convert Word document: {exc}") from exc
+    elif suffix in {".xlsx", ".xls"}:
+        try:
+            return convert_xlsx_to_pdf_complete(data)
+        except Exception as exc:
+            raise RuntimeError(f"Could not convert Excel document: {exc}") from exc
+    elif suffix in {".pptx", ".ppt"}:
+        try:
+            return convert_pptx_to_pdf_complete(data)
+        except Exception as exc:
+            raise RuntimeError(f"Could not convert PowerPoint document: {exc}") from exc
 
     raise RuntimeError("Office conversion is unavailable. Please check the backend converter installation.")
+

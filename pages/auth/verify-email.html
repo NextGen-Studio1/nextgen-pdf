@@ -1,38 +1,82 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="light">
+
+<html data-theme="light" lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Verify Email — NextGen PDF</title>
-  <link rel="icon" type="image/png" href="../../Assests/Logo-icon.png" />
-  <link rel="stylesheet" href="../../css/style.css" />
-</head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Verify Email — NextGen PDF</title>
+<link href="../../Assests/Logo-icon.png" rel="icon" type="image/png"/>
+<link href="../../css/style.css" rel="stylesheet"/>
+<meta content="NextGen PDF online document and PDF tools." name="description"/><meta content="noindex, nofollow" name="robots"/><link href="https://nextgen-pdf.web.app/pages/auth/verify-email" rel="canonical"/><meta content="Verify Email — NextGen PDF" property="og:title"/><meta content="NextGen PDF online document and PDF tools." property="og:description"/><meta content="https://nextgen-pdf.web.app/pages/auth/verify-email" property="og:url"/><meta content="website" property="og:type"/><meta content="NextGen PDF" property="og:site_name"/><meta content="https://nextgen-pdf.web.app/Assests/Logo-clean.png" property="og:image"/><meta content="summary_large_image" name="twitter:card"/><meta content="Verify Email — NextGen PDF" name="twitter:title"/><meta content="NextGen PDF online document and PDF tools." name="twitter:description"/><meta content="https://nextgen-pdf.web.app/Assests/Logo-clean.png" name="twitter:image"/></head>
 <body style="display: flex; flex-direction: column; min-height: 100vh;">
+<!-- Header -->
+<header class="site-header">
+<div class="container nav-bar">
+<a class="brand-logo" href="../../index.html">
+<img alt="NextGen PDF" src="../../Assests/Logo-icon.png"/>
+<span>NextGen <b class="text-gradient">PDF</b></span>
+</a>
+</div>
+</header>
+<main style="flex: 1; display: grid; place-items: center; padding: 40px 16px;">
+<div class="card" style="width: min(440px, 100%); padding: 36px; text-align: center;">
+<div style="font-size: 48px; margin-bottom: 16px;">✉️</div>
+<h2>Verify your email</h2>
+<p style="margin: 12px 0 16px 0;">We sent a verification link to <strong id="user-email-display">your email address</strong>. Please check your inbox and click the link.</p>
+<button class="btn btn-primary btn-lg" id="check-verification-btn" style="width: 100%; margin-bottom: 12px;">Check Verification Status</button>
+<a class="btn btn-secondary" href="../dashboard/index.html" style="width: 100%;">Go to Dashboard</a>
+<div style="margin-top: 24px; font-size: 13px; color: var(--text-muted);">
+        Didn't receive the email? <button class="btn btn-ghost btn-sm" id="resend-btn" style="padding: 0; text-decoration: underline; color: var(--primary);">Resend email</button>
+</div>
+</div>
+</main>
+<script src="../../js/config.js"></script>
+<script src="../../js/firebase-config.js"></script>
+<script src="../../js/auth.js"></script>
+<script src="../../js/components.js"></script>
+<script>
+    NextGenAuth.onAuthChange(async (user) => {
+      if (user) {
+        document.getElementById('user-email-display').textContent = user.email || 'your email';
+        if (user.emailVerified) {
+          Toast.show({ message: 'Email is already verified! Redirecting...', type: 'success' });
+          setTimeout(() => window.location.href = '../dashboard/index.html', 1500);
+        }
+      }
+    });
 
-  <!-- Header -->
-  <header class="site-header">
-    <div class="container nav-bar">
-      <a href="../../index.html" class="brand-logo">
-        <img src="../../Assests/Logo-icon.png" alt="NextGen PDF" />
-        <span>NextGen <b class="text-gradient">PDF</b></span>
-      </a>
-    </div>
-  </header>
+    document.getElementById('check-verification-btn').addEventListener('click', async () => {
+      const btn = document.getElementById('check-verification-btn');
+      btn.disabled = true;
+      btn.textContent = 'Checking...';
 
-  <main style="flex: 1; display: grid; place-items: center; padding: 40px 16px;">
-    <div class="card" style="width: min(440px, 100%); padding: 36px; text-align: center;">
-      <div style="font-size: 48px; margin-bottom: 16px;">✉️</div>
-      <h2>Verify your email</h2>
-      <p style="margin: 12px 0 24px 0;">We sent a verification link to your email address. Please click the link to activate your account.</p>
+      const user = NextGenAuth.getCurrentUser();
+      if (user) {
+        await user.reload();
+        if (user.emailVerified) {
+          await NextGenAuth.syncUserProfile(user);
+          Toast.show({ message: 'Email verified successfully! Redirecting...', type: 'success' });
+          setTimeout(() => window.location.href = '../dashboard/index.html', 1000);
+          return;
+        }
+      }
+      btn.disabled = false;
+      btn.textContent = 'Check Verification Status';
+      Toast.show({ message: 'Email not verified yet. Please click the link in your inbox.', type: 'warning' });
+    });
 
-      <a href="../dashboard/index.html" class="btn btn-primary btn-lg" style="width: 100%;">Continue to Dashboard</a>
-
-      <div style="margin-top: 24px; font-size: 13px; color: var(--text-muted);">
-        Didn't receive the email? <button class="btn btn-ghost btn-sm" onclick="Toast.show({ message: 'Verification link resent!', type: 'info' })">Resend link</button>
-      </div>
-    </div>
-  </main>
-
-  <script src="../../js/components.js"></script>
+    document.getElementById('resend-btn').addEventListener('click', async () => {
+      const resendBtn = document.getElementById('resend-btn');
+      try {
+        resendBtn.disabled = true;
+        await NextGenAuth.sendVerificationEmail();
+        Toast.show({ message: 'Verification link resent! Check your inbox.', type: 'info' });
+        setTimeout(() => resendBtn.disabled = false, 30000);
+      } catch (err) {
+        resendBtn.disabled = false;
+        Toast.show({ message: err.message || 'Could not resend email.', type: 'error' });
+      }
+    });
+  </script>
 </body>
 </html>

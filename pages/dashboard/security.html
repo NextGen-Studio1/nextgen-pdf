@@ -1,65 +1,143 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="light">
+
+<html data-theme="light" lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Security Settings — NextGen PDF</title>
-  <link rel="icon" type="image/png" href="../../Assests/Logo-icon.png" />
-  <link rel="stylesheet" href="../../css/style.css" />
-</head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Security Settings — NextGen PDF</title>
+<link href="../../Assests/Logo-icon.png" rel="icon" type="image/png"/>
+<link href="../../css/style.css" rel="stylesheet"/>
+<meta content="NextGen PDF online document and PDF tools." name="description"/><meta content="noindex, nofollow" name="robots"/><link href="https://nextgen-pdf.web.app/pages/dashboard/security" rel="canonical"/><meta content="Security Settings — NextGen PDF" property="og:title"/><meta content="NextGen PDF online document and PDF tools." property="og:description"/><meta content="https://nextgen-pdf.web.app/pages/dashboard/security" property="og:url"/><meta content="website" property="og:type"/><meta content="NextGen PDF" property="og:site_name"/><meta content="https://nextgen-pdf.web.app/Assests/Logo-clean.png" property="og:image"/><meta content="summary_large_image" name="twitter:card"/><meta content="Security Settings — NextGen PDF" name="twitter:title"/><meta content="NextGen PDF online document and PDF tools." name="twitter:description"/><meta content="https://nextgen-pdf.web.app/Assests/Logo-clean.png" name="twitter:image"/></head>
 <body>
-  <header class="site-header">
-    <div class="container nav-bar" style="width: 100%; max-width: 100%; padding: 0 24px;">
-      <a href="../../index.html" class="brand-logo">
-        <img src="../../Assests/Logo-icon.png" alt="NextGen PDF" />
-        <span>NextGen <b class="text-gradient">PDF</b></span>
-      </a>
-      <button class="theme-btn" data-theme-toggle aria-label="Toggle Theme">🌙</button>
-    </div>
-  </header>
+<header class="site-header">
+<div class="container nav-bar" style="width: 100%; max-width: 100%; padding: 0 24px;">
+<a class="brand-logo" href="../../index.html">
+<img alt="NextGen PDF" src="../../Assests/Logo-icon.png"/>
+<span>NextGen <b class="text-gradient">PDF</b></span>
+</a>
+<div style="display: flex; align-items: center; gap: 16px;">
+<button aria-label="Toggle Theme" class="theme-btn" data-theme-toggle="">🌙</button>
+<div style="display: flex; align-items: center; gap: 10px;">
+<div data-user-avatar-initial="" style="width: 36px; height: 36px; border-radius: 50%; background: var(--primary-bg); color: var(--primary); display: grid; place-items: center; font-weight: 800;">U</div>
+<span data-user-name="" style="font-weight: 700; font-size: 14px;">Loading...</span>
+<button class="btn btn-ghost btn-sm" onclick="NextGenAuth.logout()" style="padding: 4px 8px;" title="Logout">Log out</button>
+</div>
+</div>
+</div>
+</header>
+<div class="dashboard-layout">
+<aside class="sidebar-nav">
+<div style="font-size: 11px; font-weight: 800; letter-spacing: 0.08em; text-transform: uppercase; color: var(--text-muted); padding: 0 12px 8px 12px;">User Account</div>
+<a class="sidebar-item" href="index.html">📊 Overview</a>
+<a class="sidebar-item" href="files.html">📁 Files</a>
+<a class="sidebar-item" href="history.html">📜 History</a>
+<a class="sidebar-item" href="usage.html">📈 Usage</a>
+<a class="sidebar-item" href="ai-usage.html">🤖 AI Usage</a>
+<a class="sidebar-item" href="subscription.html">⭐ Subscription</a>
+<a class="sidebar-item" href="billing.html">💳 Billing</a>
+<a class="sidebar-item" href="profile.html">👤 Profile</a>
+<a class="sidebar-item active" href="security.html">🔒 Security</a>
+<div style="margin-top: 24px; font-size: 11px; font-weight: 800; letter-spacing: 0.08em; text-transform: uppercase; color: var(--text-muted); padding: 0 12px 8px 12px;">Organization</div>
+<a class="sidebar-item" href="business/index.html">🏢 Business Suite</a>
+</aside>
+<main class="dashboard-content">
+<h2>Account Security</h2>
+<p style="margin-top: 4px; margin-bottom: 24px;">Update password, 2FA, and active security status.</p>
+<!-- Email Verification Status Card -->
+<div class="card" style="max-width: 560px; margin-bottom: 24px;">
+<h3 style="margin-bottom: 12px;">Email Verification</h3>
+<div id="email-status-container" style="display: flex; align-items: center; justify-content: space-between;">
+<div>
+<span class="chip" id="email-badge">Checking...</span>
+<div id="user-email-text" style="font-size: 13px; color: var(--text-muted); margin-top: 6px;"></div>
+</div>
+<button class="btn btn-secondary btn-sm" id="verify-email-btn" style="display: none;">Verify Now</button>
+</div>
+</div>
+<!-- Change Password Card -->
+<div class="card" style="max-width: 560px; margin-bottom: 24px;">
+<h3 style="margin-bottom: 16px;">Update Password</h3>
+<form id="change-pass-form">
+<div class="form-group">
+<label class="form-label" for="new-pass">New Password</label>
+<input class="input-text" id="new-pass" minlength="6" placeholder="At least 6 characters" required="" type="password"/>
+</div>
+<div class="form-group">
+<label class="form-label" for="confirm-pass">Confirm New Password</label>
+<input class="input-text" id="confirm-pass" minlength="6" placeholder="Confirm new password" required="" type="password"/>
+</div>
+<button class="btn btn-primary" id="update-pass-btn" style="margin-top: 12px;" type="submit">Update Password</button>
+</form>
+</div>
+<!-- 2FA / TOTP Card -->
+<div class="card" style="max-width: 560px;">
+<h3>Two-Factor Authentication (Google Authenticator / TOTP)</h3>
+<p style="margin: 8px 0 16px 0;">Add an extra layer of security to your NextGen PDF account using Google Authenticator.</p>
+<div style="display: flex; align-items: center; gap: 12px;">
+<button class="btn btn-secondary btn-sm" onclick="Toast.show({ message: 'TOTP enrollment requires Firebase Identity Platform enabled.', type: 'info' })">Set up Authenticator</button>
+<span style="font-size: 13px; color: var(--text-muted);">Status: Disabled</span>
+</div>
+</div>
+</main>
+</div>
+<script src="../../js/config.js"></script>
+<script src="../../js/firebase-config.js"></script>
+<script src="../../js/auth.js"></script>
+<script src="../../js/components.js"></script>
+<script>
+    NextGenAuth.requireAuth().then((user) => {
+      const emailBadge = document.getElementById('email-badge');
+      const emailText = document.getElementById('user-email-text');
+      const verifyBtn = document.getElementById('verify-email-btn');
 
-  <div class="dashboard-layout">
-    <aside class="sidebar-nav">
-      <a href="index.html" class="sidebar-item">📊 Overview</a>
-      <a href="files.html" class="sidebar-item">📁 Files</a>
-      <a href="history.html" class="sidebar-item">📜 History</a>
-      <a href="usage.html" class="sidebar-item">📈 Usage</a>
-      <a href="ai-usage.html" class="sidebar-item">🤖 AI Usage</a>
-      <a href="subscription.html" class="sidebar-item">⭐ Subscription</a>
-      <a href="billing.html" class="sidebar-item">💳 Billing</a>
-      <a href="profile.html" class="sidebar-item">👤 Profile</a>
-      <a href="security.html" class="sidebar-item active">🔒 Security</a>
-    </aside>
+      emailText.textContent = user.email;
 
-    <main class="dashboard-content">
-      <h2>Account Security</h2>
-      <p style="margin-top: 4px; margin-bottom: 24px;">Update password, 2FA, and active sessions.</p>
+      if (user.emailVerified) {
+        emailBadge.textContent = '✓ Verified';
+        emailBadge.style.background = 'var(--success-bg)';
+        emailBadge.style.color = 'var(--success)';
+      } else {
+        emailBadge.textContent = '⚠️ Unverified';
+        emailBadge.style.background = 'var(--warning-bg)';
+        emailBadge.style.color = 'var(--warning)';
+        verifyBtn.style.display = 'inline-flex';
+      }
 
-      <div class="card" style="max-width: 560px; margin-bottom: 24px;">
-        <h3 style="margin-bottom: 16px;">Change Password</h3>
-        <form onsubmit="event.preventDefault(); Toast.show({ message: 'Password updated!', type: 'success' });">
-          <div class="form-group">
-            <label class="form-label" for="curr-pass">Current Password</label>
-            <input type="password" id="curr-pass" class="input-text" required />
-          </div>
+      verifyBtn.addEventListener('click', async () => {
+        try {
+          await NextGenAuth.sendVerificationEmail();
+          Toast.show({ message: 'Verification email sent! Check your inbox.', type: 'info' });
+        } catch (e) {
+          Toast.show({ message: e.message || 'Error sending verification email.', type: 'error' });
+        }
+      });
+    });
 
-          <div class="form-group">
-            <label class="form-label" for="new-pass">New Password</label>
-            <input type="password" id="new-pass" class="input-text" required />
-          </div>
+    document.getElementById('change-pass-form').addEventListener('submit', async (e) => {
+      e.preventDefault();
+      const btn = document.getElementById('update-pass-btn');
+      const newPass = document.getElementById('new-pass').value;
+      const confirmPass = document.getElementById('confirm-pass').value;
 
-          <button type="submit" class="btn btn-primary" style="margin-top: 12px;">Update Password</button>
-        </form>
-      </div>
+      if (newPass !== confirmPass) {
+        Toast.show({ message: 'Passwords do not match.', type: 'error' });
+        return;
+      }
 
-      <div class="card" style="max-width: 560px;">
-        <h3>Two-Factor Authentication (2FA)</h3>
-        <p style="margin: 8px 0 16px 0;">Add an extra layer of security to your account.</p>
-        <button class="btn btn-secondary btn-sm" onclick="Toast.show({ message: '2FA Setup dialog ready', type: 'info' })">Enable 2FA</button>
-      </div>
-    </main>
-  </div>
-
-  <script src="../../js/components.js"></script>
+      try {
+        btn.disabled = true;
+        btn.textContent = 'Updating...';
+        await NextGenAuth.updateUserPassword(newPass);
+        Toast.show({ message: 'Password updated successfully!', type: 'success' });
+        document.getElementById('change-pass-form').reset();
+      } catch (err) {
+        console.error('Password update error:', err);
+        Toast.show({ message: err.message || 'Password update failed.', type: 'error' });
+      } finally {
+        btn.disabled = false;
+        btn.textContent = 'Update Password';
+      }
+    });
+  </script>
 </body>
 </html>

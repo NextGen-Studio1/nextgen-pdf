@@ -1,76 +1,114 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="light">
+
+<html data-theme="light" lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Log in — NextGen PDF</title>
-  <meta name="robots" content="noindex, nofollow" />
-  <link rel="icon" type="image/png" href="../../Assests/Logo-icon.png" />
-  <link rel="stylesheet" href="../../css/style.css" />
-</head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Log in — NextGen PDF</title>
+<meta content="noindex, nofollow" name="robots"/>
+<link href="../../Assests/Logo-icon.png" rel="icon" type="image/png"/>
+<link href="../../css/style.css" rel="stylesheet"/>
+<meta content="NextGen PDF online document and PDF tools." name="description"/><link href="https://nextgen-pdf.web.app/pages/auth/login" rel="canonical"/><meta content="Log in — NextGen PDF" property="og:title"/><meta content="NextGen PDF online document and PDF tools." property="og:description"/><meta content="https://nextgen-pdf.web.app/pages/auth/login" property="og:url"/><meta content="website" property="og:type"/><meta content="NextGen PDF" property="og:site_name"/><meta content="https://nextgen-pdf.web.app/Assests/Logo-clean.png" property="og:image"/><meta content="summary_large_image" name="twitter:card"/><meta content="Log in — NextGen PDF" name="twitter:title"/><meta content="NextGen PDF online document and PDF tools." name="twitter:description"/><meta content="https://nextgen-pdf.web.app/Assests/Logo-clean.png" name="twitter:image"/></head>
 <body style="display: flex; flex-direction: column; min-height: 100vh;">
-
-  <!-- Header -->
-  <header class="site-header">
-    <div class="container nav-bar">
-      <a href="../../index.html" class="brand-logo">
-        <img src="../../Assests/Logo-icon.png" alt="NextGen PDF Logo" width="36" height="36" />
-        <span>NextGen <b class="text-gradient">PDF</b></span>
-      </a>
-      <div style="display: flex; align-items: center; gap: 12px;">
-        <button class="theme-btn" data-theme-toggle aria-label="Toggle Theme">🌙</button>
-      </div>
-    </div>
-  </header>
-
-  <!-- Login Form Container -->
-  <main style="flex: 1; display: grid; place-items: center; padding: 40px 16px;">
-    <div class="card" style="width: min(440px, 100%); padding: 36px;">
-      <div style="text-align: center; margin-bottom: 28px;">
-        <h2>Welcome back</h2>
-        <p style="margin-top: 6px;">Sign in to your NextGen PDF account</p>
-      </div>
-
-      <form id="login-form" onsubmit="event.preventDefault(); window.location.href='../dashboard/index.html';">
-        <div class="form-group">
-          <label class="form-label" for="email">Email address</label>
-          <input type="email" id="email" class="input-text" placeholder="name@company.com" required />
-        </div>
-
-        <div class="form-group">
-          <div class="form-label">
-            <span>Password</span>
-            <a href="forgot-password.html" style="color: var(--primary); font-size: 12px;">Forgot password?</a>
-          </div>
-          <input type="password" id="password" class="input-text" placeholder="••••••••" required />
-        </div>
-
-        <div class="form-group" style="flex-direction: row; align-items: center;">
-          <label class="checkbox-label">
-            <input type="checkbox" checked /> Remember me for 30 days
+<!-- Header -->
+<header class="site-header">
+<div class="container nav-bar">
+<a class="brand-logo" href="../../index.html">
+<img alt="NextGen PDF Logo" height="36" src="../../Assests/Logo-icon.png" width="36"/>
+<span>NextGen <b class="text-gradient">PDF</b></span>
+</a>
+<div style="display: flex; align-items: center; gap: 12px;">
+<button aria-label="Toggle Theme" class="theme-btn" data-theme-toggle="">🌙</button>
+</div>
+</div>
+</header>
+<!-- Login Form Container -->
+<main style="flex: 1; display: grid; place-items: center; padding: 40px 16px;">
+<div class="card" style="width: min(440px, 100%); padding: 36px;">
+<div style="text-align: center; margin-bottom: 28px;">
+<h2>Welcome back</h2>
+<p style="margin-top: 6px;">Sign in to your NextGen PDF account</p>
+</div>
+<form id="login-form">
+<div class="form-group">
+<label class="form-label" for="email">Email address</label>
+<input class="input-text" id="email" placeholder="name@company.com" required="" type="email"/>
+</div>
+<div class="form-group">
+<div class="form-label">
+<span>Password</span>
+<a href="forgot-password.html" style="color: var(--primary); font-size: 12px;">Forgot password?</a>
+</div>
+<input class="input-text" id="password" placeholder="••••••••" required="" type="password"/>
+</div>
+<div class="form-group" style="flex-direction: row; align-items: center;">
+<label class="checkbox-label">
+<input checked="" type="checkbox"/> Remember me for 30 days
           </label>
-        </div>
-
-        <button type="submit" class="btn btn-primary btn-lg" style="width: 100%; margin-top: 8px;">Sign In</button>
-      </form>
-
-      <div style="display: flex; align-items: center; gap: 12px; margin: 24px 0; color: var(--text-muted); font-size: 13px;">
-        <div style="flex: 1; height: 1px; background: var(--border);"></div>
-        <span>OR</span>
-        <div style="flex: 1; height: 1px; background: var(--border);"></div>
-      </div>
-
-      <button type="button" class="btn btn-secondary btn-lg" style="width: 100%; justify-content: center;" onclick="Toast.show({ message: 'Google Auth Ready', type: 'info' })">
-        <img src="https://www.gstatic.com/firebasejs/ui/2.0.0/images/auth/google.svg" alt="Google" style="width: 18px; height: 18px;" />
+</div>
+<button class="btn btn-primary btn-lg" id="login-btn" style="width: 100%; margin-top: 8px;" type="submit">Sign In</button>
+</form>
+<div style="display: flex; align-items: center; gap: 12px; margin: 24px 0; color: var(--text-muted); font-size: 13px;">
+<div style="flex: 1; height: 1px; background: var(--border);"></div>
+<span>OR</span>
+<div style="flex: 1; height: 1px; background: var(--border);"></div>
+</div>
+<button class="btn btn-secondary btn-lg" id="google-login-btn" style="width: 100%; justify-content: center;" type="button">
+<img alt="Google" src="https://www.gstatic.com/firebasejs/ui/2.0.0/images/auth/google.svg" style="width: 18px; height: 18px;"/>
         Continue with Google
       </button>
-
-      <div style="text-align: center; margin-top: 24px; font-size: 14px; color: var(--text-muted);">
+<div style="text-align: center; margin-top: 24px; font-size: 14px; color: var(--text-muted);">
         Don't have an account? <a href="register.html" style="color: var(--primary); font-weight: 700;">Create account</a>
-      </div>
-    </div>
-  </main>
+</div>
+</div>
+</main>
+<script src="../../js/config.js"></script>
+<script src="../../js/firebase-config.js"></script>
+<script src="../../js/auth.js"></script>
+<script src="../../js/components.js"></script>
+<script>
+    document.getElementById('login-form').addEventListener('submit', async (e) => {
+      e.preventDefault();
+      const btn = document.getElementById('login-btn');
+      const email = document.getElementById('email').value.trim();
+      const password = document.getElementById('password').value;
 
-  <script src="../../js/components.js"></script>
+      try {
+        btn.disabled = true;
+        btn.textContent = 'Signing in...';
+        const user = await NextGenAuth.login({ email, password });
+        
+        if (!user.emailVerified) {
+          Toast.show({ message: 'Please verify your email to access all features.', type: 'warning' });
+          setTimeout(() => {
+            window.location.href = 'verify-email.html';
+          }, 1200);
+        } else {
+          Toast.show({ message: 'Signed in successfully!', type: 'success' });
+          setTimeout(() => {
+            window.location.href = '../dashboard/index.html';
+          }, 1000);
+        }
+      } catch (err) {
+        btn.disabled = false;
+        btn.textContent = 'Sign In';
+        console.error('Login error:', err);
+        Toast.show({ message: err.message || 'Invalid email or password.', type: 'error' });
+      }
+    });
+
+    document.getElementById('google-login-btn').addEventListener('click', async () => {
+      try {
+        await NextGenAuth.googleLogin();
+        Toast.show({ message: 'Google login successful!', type: 'success' });
+        setTimeout(() => {
+          window.location.href = '../dashboard/index.html';
+        }, 1000);
+      } catch (err) {
+        console.error('Google Login Error:', err);
+        Toast.show({ message: err.message || 'Google login failed.', type: 'error' });
+      }
+    });
+  </script>
 </body>
 </html>

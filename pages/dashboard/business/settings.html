@@ -1,59 +1,54 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="light">
+
+<html data-theme="light" lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Organization Settings — NextGen PDF</title>
-  <link rel="icon" type="image/png" href="../../../Assests/Logo-icon.png" />
-  <link rel="stylesheet" href="../../../css/style.css" />
-</head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Organization Settings — NextGen PDF</title>
+<link href="../../../Assests/Logo-icon.png" rel="icon" type="image/png"/>
+<link href="../../../css/style.css" rel="stylesheet"/>
+<meta content="NextGen PDF online document and PDF tools." name="description"/><meta content="noindex, nofollow" name="robots"/><link href="https://nextgen-pdf.web.app/pages/dashboard/business/settings" rel="canonical"/><meta content="Organization Settings — NextGen PDF" property="og:title"/><meta content="NextGen PDF online document and PDF tools." property="og:description"/><meta content="https://nextgen-pdf.web.app/pages/dashboard/business/settings" property="og:url"/><meta content="website" property="og:type"/><meta content="NextGen PDF" property="og:site_name"/><meta content="https://nextgen-pdf.web.app/Assests/Logo-clean.png" property="og:image"/><meta content="summary_large_image" name="twitter:card"/><meta content="Organization Settings — NextGen PDF" name="twitter:title"/><meta content="NextGen PDF online document and PDF tools." name="twitter:description"/><meta content="https://nextgen-pdf.web.app/Assests/Logo-clean.png" name="twitter:image"/></head>
 <body>
-  <header class="site-header">
-    <div class="container nav-bar" style="width: 100%; max-width: 100%; padding: 0 24px;">
-      <a href="../../../index.html" class="brand-logo">
-        <img src="../../../Assests/Logo-icon.png" alt="NextGen PDF" />
-        <span>NextGen <b class="text-gradient">PDF</b></span>
-      </a>
-      <button class="theme-btn" data-theme-toggle aria-label="Toggle Theme">🌙</button>
-    </div>
-  </header>
-
-  <div class="dashboard-layout">
-    <aside class="sidebar-nav">
-      <a href="index.html" class="sidebar-item">🏢 Overview</a>
-      <a href="team.html" class="sidebar-item">👥 Team Members</a>
-      <a href="api.html" class="sidebar-item">🔑 API Keys</a>
-      <a href="billing.html" class="sidebar-item">💳 Enterprise Billing</a>
-      <a href="settings.html" class="sidebar-item active">⚙️ Org Settings</a>
-    </aside>
-
-    <main class="dashboard-content">
-      <h2>Organization Profile</h2>
-      <p style="margin-top: 4px; margin-bottom: 24px;">Configure company name, SSO, and data retention rules.</p>
-
-      <div class="card" style="max-width: 560px;">
-        <form onsubmit="event.preventDefault(); Toast.show({ message: 'Settings saved', type: 'success' });">
-          <div class="form-group">
-            <label class="form-label" for="org-name">Company Name</label>
-            <input type="text" id="org-name" class="input-text" value="Acme Corp" />
-          </div>
-
-          <div class="form-group">
-            <label class="form-label" for="retention">Data Retention Period</label>
-            <select id="retention" class="input-select">
-              <option value="1h">1 Hour (Default)</option>
-              <option value="24h">24 Hours</option>
-              <option value="7d">7 Days</option>
-              <option value="custom">Never store on server</option>
-            </select>
-          </div>
-
-          <button type="submit" class="btn btn-primary" style="margin-top: 12px;">Save Settings</button>
-        </form>
-      </div>
-    </main>
-  </div>
-
-  <script src="../../../js/components.js"></script>
+<header class="site-header">
+<div class="container nav-bar" style="width: 100%; max-width: 100%; padding: 0 24px;">
+<a class="brand-logo" href="../../../index.html">
+<img alt="NextGen PDF" src="../../../Assests/Logo-icon.png"/>
+<span>NextGen <b class="text-gradient">PDF</b></span>
+</a>
+<button aria-label="Toggle Theme" class="theme-btn" data-theme-toggle="">🌙</button>
+</div>
+</header>
+<div class="dashboard-layout">
+<aside class="sidebar-nav">
+<a class="sidebar-item" href="index.html">🏢 Overview</a>
+<a class="sidebar-item" href="team.html">👥 Team Members</a>
+<a class="sidebar-item" href="api.html">🔑 API Keys</a>
+<a class="sidebar-item" href="billing.html">💳 Enterprise Billing</a>
+<a class="sidebar-item active" href="settings.html">⚙️ Org Settings</a>
+</aside>
+<main class="dashboard-content">
+<h2>Organization Profile</h2>
+<p style="margin-top: 4px; margin-bottom: 24px;">Configure company name, SSO, and data retention rules.</p>
+<div class="card" style="max-width: 560px;">
+<form onsubmit="event.preventDefault(); Toast.show({ message: 'Settings saved', type: 'success' });">
+<div class="form-group">
+<label class="form-label" for="org-name">Company Name</label>
+<input class="input-text" id="org-name" type="text" value="Acme Corp"/>
+</div>
+<div class="form-group">
+<label class="form-label" for="retention">Data Retention Period</label>
+<select class="input-select" id="retention">
+<option value="1h">1 Hour (Default)</option>
+<option value="24h">24 Hours</option>
+<option value="7d">7 Days</option>
+<option value="custom">Never store on server</option>
+</select>
+</div>
+<button class="btn btn-primary" style="margin-top: 12px;" type="submit">Save Settings</button>
+</form>
+</div>
+</main>
+</div>
+<script src="../../../js/components.js"></script>
 </body>
 </html>

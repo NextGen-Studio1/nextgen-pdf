@@ -1,118 +1,115 @@
-<!doctype html>
-<html lang="en" data-theme="light">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width,initial-scale=1" />
-    <title>PDF Overlay — NextGen PDF</title>
-    <link rel="icon" type="image/png" href="../Assests/Logo.png" />
-    <link rel="stylesheet" href="../css/style.css" />
-    <link rel="stylesheet" href="../css/components.css" />
-    <link rel="stylesheet" href="../css/responsive.css" />
-  </head>
-  <body data-tool="overlay-pdf">
-    <header class="site-header">
-      <div class="container nav">
-        <a class="brand" href="../index.html"
-          ><img
-            src="../Assests/Logo-icon.png"
-            alt="NextGen PDF Logo"
-            class="brand-logo-icon"
-          /><span>NextGen <b>PDF</b></span></a
-        >
-        <nav>
-          <a href="tools.html">Tools</a><a href="about.html">About</a
-          ><a href="privacy.html">Privacy</a>
-        </nav>
-        <button class="theme-toggle" data-theme-toggle>☾</button
-        ><button
-          class="mobile-toggle"
-          data-mobile-toggle
-          aria-label="Toggle menu"
-        >
-          ☰
-        </button>
-      </div>
-    </header>
-    <main class="container">
-      <div class="page-hero">
-        <span class="eyebrow">BACKGROUND & STAMPING</span>
-        <h1>PDF Overlay</h1>
-        <p>Overlay a template, letterhead, or background grid onto your target document.</p>
-      </div>
-      <section class="workspace">
-        <div class="workspace-body">
-          <div class="dropzone" id="drop">
-            <div class="upload-icon">↑</div>
-            <h3>Drop your Target PDF file here</h3>
-            <p>or choose it from your device</p>
-            <label class="btn"
-              >Choose Target PDF<input
-                id="files"
-                type="file"
-                accept="application/pdf"
-                hidden /></label
-            ><small>Files are processed securely in-memory.</small>
-          </div>
-          <div id="list" class="file-list"></div>
+<!DOCTYPE html>
 
-          <div class="split-range-control" style="margin-top: 20px;">
-            <label for="overlay-file">
-              <b>Select Background Overlay PDF</b>
-              <small>Choose the template, grid, or letterhead PDF to stamp behind/over target pages.</small>
-            </label>
-            <input
-              id="overlay-file"
-              type="file"
-              accept="application/pdf"
-              style="padding: 10px; background: var(--bg); border: 1px dashed var(--border); border-radius: 8px; width: 100%; cursor: pointer;"
-            />
-          </div>
-
-          <button
-            id="process"
-            class="btn"
-            style="width: 100%; margin-top: 24px"
-          >
+<html data-theme="light" lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
+<title>Overlay PDF | NextGen PDF</title>
+<link href="../Assests/Logo-icon.png" rel="icon" type="image/png"/>
+<link href="../css/style.css" rel="stylesheet"/>
+<link href="../css/components.css" rel="stylesheet"/>
+<link href="../css/responsive.css" rel="stylesheet"/>
+<script async="" crossorigin="anonymous" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5453249687281273"></script>
+<meta content="Overlay one PDF document or page onto another with NextGen PDF." name="description"/><meta content="index, follow" name="robots"/><link href="https://nextgen-pdf.web.app/pages/overlay-pdf" rel="canonical"/><meta content="Overlay PDF | NextGen PDF" property="og:title"/><meta content="Overlay one PDF document or page onto another with NextGen PDF." property="og:description"/><meta content="https://nextgen-pdf.web.app/pages/overlay-pdf" property="og:url"/><meta content="website" property="og:type"/><meta content="NextGen PDF" property="og:site_name"/><meta content="https://nextgen-pdf.web.app/Assests/Logo-clean.png" property="og:image"/><meta content="summary_large_image" name="twitter:card"/><meta content="Overlay PDF | NextGen PDF" name="twitter:title"/><meta content="Overlay one PDF document or page onto another with NextGen PDF." name="twitter:description"/><meta content="https://nextgen-pdf.web.app/Assests/Logo-clean.png" name="twitter:image"/><script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebApplication", "name": "Overlay PDF", "url": "https://nextgen-pdf.web.app/pages/overlay-pdf", "description": "Overlay one PDF document or page onto another with NextGen PDF.", "applicationCategory": "BusinessApplication", "operatingSystem": "Web Browser"}</script><script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://nextgen-pdf.web.app/"}, {"@type": "ListItem", "position": 2, "name": "PDF Tools", "item": "https://nextgen-pdf.web.app/pages/tools"}, {"@type": "ListItem", "position": 3, "name": "Overlay PDF", "item": "https://nextgen-pdf.web.app/pages/overlay-pdf"}]}</script></head>
+<body data-tool="overlay-pdf">
+<!-- Header -->
+<header class="site-header">
+<div class="container nav-bar">
+<a class="brand-logo" href="../index.html">
+<img alt="NextGen PDF Logo" height="36" src="../Assests/Logo-icon.png" style="height:36px !important; max-height:36px !important; width:auto !important; display:inline-block;" width="36"/>
+<span>NextGen <b class="text-gradient">PDF</b></span>
+</a>
+<nav class="nav-links nav-links-desktop">
+<a href="../index.html">Home</a>
+<a href="tools.html">All Tools</a>
+<a href="pricing.html">Pricing</a>
+<a href="faq.html">FAQ</a>
+</nav>
+<div style="display: flex; align-items: center; gap: 12px;">
+<button aria-label="Toggle Theme" class="theme-btn" data-theme-toggle="">🌙</button>
+<a class="btn btn-ghost btn-sm" href="auth/login.html">Log in</a>
+<a class="btn btn-primary btn-sm" href="auth/register.html">Get Started</a>
+</div>
+</div>
+</header>
+<main class="container">
+<div class="page-hero">
+<span class="eyebrow">BACKGROUND &amp; STAMPING</span>
+<h1>PDF Overlay</h1>
+<p>Overlay a template, letterhead, or background grid onto your target document.</p>
+</div>
+<section class="workspace">
+<div class="workspace-body">
+<div class="dropzone" id="drop">
+<div class="upload-icon">↑</div>
+<h3>Drop your Target PDF file here</h3>
+<p>or choose it from your device</p>
+<label class="btn">Choose Target PDF<input accept="application/pdf" hidden="" id="files" type="file"/></label><small>Files are processed securely in-memory.</small>
+</div>
+<div class="file-list" id="list"></div>
+<div class="split-range-control" style="margin-top: 20px;">
+<label for="overlay-file">
+<b>Select Background Overlay PDF</b>
+<small>Choose the template, grid, or letterhead PDF to stamp behind/over target pages.</small>
+</label>
+<input accept="application/pdf" id="overlay-file" style="padding: 10px; background: var(--bg); border: 1px dashed var(--border); border-radius: 8px; width: 100%; cursor: pointer;" type="file"/>
+</div>
+<button class="btn" id="process" style="width: 100%; margin-top: 24px">
             Apply PDF Overlay 📑 →
           </button>
-          <div id="result" style="display: none; margin-top: 28px">
-            <div class="workspace-body">
-              <span class="eyebrow">COMPLETED</span>
-              <h3 style="margin-top: 8px">Your overlaid PDF is ready.</h3>
-              <p id="resultText">Your processed file is ready to download.</p>
-              <button class="btn" id="download">Download result</button
-              ><button
-                class="text-link"
-                id="again"
-                style="
+<div id="result" style="display: none; margin-top: 28px">
+<div class="workspace-body">
+<span class="eyebrow">COMPLETED</span>
+<h3 style="margin-top: 8px">Your overlaid PDF is ready.</h3>
+<p id="resultText">Your processed file is ready to download.</p>
+<button class="btn" id="download">Download result</button><button class="text-link" id="again" style="
                   margin-left: 15px;
                   background: none;
                   border: 0;
                   cursor: pointer;
-                "
-              >
+                ">
                 Overlay another file
               </button>
-            </div>
-          </div>
-        </div>
-      </section>
-    </main>
-    <footer>
-      <div class="container footer">
-        <div>
-          <a class="brand" href="../index.html"
-            ><img
-              src="../Assests/Logo-icon.png"
-              alt="NextGen PDF Logo"
-              class="brand-logo-icon"
-            /><span>NextGen <b>PDF</b></span></a
-          >
-        </div>
-      </div>
-    </footer>
-    <script src="../js/theme.js"></script>
-    <script src="../js/app.js"></script>
-    <script src="../js/api.js"></script>
-  </body>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<section aria-label="About Overlay PDF" class="seo-copy"><h2>Overlay PDF Online</h2><p>Overlay one PDF document or page onto another with NextGen PDF. NextGen PDF is designed to make common document tasks straightforward on desktop and mobile.</p><h3>How to use Overlay PDF</h3><ol><li>Choose or upload the document you want to process.</li><li>Select the options required for your task.</li><li>Start processing and download the resulting file when it is ready.</li></ol></section><footer style="padding: 60px 0 30px 0; border-top: 1px solid var(--border); background: var(--bg);">
+<div class="container" style="display: flex; flex-wrap: wrap; justify-content: space-between; gap: 32px;">
+<div>
+<a class="brand-logo" href="../index.html" style="margin-bottom: 12px; display: inline-flex;">
+<img alt="NextGen PDF Logo" height="36" src="../Assests/Logo-icon.png" style="height:36px !important; max-height:36px !important; width:auto !important;" width="36"/>
+<span>NextGen <b class="text-gradient">PDF</b></span>
+</a>
+<p style="max-width: 300px; margin-top: 8px; color: var(--text-muted);">Simple, fast, and secure PDF tools for creators, students, and businesses worldwide.</p>
+</div>
+<div style="display: flex; gap: 48px; flex-wrap: wrap;">
+<div>
+<h4 style="margin-bottom: 16px;">Product</h4>
+<div style="display: flex; flex-direction: column; gap: 8px;">
+<a href="tools.html">All Tools</a>
+<a href="pricing.html">Pricing</a>
+<a href="dashboard/index.html">Dashboard</a>
+</div>
+</div>
+<div>
+<h4 style="margin-bottom: 16px;">Company</h4>
+<div style="display: flex; flex-direction: column; gap: 8px;">
+<a href="about.html">About Us</a>
+<a href="faq.html">FAQ</a>
+<a href="privacy.html">Privacy Policy</a>
+</div>
+</div>
+</div>
+</div>
+<div class="container" style="margin-top: 40px; padding-top: 20px; border-top: 1px solid var(--border); text-align: center; color: var(--text-muted); font-size: 13px;">
+      © 2026 NextGen PDF. All rights reserved.
+    </div>
+</footer>
+<script src="../js/theme.js"></script>
+<script src="../js/app.js"></script>
+<script src="../js/api.js"></script>
+</body>
 </html>

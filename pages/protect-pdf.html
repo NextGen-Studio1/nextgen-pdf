@@ -1,137 +1,79 @@
-<!doctype html>
-<html lang="en" data-theme="light">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width,initial-scale=1" />
-    <title>Protect PDF — NextGen PDF</title>
-    <link rel="icon" type="image/png" href="../Assests/Logo.png" />
-    <link rel="stylesheet" href="../css/style.css" />
-    <link rel="stylesheet" href="../css/components.css" />
-    <link rel="stylesheet" href="../css/responsive.css" />
-    <!-- Google AdSense -->
-    <script
-      async
-      src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5453249687281273"
-      crossorigin="anonymous"
-    ></script>
-  </head>
-  <body data-tool="protect-pdf">
-    <header class="site-header">
-      <div class="container nav">
-        <a class="brand" href="../index.html"
-          ><img
-            src="../Assests/Logo-icon.png"
-            alt="NextGen PDF Logo"
-            class="brand-logo-icon"
-          /><span>NextGen <b>PDF</b></span></a
-        >
-        <nav>
-          <a href="tools.html">Tools</a><a href="about.html">About</a
-          ><a href="privacy.html">Privacy</a>
-        </nav>
-        <button class="theme-toggle" data-theme-toggle>☾</button
-        ><button
-          class="mobile-toggle"
-          data-mobile-toggle
-          aria-label="Toggle menu"
-        >
-          ☰
-        </button>
-      </div>
-    </header>
-    <main class="container">
-      <div class="page-hero">
-        <span class="eyebrow">DOCUMENT PROTECTION</span>
-        <h1>Protect PDF</h1>
-        <p>Set a secure password to encrypt and prevent unauthorized access to your PDF.</p>
-      </div>
-      <section class="workspace">
-        <div class="workspace-body">
-          <div class="dropzone" id="drop">
-            <div class="upload-icon">↑</div>
-            <h3>Drop your PDF file here</h3>
-            <p>or choose it from your device</p>
-            <label class="btn"
-              >Choose file<input
-                id="files"
-                type="file"
-                accept="application/pdf"
-                hidden /></label
-            ><small>Files are processed securely in-memory.</small>
-          </div>
-          <div id="list" class="file-list"></div>
+<!DOCTYPE html>
 
-          <div class="split-range-control" style="margin-top: 20px;">
-            <label for="protect-password">
-              <b>Set Password</b>
-              <small>Choose a strong password to lock this PDF document.</small>
-            </label>
-            <input
-              id="protect-password"
-              type="password"
-              placeholder="Enter password"
-              autocomplete="off"
-            />
-          </div>
-
-          <button
-            id="process"
-            class="btn"
-            style="width: 100%; margin-top: 24px"
-          >
-            Protect PDF 🔐 →
-          </button>
-          <div id="result" style="display: none; margin-top: 28px">
-            <div class="workspace-body">
-              <span class="eyebrow">COMPLETED</span>
-              <h3 style="margin-top: 8px">Your protected PDF is ready.</h3>
-              <p id="resultText">Your processed file is ready to download.</p>
-              <button class="btn" id="download">Download result</button
-              ><button
-                class="text-link"
-                id="again"
-                style="
-                  margin-left: 15px;
-                  background: none;
-                  border: 0;
-                  cursor: pointer;
-                "
-              >
-                Protect another file
-              </button>
-            </div>
-          </div>
-        </div>
-      </section>
-      <div
-        class="ad-container"
-        data-ad-slot="1000000020"
-        data-ad-format="horizontal"
-      ></div>
-    </main>
-    <footer>
-      <div class="container footer">
-        <div>
-          <a class="brand" href="../index.html"
-            ><img
-              src="../Assests/Logo-icon.png"
-              alt="NextGen PDF Logo"
-              class="brand-logo-icon"
-            /><span>NextGen <b>PDF</b></span></a
-          >
-          <p>Simple tools for your documents.</p>
-        </div>
-        <div class="footer-links">
-          <a href="tools.html">Tools</a><a href="about.html">About</a
-          ><a href="privacy.html">Privacy</a>
-        </div>
-        <span>© 2026 NextGen PDF</span>
-      </div>
-    </footer>
-    <script src="../js/app.js"></script>
-    <script src="../js/config.js"></script>
-    <script src="../js/firebase-config.js"></script>
-    <script src="../js/ads.js"></script>
-    <script src="../js/api.js"></script>
-  </body>
+<html data-theme="light" lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Protect PDF | NextGen PDF</title>
+<meta content="Password-protect PDF documents with NextGen PDF." name="description"/>
+<link href="https://nextgen-pdf.web.app/pages/protect-pdf" rel="canonical"/>
+<link href="../Assests/Logo-icon.png" rel="icon" type="image/png"/>
+<link href="../css/style.css" rel="stylesheet"/>
+<script async="" crossorigin="anonymous" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5453249687281273"></script>
+<meta content="index, follow" name="robots"/><meta content="Protect PDF | NextGen PDF" property="og:title"/><meta content="Password-protect PDF documents with NextGen PDF." property="og:description"/><meta content="https://nextgen-pdf.web.app/pages/protect-pdf" property="og:url"/><meta content="website" property="og:type"/><meta content="NextGen PDF" property="og:site_name"/><meta content="https://nextgen-pdf.web.app/Assests/Logo-clean.png" property="og:image"/><meta content="summary_large_image" name="twitter:card"/><meta content="Protect PDF | NextGen PDF" name="twitter:title"/><meta content="Password-protect PDF documents with NextGen PDF." name="twitter:description"/><meta content="https://nextgen-pdf.web.app/Assests/Logo-clean.png" name="twitter:image"/><script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebApplication", "name": "Protect PDF", "url": "https://nextgen-pdf.web.app/pages/protect-pdf", "description": "Password-protect PDF documents with NextGen PDF.", "applicationCategory": "BusinessApplication", "operatingSystem": "Web Browser"}</script><script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://nextgen-pdf.web.app/"}, {"@type": "ListItem", "position": 2, "name": "PDF Tools", "item": "https://nextgen-pdf.web.app/pages/tools"}, {"@type": "ListItem", "position": 3, "name": "Protect PDF", "item": "https://nextgen-pdf.web.app/pages/protect-pdf"}]}</script></head>
+<body data-tool="protect">
+<!-- Header -->
+<!-- Header -->
+<header class="site-header">
+<div class="container nav-bar">
+<a class="brand-logo" href="../index.html">
+<img alt="NextGen PDF Logo" height="36" src="../Assests/Logo-icon.png" style="height:36px !important; max-height:36px !important; width:auto !important; display:inline-block;" width="36"/>
+<span>NextGen <b class="text-gradient">PDF</b></span>
+</a>
+<nav class="nav-links nav-links-desktop">
+<a href="../index.html">Home</a>
+<a href="tools.html">All Tools</a>
+<a href="pricing.html">Pricing</a>
+<a href="faq.html">FAQ</a>
+</nav>
+<div style="display: flex; align-items: center; gap: 12px;">
+<button aria-label="Toggle Theme" class="theme-btn" data-theme-toggle="">🌙</button>
+<a class="btn btn-ghost btn-sm" href="auth/login.html">Log in</a>
+<a class="btn btn-primary btn-sm" href="auth/register.html">Get Started</a>
+</div>
+</div>
+</header>
+<!-- Breadcrumbs Bar -->
+<div style="background: var(--surface); border-bottom: 1px solid var(--border); padding: 12px 0; font-size: 13px; color: var(--text-muted);">
+<div class="container" style="display: flex; gap: 8px; align-items: center;">
+<a href="../index.html">Home</a> <span>›</span>
+<a href="tools.html">Tools</a> <span>›</span>
+<span style="color: var(--text-primary); font-weight: 700;">Protect PDF</span>
+</div>
+</div>
+<!-- Hero & Upload -->
+<section style="padding: 50px 0 30px;">
+<div class="container" style="max-width: 800px; text-align: center;">
+<span class="hero-eyebrow">🔒 ENCRYPTION &amp; SECURITY</span>
+<h1 style="margin-top: 12px;">Password Protect PDF Files</h1>
+<p style="font-size: var(--text-body-lg); color: var(--text-muted); margin-top: 12px;">
+        Add 256-bit AES encryption passwords to protect confidential documents.
+      </p>
+<div id="protect-uploader-container" style="margin-top: 32px; text-align: left;"></div>
+</div>
+</section>
+<!-- Related Tools Topic Cluster -->
+<section style="padding: 40px 0; border-top: 1px solid var(--border);">
+<div class="container" style="text-align: center;">
+<h3 style="margin-bottom: 16px;">Related PDF Tools</h3>
+<div style="display: flex; gap: 12px; justify-content: center; flex-wrap: wrap;">
+<a class="chip" href="unlock-pdf.html">🔓 Unlock PDF</a>
+<a class="chip" href="watermark.html">💧 Watermark PDF</a>
+<a class="chip" href="redact-pdf.html">⬛ Redact PDF</a>
+</div>
+</div>
+</section>
+<script src="../js/components.js"></script>
+<script src="../js/uploader.js"></script>
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+      window.activeUploader = new PDFUploader('protect-uploader-container', {
+        onFilesSelected: (files) => {
+          Toast.show({ message: `Ready to encrypt ${files[0].name}`, type: 'success' });
+          window.activeUploader.simulateProgress();
+        }
+      });
+    });
+  </script>
+<section aria-label="About Protect PDF" class="seo-copy"><h2>Protect PDF Online</h2><p>Password-protect PDF documents with NextGen PDF. NextGen PDF is designed to make common document tasks straightforward on desktop and mobile.</p><h3>How to use Protect PDF</h3><ol><li>Choose or upload the document you want to process.</li><li>Select the options required for your task.</li><li>Start processing and download the resulting file when it is ready.</li></ol><h3>Related PDF tools</h3><nav aria-label="Related PDF tools" class="related-tools"><a href="unlock-pdf.html">Unlock PDF</a><a href="encrypt-pdf.html">Encrypt PDF</a><a href="redact-pdf.html">Redact PDF</a></nav></section></body>
 </html>

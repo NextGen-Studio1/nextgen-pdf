@@ -1,0 +1,116 @@
+[
+  {
+    "source": "pages/add-image.html",
+    "type": "script",
+    "ref": "../js/theme.js",
+    "expected": "js/theme.js"
+  },
+  {
+    "source": "pages/add-links.html",
+    "type": "script",
+    "ref": "../js/theme.js",
+    "expected": "js/theme.js"
+  },
+  {
+    "source": "pages/ai-summarize.html",
+    "type": "script",
+    "ref": "../js/theme.js",
+    "expected": "js/theme.js"
+  },
+  {
+    "source": "pages/annotate-pdf.html",
+    "type": "script",
+    "ref": "../js/theme.js",
+    "expected": "js/theme.js"
+  },
+  {
+    "source": "pages/chat-pdf.html",
+    "type": "script",
+    "ref": "../js/theme.js",
+    "expected": "js/theme.js"
+  },
+  {
+    "source": "pages/compare-pdfs.html",
+    "type": "script",
+    "ref": "../js/theme.js",
+    "expected": "js/theme.js"
+  },
+  {
+    "source": "pages/deskew-pdf.html",
+    "type": "script",
+    "ref": "../js/theme.js",
+    "expected": "js/theme.js"
+  },
+  {
+    "source": "pages/edit-pdf.html",
+    "type": "script",
+    "ref": "../js/theme.js",
+    "expected": "js/theme.js"
+  },
+  {
+    "source": "pages/extract-images.html",
+    "type": "script",
+    "ref": "../js/theme.js",
+    "expected": "js/theme.js"
+  },
+  {
+    "source": "pages/flatten-pdf.html",
+    "type": "script",
+    "ref": "../js/theme.js",
+    "expected": "js/theme.js"
+  },
+  {
+    "source": "pages/highlight-pdf.html",
+    "type": "script",
+    "ref": "../js/theme.js",
+    "expected": "js/theme.js"
+  },
+  {
+    "source": "pages/metadata-editor.html",
+    "type": "script",
+    "ref": "../js/theme.js",
+    "expected": "js/theme.js"
+  },
+  {
+    "source": "pages/overlay-pdf.html",
+    "type": "script",
+    "ref": "../js/theme.js",
+    "expected": "js/theme.js"
+  },
+  {
+    "source": "pages/pdf-bookmarks.html",
+    "type": "script",
+    "ref": "../js/theme.js",
+    "expected": "js/theme.js"
+  },
+  {
+    "source": "pages/pdf-to-markdown.html",
+    "type": "script",
+    "ref": "../js/theme.js",
+    "expected": "js/theme.js"
+  },
+  {
+    "source": "pages/repair-pdf.html",
+    "type": "script",
+    "ref": "../js/theme.js",
+    "expected": "js/theme.js"
+  },
+  {
+    "source": "pages/resize-pages.html",
+    "type": "script",
+    "ref": "../js/theme.js",
+    "expected": "js/theme.js"
+  },
+  {
+    "source": "pages/scanned-pdf-to-text.html",
+    "type": "script",
+    "ref": "../js/theme.js",
+    "expected": "js/theme.js"
+  },
+  {
+    "source": "pages/translate-pdf.html",
+    "type": "script",
+    "ref": "../js/theme.js",
+    "expected": "js/theme.js"
+  }
+]
