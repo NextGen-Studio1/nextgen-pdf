@@ -22,7 +22,6 @@ from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import StreamingResponse
 from PIL import Image
 from pypdf import PdfReader, PdfWriter
-from office_converter import convert_office_to_pdf
 
 MAX_FILE_SIZE = 25 * 1024 * 1024
 MAX_FILES = 20
@@ -862,58 +861,133 @@ async def pdf_to_pdfa(file: UploadFile = File(...)):
 @app.post("/api/word-to-pdf")
 async def word_to_pdf(file: UploadFile = File(...)):
     if not is_docx(file):
-        raise HTTPException(415, "Please upload a Word document (.doc/.docx).")
+        raise HTTPException(415, "Please upload a Word (.docx) file.")
     data = await file.read()
     reject_large(data)
     try:
-        result = convert_office_to_pdf(data, file.filename or "document.docx")
-    except ValueError as exc:
-        raise HTTPException(415, str(exc)) from exc
-    except RuntimeError as exc:
-        raise HTTPException(500, str(exc)) from exc
-    except Exception as exc:
-        raise HTTPException(400, "The Word document could not be converted to PDF.") from exc
+        docx_doc = docx.Document(io.BytesIO(data))
+        out_doc = fitz.open()
+        
+        page = out_doc.new_page(width=595, height=842)
+        y_cursor = 40
+        
+        for p in docx_doc.paragraphs:
+            text = p.text.strip()
+            if text:
+                lines = [text[i:i+80] for i in range(0, len(text), 80)]
+                for line in lines:
+                    if y_cursor > 800:
+                        page = out_doc.new_page(width=595, height=842)
+                        y_cursor = 40
+                    page.insert_text(fitz.Point(40, y_cursor), line, fontsize=11, fontname="helv", color=(0.1, 0.1, 0.1))
+                    y_cursor += 16
+                y_cursor += 8
+        
+        for table in docx_doc.tables:
+            for row in table.rows:
+                row_str = " | ".join(cell.text.strip() for cell in row.cells if cell.text.strip())
+                if row_str:
+                    if y_cursor > 800:
+                        page = out_doc.new_page(width=595, height=842)
+                        y_cursor = 40
+                    page.insert_text(fitz.Point(40, y_cursor), row_str, fontsize=10, fontname="hebo", color=(0.2, 0.3, 0.6))
+                    y_cursor += 16
+        
+        if out_doc.page_count == 0:
+            page = out_doc.new_page(width=595, height=842)
+            page.insert_text(fitz.Point(40, 40), "Converted Document", fontsize=12)
 
-    base = safe_stem(file.filename, "document")
-    return file_response(result, f"nextgen-{base}-word-to-pdf-result.pdf", "application/pdf")
+        out_buf = io.BytesIO()
+        out_doc.save(out_buf, garbage=3, deflate=True)
+        out_doc.close()
+
+        base = safe_stem(file.filename, "document")
+        return file_response(out_buf.getvalue(), f"nextgen-{base}-converted.pdf", "application/pdf")
+    except Exception as exc:
+        raise HTTPException(400, f"The Word document could not be converted to PDF: {exc}") from exc
 
 
 @app.post("/api/excel-to-pdf")
 async def excel_to_pdf(file: UploadFile = File(...)):
     if not is_xlsx(file):
-        raise HTTPException(415, "Please upload an Excel document (.xls/.xlsx).")
+        raise HTTPException(415, "Please upload an Excel (.xlsx) file.")
     data = await file.read()
     reject_large(data)
     try:
-        result = convert_office_to_pdf(data, file.filename or "document.xlsx")
-    except ValueError as exc:
-        raise HTTPException(415, str(exc)) from exc
-    except RuntimeError as exc:
-        raise HTTPException(500, str(exc)) from exc
-    except Exception as exc:
-        raise HTTPException(400, "The Excel document could not be converted to PDF.") from exc
+        wb = openpyxl.load_workbook(io.BytesIO(data), data_only=True)
+        out_doc = fitz.open()
+        
+        for sheet in wb.worksheets:
+            page = out_doc.new_page(width=842, height=595)
+            page.insert_text(fitz.Point(40, 40), f"Sheet: {sheet.title}", fontsize=14, fontname="hebo", color=(0.2, 0.4, 0.8))
+            y_cursor = 70
+            
+            for row in sheet.iter_rows(values_only=True):
+                non_empty = [str(val).strip() for val in row if val is not None and str(val).strip()]
+                if non_empty:
+                    row_str = " | ".join(non_empty)
+                    lines = [row_str[i:i+110] for i in range(0, len(row_str), 110)]
+                    for line in lines:
+                        if y_cursor > 550:
+                            page = out_doc.new_page(width=842, height=595)
+                            y_cursor = 40
+                        page.insert_text(fitz.Point(40, y_cursor), line, fontsize=10, fontname="helv", color=(0.1, 0.1, 0.1))
+                        y_cursor += 15
+                    y_cursor += 4
 
-    base = safe_stem(file.filename, "document")
-    return file_response(result, f"nextgen-{base}-excel-to-pdf-result.pdf", "application/pdf")
+        if out_doc.page_count == 0:
+            page = out_doc.new_page(width=842, height=595)
+            page.insert_text(fitz.Point(40, 40), "Spreadsheet Document", fontsize=12)
+
+        out_buf = io.BytesIO()
+        out_doc.save(out_buf, garbage=3, deflate=True)
+        out_doc.close()
+
+        base = safe_stem(file.filename, "spreadsheet")
+        return file_response(out_buf.getvalue(), f"nextgen-{base}-converted.pdf", "application/pdf")
+    except Exception as exc:
+        raise HTTPException(400, f"The Excel file could not be converted to PDF: {exc}") from exc
 
 
 @app.post("/api/pptx-to-pdf")
 async def pptx_to_pdf(file: UploadFile = File(...)):
     if not is_pptx(file):
-        raise HTTPException(415, "Please upload a PowerPoint document (.ppt/.pptx).")
+        raise HTTPException(415, "Please upload a PowerPoint (.pptx) file.")
     data = await file.read()
     reject_large(data)
     try:
-        result = convert_office_to_pdf(data, file.filename or "presentation.pptx")
-    except ValueError as exc:
-        raise HTTPException(415, str(exc)) from exc
-    except RuntimeError as exc:
-        raise HTTPException(500, str(exc)) from exc
-    except Exception as exc:
-        raise HTTPException(400, "The PowerPoint document could not be converted to PDF.") from exc
+        prs = pptx.Presentation(io.BytesIO(data))
+        out_doc = fitz.open()
+        
+        for idx, slide in enumerate(prs.slides):
+            page = out_doc.new_page(width=842, height=595)
+            page.insert_text(fitz.Point(40, 40), f"Slide {idx + 1}", fontsize=16, fontname="hebo", color=(0.2, 0.4, 0.8))
+            y_cursor = 80
+            
+            for shape in slide.shapes:
+                if hasattr(shape, "text") and shape.text.strip():
+                    for paragraph in shape.text.split("\n"):
+                        p_clean = paragraph.strip()
+                        if p_clean:
+                            lines = [p_clean[i:i+110] for i in range(0, len(p_clean), 110)]
+                            for line in lines:
+                                page.insert_text(fitz.Point(40, y_cursor), line, fontsize=12, fontname="helv", color=(0.1, 0.1, 0.1))
+                                y_cursor += 18
+                                if y_cursor > 550:
+                                    break
+        
+        if out_doc.page_count == 0:
+            page = out_doc.new_page(width=842, height=595)
+            page.insert_text(fitz.Point(40, 40), "Presentation Document", fontsize=12)
 
-    base = safe_stem(file.filename, "presentation")
-    return file_response(result, f"nextgen-{base}-pptx-to-pdf-result.pdf", "application/pdf")
+        out_buf = io.BytesIO()
+        out_doc.save(out_buf, garbage=3, deflate=True)
+        out_doc.close()
+
+        base = safe_stem(file.filename, "presentation")
+        return file_response(out_buf.getvalue(), f"nextgen-{base}-converted.pdf", "application/pdf")
+    except Exception as exc:
+        raise HTTPException(400, f"The PowerPoint file could not be converted to PDF: {exc}") from exc
 
 
 @app.post("/api/html-to-pdf")

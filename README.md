@@ -1,37 +1,70 @@
-# NextGen PDF
+# NextGen PDF — High-Fidelity Office → PDF Fix
 
-Frontend + FastAPI backend for the first production-ready MVP of NextGen PDF.
+This patch fixes the core Office-to-PDF problem in the NextGen PDF backend.
 
-## V1 tools
-- JPG/PNG → PDF
-- Merge PDF
-- Split PDF (split every page or extract page/range groups)
-- Compress PDF (best quality, balanced, smallest size)
-- PDF → JPG/PNG (all pages or selected pages/ranges)
+## What was wrong
 
-## Run locally
+The previous `/api/word-to-pdf`, `/api/excel-to-pdf`, and `/api/pptx-to-pdf`
+implementations extracted text with Python libraries and manually drew that
+text into a new PDF. That discards much of the original document layout.
 
-### Backend
+## What this patch changes
+
+Office documents are now rendered by **LibreOffice**:
+
+DOCX/DOC → LibreOffice → PDF
+XLSX/XLS → LibreOffice → PDF
+PPTX/PPT → LibreOffice → PDF
+
+This is a document renderer, not a text reconstruction pipeline. It therefore
+preserves the original document's layout much more faithfully, including images,
+fonts available on the server, paragraph formatting, tables, margins,
+headers/footers, page breaks and spacing.
+
+## Files
+
+- `backend/office_converter.py` — reusable conversion engine
+- `backend/Dockerfile` — installs LibreOffice + fonts on Render
+- `backend/requirements.txt` — backend dependencies
+- `render.yaml` — switches the Render service to Docker
+- `apply_conversion_fix.py` — safely patches the existing `backend/main.py`
+
+## Apply to your current project
+
+Copy these files into the root of your current NextGen PDF project, then run:
+
 ```powershell
-cd backend
-py -m venv .venv
-.\.venv\Scripts\Activate.ps1
-pip install -r requirements.txt
-uvicorn main:app --reload --host 127.0.0.1 --port 8000
+python apply_conversion_fix.py
 ```
 
-### Frontend
-In another terminal from the project root:
-```powershell
-python -m http.server 5500
+The script creates:
+
+```text
+backend/main.py.before-office-fix
 ```
-Open `http://127.0.0.1:5500`.
 
-The frontend calls `http://127.0.0.1:8000/api` by default. Set `window.NEXTGEN_API_BASE` before loading the app when the API is deployed elsewhere.
+before changing `backend/main.py`.
 
-## File rules
-- Maximum single upload: 25 MB.
-- Merge and image-to-PDF: up to 20 files.
-- One output file downloads directly.
-- Multiple output files are packaged as a ZIP.
-- Generated files are streamed back and are not intentionally persisted by this MVP.
+Then verify:
+
+```powershell
+python -m py_compile backend/main.py backend/office_converter.py
+```
+
+## Local requirement
+
+For local Word/Excel/PowerPoint → PDF testing, install LibreOffice on the
+machine and make sure `libreoffice` or `soffice` is on PATH.
+
+## Render deployment
+
+The included `render.yaml` uses the Dockerfile so Render installs LibreOffice.
+This is required; simply adding a Python package is not enough.
+
+After deployment, test with the original Word assignment and compare the PDF
+page-by-page with Word.
+
+## Important
+
+Do not use the old text-reconstruction implementations for Office → PDF again.
+All three Office conversion endpoints should use `convert_office_to_pdf()`.
