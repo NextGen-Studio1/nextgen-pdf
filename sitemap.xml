@@ -1,30 +1,126 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <!-- Core Landing Pages -->
   <url>
     <loc>https://nextgen-pdf.web.app/</loc>
+    <lastmod>2026-09-22</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://nextgen-pdf.web.app/pages/tools</loc>
+    <loc>https://nextgen-pdf.web.app/pages/tools.html</loc>
+    <lastmod>2026-09-22</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://nextgen-pdf.web.app/pages/compress</loc>
+    <loc>https://nextgen-pdf.web.app/pages/pricing.html</loc>
+    <lastmod>2026-09-22</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://nextgen-pdf.web.app/pages/merge</loc>
+    <loc>https://nextgen-pdf.web.app/pages/faq.html</loc>
+    <lastmod>2026-09-22</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://nextgen-pdf.web.app/pages/split</loc>
+    <loc>https://nextgen-pdf.web.app/pages/about.html</loc>
+    <lastmod>2026-09-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://nextgen-pdf.web.app/pages/jpg-to-pdf</loc>
+    <loc>https://nextgen-pdf.web.app/pages/privacy.html</loc>
+    <lastmod>2026-09-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+
+  <!-- High-Priority PDF Tool Pages -->
+  <url>
+    <loc>https://nextgen-pdf.web.app/pages/compress.html</loc>
+    <lastmod>2026-09-22</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://nextgen-pdf.web.app/pages/pdf-to-jpg</loc>
+    <loc>https://nextgen-pdf.web.app/pages/merge.html</loc>
+    <lastmod>2026-09-22</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://nextgen-pdf.web.app/pages/about</loc>
+    <loc>https://nextgen-pdf.web.app/pages/split.html</loc>
+    <lastmod>2026-09-22</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://nextgen-pdf.web.app/pages/privacy</loc>
+    <loc>https://nextgen-pdf.web.app/pages/pdf-to-word.html</loc>
+    <lastmod>2026-09-22</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://nextgen-pdf.web.app/pages/word-to-pdf.html</loc>
+    <lastmod>2026-09-22</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://nextgen-pdf.web.app/pages/pdf-to-jpg.html</loc>
+    <lastmod>2026-09-22</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://nextgen-pdf.web.app/pages/jpg-to-pdf.html</loc>
+    <lastmod>2026-09-22</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://nextgen-pdf.web.app/pages/ocr-pdf.html</loc>
+    <lastmod>2026-09-22</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://nextgen-pdf.web.app/pages/rotate.html</loc>
+    <lastmod>2026-09-22</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://nextgen-pdf.web.app/pages/protect-pdf.html</loc>
+    <lastmod>2026-09-22</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://nextgen-pdf.web.app/pages/unlock-pdf.html</loc>
+    <lastmod>2026-09-22</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://nextgen-pdf.web.app/pages/pdf-to-excel.html</loc>
+    <lastmod>2026-09-22</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://nextgen-pdf.web.app/pages/ai-summarize.html</loc>
+    <lastmod>2026-09-22</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://nextgen-pdf.web.app/pages/chat-pdf.html</loc>
+    <lastmod>2026-09-22</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
   </url>
 </urlset>

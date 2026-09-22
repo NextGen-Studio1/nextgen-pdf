@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Business Dashboard — NextGen PDF</title>
+  <link rel="icon" type="image/png" href="../../../Assests/Logo-icon.png" />
+  <link rel="stylesheet" href="../../../css/style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container nav-bar" style="width: 100%; max-width: 100%; padding: 0 24px;">
+      <a href="../../../index.html" class="brand-logo">
+        <img src="../../../Assests/Logo-icon.png" alt="NextGen PDF" />
+        <span>NextGen <b class="text-gradient">PDF</b> <span class="chip" style="background: var(--primary-bg); color: var(--primary); font-size: 11px;">BUSINESS</span></span>
+      </a>
+      <button class="theme-btn" data-theme-toggle aria-label="Toggle Theme">🌙</button>
+    </div>
+  </header>
+
+  <div class="dashboard-layout">
+    <aside class="sidebar-nav">
+      <div style="font-size: 11px; font-weight: 800; letter-spacing: 0.08em; text-transform: uppercase; color: var(--text-muted); padding: 0 12px 8px 12px;">Business Suite</div>
+      <a href="index.html" class="sidebar-item active">🏢 Overview</a>
+      <a href="team.html" class="sidebar-item">👥 Team Members</a>
+      <a href="api.html" class="sidebar-item">🔑 API Keys</a>
+      <a href="billing.html" class="sidebar-item">💳 Enterprise Billing</a>
+      <a href="settings.html" class="sidebar-item">⚙️ Org Settings</a>
+
+      <div style="margin-top: 24px; font-size: 11px; font-weight: 800; letter-spacing: 0.08em; text-transform: uppercase; color: var(--text-muted); padding: 0 12px 8px 12px;">Back</div>
+      <a href="../index.html" class="sidebar-item">👤 Personal Dashboard</a>
+    </aside>
+
+    <main class="dashboard-content">
+      <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 28px;">
+        <div>
+          <h2>Organization Overview</h2>
+          <p style="margin-top: 4px;">Acme Corp Enterprise Workspace</p>
+        </div>
+        <a href="team.html" class="btn btn-primary">+ Invite Member</a>
+      </div>
+
+      <div class="stats-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px; margin-bottom: 28px;">
+        <div class="stats-card">
+          <div class="stats-card-lbl">Active Seats</div>
+          <div class="stats-card-val">12 / 25</div>
+        </div>
+        <div class="stats-card">
+          <div class="stats-card-lbl">API Calls (This Month)</div>
+          <div class="stats-card-val">142,850</div>
+        </div>
+        <div class="stats-card">
+          <div class="stats-card-lbl">Monthly SLA</div>
+          <div class="stats-card-val" style="color: var(--success);">99.99%</div>
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <script src="../../../js/components.js"></script>
+</body>
+</html>

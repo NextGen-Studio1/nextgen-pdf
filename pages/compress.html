@@ -1,134 +1,226 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en" data-theme="light">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width,initial-scale=1" />
-    <title>Compress PDF — NextGen PDF</title>
-    <link rel="icon" type="image/png" href="../Assests/Logo.png" />
-    <link rel="stylesheet" href="../css/style.css" />
-    <link rel="stylesheet" href="../css/components.css" />
-    <link rel="stylesheet" href="../css/responsive.css" />
-    <!-- Google AdSense -->
-    <script
-      async
-      src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5453249687281273"
-      crossorigin="anonymous"
-    ></script>
-  </head>
-  <body data-tool="compress">
-    <header class="site-header">
-      <div class="container nav">
-        <a class="brand" href="../index.html"
-          ><img
-            src="../Assests/Logo-icon.png"
-            alt="NextGen PDF Logo"
-            class="brand-logo-icon"
-          /><span>NextGen <b>PDF</b></span></a
-        >
-        <nav>
-          <a href="tools.html">Tools</a><a href="about.html">About</a
-          ><a href="privacy.html">Privacy</a>
-        </nav>
-        <button class="theme-toggle" data-theme-toggle>☾</button
-        ><button
-          class="mobile-toggle"
-          data-mobile-toggle
-          aria-label="Toggle menu"
-        >
-          ☰
-        </button>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Compress PDF Online — Reduce PDF File Size Free | NextGen PDF</title>
+  <meta name="description" content="Compress PDF files online for free while preserving maximum document quality. Reduce PDF file size instantly with NextGen PDF compression tool." />
+  <link rel="canonical" href="https://nextgen-pdf.web.app/pages/compress.html" />
+  <link rel="icon" type="image/png" href="../Assests/Logo-icon.png" />
+  
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://nextgen-pdf.web.app/pages/compress.html" />
+  <meta property="og:title" content="Compress PDF Online Free — Reduce PDF Size | NextGen PDF" />
+  <meta property="og:description" content="Reduce PDF file size quickly with NextGen PDF. Compress documents while keeping them easy to share and download." />
+  <meta property="og:image" content="https://nextgen-pdf.web.app/Assests/Logo.png" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Compress PDF Online Free | NextGen PDF" />
+  <meta name="twitter:description" content="Shrink PDF file sizes instantly while keeping text and graphics crisp." />
+  <meta name="twitter:image" content="https://nextgen-pdf.web.app/Assests/Logo.png" />
+
+  <link rel="stylesheet" href="../css/style.css" />
+
+  <!-- Structured Data: BreadcrumbList, SoftwareApplication, FAQPage -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://nextgen-pdf.web.app/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Tools",
+            "item": "https://nextgen-pdf.web.app/pages/tools.html"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "Compress PDF",
+            "item": "https://nextgen-pdf.web.app/pages/compress.html"
+          }
+        ]
+      },
+      {
+        "@type": "SoftwareApplication",
+        "name": "NextGen PDF Compressor",
+        "operatingSystem": "All",
+        "applicationCategory": "BusinessApplication",
+        "offers": {
+          "@type": "Offer",
+          "price": "0",
+          "priceCurrency": "USD"
+        }
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "How do I compress a PDF file without losing quality?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Select your PDF document in the upload box above, choose 'Balanced' or 'Best Quality' compression, and click Process. NextGen PDF reduces stream data while preserving vector graphics and text clarity."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Is PDF compression free on NextGen PDF?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes, you can compress up to 5 PDFs per day completely free without registering an account."
+            }
+          }
+        ]
+      }
+    ]
+  }
+  </script>
+</head>
+<body data-tool="compress">
+
+  <!-- Header -->
+  <header class="site-header">
+    <div class="container nav-bar">
+      <a href="../index.html" class="brand-logo">
+        <img src="../Assests/Logo-icon.png" alt="NextGen PDF Logo" width="36" height="36" />
+        <span>NextGen <b class="text-gradient">PDF</b></span>
+      </a>
+
+      <nav class="nav-links nav-links-desktop">
+        <a href="../index.html">Home</a>
+        <a href="tools.html">All Tools</a>
+        <a href="pricing.html">Pricing</a>
+        <a href="faq.html">FAQ</a>
+      </nav>
+
+      <div style="display: flex; align-items: center; gap: 12px;">
+        <button class="theme-btn" data-theme-toggle aria-label="Toggle Theme">🌙</button>
+        <a href="auth/login.html" class="btn btn-ghost btn-sm">Log in</a>
+        <a href="auth/register.html" class="btn btn-primary btn-sm">Get Started</a>
       </div>
-    </header>
-    <main class="container">
-      <div class="page-hero">
-        <span class="eyebrow">PDF WORKSPACE</span>
-        <h1>Compress PDF</h1>
-        <p>Reduce PDF size with a simple quality choice.</p>
+    </div>
+  </header>
+
+  <!-- Breadcrumbs Bar -->
+  <div style="background: var(--surface); border-bottom: 1px solid var(--border); padding: 12px 0; font-size: 13px; color: var(--text-muted);">
+    <div class="container" style="display: flex; gap: 8px; align-items: center;">
+      <a href="../index.html">Home</a> <span>›</span>
+      <a href="tools.html">Tools</a> <span>›</span>
+      <span style="color: var(--text-primary); font-weight: 700;">Compress PDF</span>
+    </div>
+  </div>
+
+  <!-- Page Hero & Upload Area -->
+  <section style="padding: 50px 0 30px;">
+    <div class="container" style="max-width: 800px; text-align: center;">
+      <span class="hero-eyebrow">📦 PDF COMPRESSION TOOL</span>
+      <h1 style="margin-top: 12px;">Compress PDF Online</h1>
+      <p style="font-size: var(--text-body-lg); color: var(--text-muted); margin-top: 12px;">
+        Shrink PDF file size quickly while keeping documents clean and easy to share via email or web upload.
+      </p>
+
+      <!-- Reusable Uploader Mount -->
+      <div id="compress-uploader-container" style="margin-top: 32px; text-align: left;"></div>
+    </div>
+  </section>
+
+  <!-- How-To Guide Section -->
+  <section style="padding: 60px 0; background: var(--surface); border-top: 1px solid var(--border);">
+    <div class="container" style="max-width: 900px;">
+      <h2 style="text-align: center; margin-bottom: 36px;">How to Compress a PDF File</h2>
+      
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 24px;">
+        <div class="card" style="text-align: center;">
+          <div style="width: 36px; height: 36px; border-radius: 50%; background: var(--primary-bg); color: var(--primary); font-weight: 800; display: grid; place-items: center; margin: 0 auto 16px;">1</div>
+          <h3 style="font-size: 16px;">Upload PDF</h3>
+          <p style="font-size: 14px; margin-top: 6px;">Select or drop your PDF into the upload area above.</p>
+        </div>
+
+        <div class="card" style="text-align: center;">
+          <div style="width: 36px; height: 36px; border-radius: 50%; background: var(--primary-bg); color: var(--primary); font-weight: 800; display: grid; place-items: center; margin: 0 auto 16px;">2</div>
+          <h3 style="font-size: 16px;">Choose Level</h3>
+          <p style="font-size: 14px; margin-top: 6px;">Select recommended balanced or extreme compression.</p>
+        </div>
+
+        <div class="card" style="text-align: center;">
+          <div style="width: 36px; height: 36px; border-radius: 50%; background: var(--primary-bg); color: var(--primary); font-weight: 800; display: grid; place-items: center; margin: 0 auto 16px;">3</div>
+          <h3 style="font-size: 16px;">Compress File</h3>
+          <p style="font-size: 14px; margin-top: 6px;">Our engine optimizes images and font streams automatically.</p>
+        </div>
+
+        <div class="card" style="text-align: center;">
+          <div style="width: 36px; height: 36px; border-radius: 50%; background: var(--primary-bg); color: var(--primary); font-weight: 800; display: grid; place-items: center; margin: 0 auto 16px;">4</div>
+          <h3 style="font-size: 16px;">Download PDF</h3>
+          <p style="font-size: 14px; margin-top: 6px;">Save your newly compressed PDF to your device.</p>
+        </div>
       </div>
-      <section class="workspace">
-        <div class="workspace-body">
-          <div class="dropzone" id="drop">
-            <div class="upload-icon">↑</div>
-            <h3>Drop your files here</h3>
-            <p>or choose them from your device</p>
-            <label class="btn"
-              >Choose files<input
-                id="files"
-                type="file"
-                accept="application/pdf"
-                hidden /></label
-            ><small>Files are processed securely by the NextGen PDF API</small>
-          </div>
-          <div id="list" class="file-list"></div>
-          <div class="options">
-            <div class="option active" data-value="best">
-              Best quality <small> — larger output, clearer pages</small>
-            </div>
-            <div class="option" data-value="balanced">
-              Balanced <small> — recommended</small>
-            </div>
-            <div class="option" data-value="smallest">
-              Smallest size <small> — maximum reduction</small>
-            </div>
-          </div>
-          <button
-            id="process"
-            class="btn"
-            style="width: 100%; margin-top: 15px"
-          >
-            Process files →
-          </button>
-          <div id="result" style="display: none; margin-top: 28px">
-            <div class="workspace-body">
-              <span class="eyebrow">COMPLETED</span>
-              <h3 style="margin-top: 8px">Your file is ready.</h3>
-              <p id="resultText">Your processed file is ready to download.</p>
-              <button class="btn" id="download">Download result</button
-              ><button
-                class="text-link"
-                id="again"
-                style="
-                  margin-left: 15px;
-                  background: none;
-                  border: 0;
-                  cursor: pointer;
-                "
-              >
-                Process another file
-              </button>
-            </div>
-          </div>
+    </div>
+  </section>
+
+  <!-- Key Features & Privacy Guarantee -->
+  <section style="padding: 60px 0;">
+    <div class="container" style="max-width: 900px;">
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 24px; margin-bottom: 48px;">
+        <div class="card">
+          <h3>⚡ Maximum Compression Ratio</h3>
+          <p style="margin-top: 8px;">Reduce PDF sizes by up to 80% without destroying text legibility or vector shapes.</p>
         </div>
-      </section>
-      <div
-        class="ad-container"
-        data-ad-slot="1000000002"
-        data-ad-format="horizontal"
-      ></div>
-    </main>
-    <footer>
-      <div class="container footer">
-        <div>
-          <a class="brand" href="../index.html"
-            ><img
-              src="../Assests/Logo-icon.png"
-              alt="NextGen PDF Logo"
-              class="brand-logo-icon"
-            /><span>NextGen <b>PDF</b></span></a
-          >
-          <p>Simple tools for your documents.</p>
+
+        <div class="card">
+          <h3>🔒 100% Secure & Private</h3>
+          <p style="margin-top: 8px;">Your uploaded documents are processed via SSL encryption and deleted after 1 hour.</p>
         </div>
-        <div class="footer-links">
-          <a href="tools.html">Tools</a><a href="about.html">About</a
-          ><a href="privacy.html">Privacy</a>
-        </div>
-        <span>© 2026 NextGen PDF</span>
       </div>
-    </footer>
-    <script src="../js/app.js"></script>
-    <script src="../js/config.js"></script>
-    <script src="../js/firebase-config.js"></script>
-    <script src="../js/ads.js"></script>
-    <script src="../js/api.js"></script>
-  </body>
+
+      <!-- FAQ Section -->
+      <h2 style="text-align: center; margin-bottom: 24px;">Frequently Asked Questions</h2>
+      <div style="display: flex; flex-direction: column; gap: 16px;">
+        <div class="card">
+          <h3>How do I compress a PDF file without losing quality?</h3>
+          <p style="margin-top: 8px;">Select your PDF document in the upload box above, choose 'Balanced' compression, and click Process.</p>
+        </div>
+        <div class="card">
+          <h3>Is PDF compression free on NextGen PDF?</h3>
+          <p style="margin-top: 8px;">Yes, you can compress up to 5 PDFs per day completely free without registering an account.</p>
+        </div>
+      </div>
+
+      <!-- Related Tools Topic Cluster -->
+      <div style="margin-top: 60px; text-align: center;">
+        <h3 style="margin-bottom: 16px;">Related PDF Tools</h3>
+        <div style="display: flex; gap: 12px; justify-content: center; flex-wrap: wrap;">
+          <a href="merge.html" class="chip">📄 Merge PDF</a>
+          <a href="split.html" class="chip">✂️ Split PDF</a>
+          <a href="pdf-to-word.html" class="chip">📝 PDF to Word</a>
+          <a href="protect-pdf.html" class="chip">🔒 Protect PDF</a>
+          <a href="ocr-pdf.html" class="chip">🔍 OCR PDF</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script src="../js/components.js"></script>
+  <script src="../js/uploader.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      window.activeUploader = new PDFUploader('compress-uploader-container', {
+        onFilesSelected: (files) => {
+          Toast.show({ message: `Ready to compress ${files[0].name}`, type: 'success' });
+          window.activeUploader.simulateProgress();
+        }
+      });
+    });
+  </script>
+</body>
 </html>

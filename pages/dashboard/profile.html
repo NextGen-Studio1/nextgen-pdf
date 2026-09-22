@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>User Profile — NextGen PDF</title>
+  <link rel="icon" type="image/png" href="../../Assests/Logo-icon.png" />
+  <link rel="stylesheet" href="../../css/style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container nav-bar" style="width: 100%; max-width: 100%; padding: 0 24px;">
+      <a href="../../index.html" class="brand-logo">
+        <img src="../../Assests/Logo-icon.png" alt="NextGen PDF" />
+        <span>NextGen <b class="text-gradient">PDF</b></span>
+      </a>
+      <button class="theme-btn" data-theme-toggle aria-label="Toggle Theme">🌙</button>
+    </div>
+  </header>
+
+  <div class="dashboard-layout">
+    <aside class="sidebar-nav">
+      <a href="index.html" class="sidebar-item">📊 Overview</a>
+      <a href="files.html" class="sidebar-item">📁 Files</a>
+      <a href="history.html" class="sidebar-item">📜 History</a>
+      <a href="usage.html" class="sidebar-item">📈 Usage</a>
+      <a href="ai-usage.html" class="sidebar-item">🤖 AI Usage</a>
+      <a href="subscription.html" class="sidebar-item">⭐ Subscription</a>
+      <a href="billing.html" class="sidebar-item">💳 Billing</a>
+      <a href="profile.html" class="sidebar-item active">👤 Profile</a>
+      <a href="security.html" class="sidebar-item">🔒 Security</a>
+    </aside>
+
+    <main class="dashboard-content">
+      <h2>Profile Settings</h2>
+      <p style="margin-top: 4px; margin-bottom: 24px;">Update your personal info and preferences.</p>
+
+      <div class="card" style="max-width: 560px;">
+        <form onsubmit="event.preventDefault(); Toast.show({ message: 'Profile updated!', type: 'success' });">
+          <div class="form-group">
+            <label class="form-label" for="prof-name">Full Name</label>
+            <input type="text" id="prof-name" class="input-text" value="Ankush Sharma" />
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="prof-email">Email Address</label>
+            <input type="email" id="prof-email" class="input-text" value="ankush@example.com" />
+          </div>
+
+          <button type="submit" class="btn btn-primary" style="margin-top: 12px;">Save Changes</button>
+        </form>
+      </div>
+    </main>
+  </div>
+
+  <script src="../../js/components.js"></script>
+</body>
+</html>

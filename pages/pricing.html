@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pricing Plans — NextGen PDF</title>
+  <link rel="icon" type="image/png" href="../Assests/Logo-icon.png" />
+  <link rel="stylesheet" href="../css/style.css" />
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="site-header">
+    <div class="container nav-bar">
+      <a href="../index.html" class="brand-logo">
+        <img src="../Assests/Logo-icon.png" alt="NextGen PDF" />
+        <span>NextGen <b class="text-gradient">PDF</b></span>
+      </a>
+
+      <nav class="nav-links nav-links-desktop">
+        <a href="../index.html">Home</a>
+        <a href="tools.html">All Tools</a>
+        <a href="pricing.html" style="color: var(--primary);">Pricing</a>
+        <a href="faq.html">FAQ</a>
+      </nav>
+
+      <div style="display: flex; align-items: center; gap: 12px;">
+        <button class="theme-btn" data-theme-toggle aria-label="Toggle Theme">🌙</button>
+        <a href="auth/login.html" class="btn btn-ghost btn-sm">Log in</a>
+        <a href="auth/register.html" class="btn btn-primary btn-sm">Get Started</a>
+      </div>
+    </div>
+  </header>
+
+  <section style="padding: 60px 0 40px; text-align: center;">
+    <div class="container">
+      <h1>Simple & Flexible Pricing</h1>
+      <p style="font-size: var(--text-body-lg); color: var(--text-muted); max-width: 600px; margin: 12px auto;">
+        Whether you are a casual user or a large organization, choose the plan built for your needs.
+      </p>
+    </div>
+  </section>
+
+  <section style="padding: 20px 0 80px;">
+    <div class="container">
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 24px;">
+
+        <div class="pricing-card">
+          <h3>Guest</h3>
+          <p>Quick edits without an account.</p>
+          <div class="pricing-price">₹0</div>
+          <ul class="pricing-features">
+            <li>5 file operations / day</li>
+            <li>Max 15MB file upload limit</li>
+            <li>Standard queue speed</li>
+            <li>Basic PDF tools</li>
+          </ul>
+          <a href="tools.html" class="btn btn-secondary" style="margin-top: auto;">Use as Guest</a>
+        </div>
+
+        <div class="pricing-card">
+          <h3>Free</h3>
+          <p>For registered individual users.</p>
+          <div class="pricing-price">₹0</div>
+          <ul class="pricing-features">
+            <li>10 file operations / day</li>
+            <li>Max 50MB file upload limit</li>
+            <li>Dashboard file history</li>
+            <li>5 AI summaries per month</li>
+          </ul>
+          <a href="auth/register.html" class="btn btn-secondary" style="margin-top: auto;">Create Free Account</a>
+        </div>
+
+        <div class="pricing-card popular">
+          <div class="pricing-card-badge">Most Popular</div>
+          <h3>Pro</h3>
+          <p>For professionals & heavy users.</p>
+          <div class="pricing-price">₹199<span style="font-size: 16px; font-weight: 500;">/mo</span></div>
+          <ul class="pricing-features">
+            <li>100 file operations / day</li>
+            <li>Max 2GB file upload limit</li>
+            <li>Batch file processing & OCR</li>
+            <li>50 AI Summaries & Chat tokens</li>
+            <li>Ad-free experience</li>
+          </ul>
+          <a href="auth/register.html" class="btn btn-primary" style="margin-top: auto;">Upgrade to Pro</a>
+        </div>
+
+        <div class="pricing-card">
+          <h3>Business</h3>
+          <p>For teams and API integration.</p>
+          <div class="pricing-price">Custom</div>
+          <ul class="pricing-features">
+            <li>500+ file operations / day</li>
+            <li>Team seat management</li>
+            <li>REST API & Webhooks</li>
+            <li>Dedicated priority processing</li>
+            <li>Enterprise SLA & 24/7 Support</li>
+          </ul>
+          <a href="about.html" class="btn btn-secondary" style="margin-top: auto;">Contact Sales</a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <script src="../js/components.js"></script>
+</body>
+</html>

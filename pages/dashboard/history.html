@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Conversion History — NextGen PDF</title>
+  <link rel="icon" type="image/png" href="../../Assests/Logo-icon.png" />
+  <link rel="stylesheet" href="../../css/style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container nav-bar" style="width: 100%; max-width: 100%; padding: 0 24px;">
+      <a href="../../index.html" class="brand-logo">
+        <img src="../../Assests/Logo-icon.png" alt="NextGen PDF" />
+        <span>NextGen <b class="text-gradient">PDF</b></span>
+      </a>
+      <button class="theme-btn" data-theme-toggle aria-label="Toggle Theme">🌙</button>
+    </div>
+  </header>
+
+  <div class="dashboard-layout">
+    <aside class="sidebar-nav">
+      <a href="index.html" class="sidebar-item">📊 Overview</a>
+      <a href="files.html" class="sidebar-item">📁 Files</a>
+      <a href="history.html" class="sidebar-item active">📜 History</a>
+      <a href="usage.html" class="sidebar-item">📈 Usage</a>
+      <a href="ai-usage.html" class="sidebar-item">🤖 AI Usage</a>
+      <a href="subscription.html" class="sidebar-item">⭐ Subscription</a>
+      <a href="billing.html" class="sidebar-item">💳 Billing</a>
+      <a href="profile.html" class="sidebar-item">👤 Profile</a>
+      <a href="security.html" class="sidebar-item">🔒 Security</a>
+    </aside>
+
+    <main class="dashboard-content">
+      <h2>Processing History</h2>
+      <p style="margin-top: 4px; margin-bottom: 24px;">Full audit log of document conversions.</p>
+
+      <div class="card">
+        <table style="width: 100%; border-collapse: collapse; text-align: left; font-size: 14px;">
+          <thead>
+            <tr style="border-bottom: 1px solid var(--border); color: var(--text-muted);">
+              <th style="padding: 12px;">Task ID</th>
+              <th style="padding: 12px;">Operation</th>
+              <th style="padding: 12px;">Status</th>
+              <th style="padding: 12px;">Timestamp</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr style="border-bottom: 1px solid var(--border);">
+              <td style="padding: 12px; font-family: monospace;">#TK-9021</td>
+              <td style="padding: 12px;">PDF Compress</td>
+              <td style="padding: 12px;"><span style="color: var(--success); font-weight: 700;">Completed</span></td>
+              <td style="padding: 12px; color: var(--text-muted);">Sep 22, 2026 • 14:32</td>
+            </tr>
+            <tr style="border-bottom: 1px solid var(--border);">
+              <td style="padding: 12px; font-family: monospace;">#TK-8954</td>
+              <td style="padding: 12px;">PDF to Word</td>
+              <td style="padding: 12px;"><span style="color: var(--success); font-weight: 700;">Completed</span></td>
+              <td style="padding: 12px; color: var(--text-muted);">Sep 21, 2026 • 09:15</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </main>
+  </div>
+
+  <script src="../../js/components.js"></script>
+</body>
+</html>

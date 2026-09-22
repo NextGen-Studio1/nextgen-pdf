@@ -1,624 +1,195 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en" data-theme="light">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width,initial-scale=1" />
-    <title>PDF Tools Online — Compress, Merge, Split & Convert | NextGen PDF</title>
-    <meta
-      name="description"
-      content="Free online PDF tools to compress, merge, split, convert, edit, protect, sign, and OCR PDFs securely in your browser with NextGen PDF. Fast, private, and easy to use."
-    />
-    <link rel="icon" type="image/png" href="../Assests/Logo.png" />
-    <link rel="stylesheet" href="../css/style.css" />
-    <link rel="stylesheet" href="../css/components.css" />
-    <link rel="stylesheet" href="../css/responsive.css" />
-    <!-- Google AdSense -->
-    <script
-      async
-      src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5453249687281273"
-      crossorigin="anonymous"
-    ></script>
-  </head>
-  <body>
-    <header class="site-header">
-      <div class="container nav">
-        <a class="brand" href="../index.html"
-          ><img
-            src="../Assests/Logo-icon.png"
-            alt="NextGen PDF Logo"
-            class="brand-logo-icon"
-          /><span>NextGen <b>PDF</b></span></a
-        >
-        <nav>
-          <div class="nav-dropdown">
-            <a href="javascript:void(0)" data-mega-toggle style="cursor: pointer;">Tools ▾</a>
-            <div class="tools-mega-menu">
-              <div class="mega-grid">
-                <div class="mega-col">
-                  <h4>🗂 Organize</h4>
-                  <a href="merge.html">Merge PDF</a>
-                  <a href="split.html">Split PDF</a>
-                  <a href="organize.html">Organize PDF</a>
-                  <a href="delete-pages.html">Delete Pages</a>
-                  <a href="extract-pages.html">Extract Pages</a>
-                  <a href="rotate.html">Rotate Pages</a>
-                </div>
-                <div class="mega-col">
-                  <h4>📦 Compress & Optimize</h4>
-                  <a href="compress.html">Compress PDF</a>
-                  <a href="repair-pdf.html">Repair PDF</a>
-                  <a href="flatten-pdf.html">Flatten PDF</a>
-                  <a href="pdf-to-pdfa.html">PDF → PDF/A</a>
-                </div>
-                <div class="mega-col">
-                  <h4>🔄 Convert</h4>
-                  <a href="pdf-to-word.html">PDF → Word</a>
-                  <a href="word-to-pdf.html">Word → PDF</a>
-                  <a href="pdf-to-excel.html">PDF → Excel</a>
-                  <a href="jpg-to-pdf.html">JPG → PDF</a>
-                  <a href="pdf-to-jpg.html">PDF → JPG</a>
-                </div>
-                <div class="mega-col">
-                  <h4>✏️ Edit & Security</h4>
-                  <a href="edit-pdf.html">Edit PDF</a>
-                  <a href="protect-pdf.html">Protect PDF</a>
-                  <a href="unlock-pdf.html">Unlock PDF</a>
-                  <a href="redact-pdf.html">Redact PDF</a>
-                  <a href="watermark.html">Watermark PDF</a>
-                </div>
-                <div class="mega-col">
-                  <h4>🔍 OCR & Extract</h4>
-                  <a href="ocr-pdf.html">OCR PDF</a>
-                  <a href="scanned-pdf-to-text.html">Scanned → Text</a>
-                  <a href="extract-images.html">Extract Images</a>
-                </div>
-                <div class="mega-col">
-                  <h4>🤖 AI PDF</h4>
-                  <a href="ai-summarize.html">AI PDF Summarizer</a>
-                  <a href="chat-pdf.html">Chat with PDF</a>
-                  <a href="translate-pdf.html">Translate PDF</a>
-                  <a href="pdf-to-markdown.html">PDF → Markdown</a>
-                </div>
-              </div>
-              <div class="mega-footer">
-                <span>Everything you need for PDFs in one clean workspace.</span>
-                <a href="tools.html" style="text-decoration: underline;">View All 48 Tools →</a>
-              </div>
-            </div>
-          </div>
-          <a href="tools.html">All Tools</a>
-          <a href="about.html">About</a>
-          <a href="privacy.html">Privacy</a>
-        </nav>
-        <button class="theme-toggle" data-theme-toggle>☾</button
-        ><button
-          class="mobile-toggle"
-          data-mobile-toggle
-          aria-label="Toggle menu"
-        >
-          ☰
-        </button>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>All 48 PDF Tools — NextGen PDF</title>
+  <link rel="icon" type="image/png" href="../Assests/Logo-icon.png" />
+  <link rel="stylesheet" href="../css/style.css" />
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="site-header">
+    <div class="container nav-bar">
+      <a href="../index.html" class="brand-logo">
+        <img src="../Assests/Logo-icon.png" alt="NextGen PDF" />
+        <span>NextGen <b class="text-gradient">PDF</b></span>
+      </a>
+
+      <nav class="nav-links nav-links-desktop">
+        <a href="../index.html">Home</a>
+        <a href="tools.html" style="color: var(--primary);">All Tools</a>
+        <a href="pricing.html">Pricing</a>
+        <a href="faq.html">FAQ</a>
+      </nav>
+
+      <div style="display: flex; align-items: center; gap: 12px;">
+        <button class="theme-btn" data-theme-toggle aria-label="Toggle Theme">🌙</button>
+        <a href="auth/login.html" class="btn btn-ghost btn-sm">Log in</a>
+        <a href="auth/register.html" class="btn btn-primary btn-sm">Get Started</a>
       </div>
-    </header>
-    <main class="container">
-      <!-- Hero Section -->
-      <div class="page-hero">
-        <span class="eyebrow">NEXTGEN PDF</span>
-        <h1>PDF Tools</h1>
-        <p>Everything you need for your documents.</p>
+    </div>
+  </header>
 
-        <!-- Search Box -->
-        <div class="search-hero-wrapper" style="max-width: 720px;">
-          <div class="search-input-box">
-            <span class="search-icon">🔍</span>
-            <input
-              type="text"
-              class="search-input"
-              placeholder="What do you want to do? Search tools..."
-              autocomplete="off"
-            />
-          </div>
-          <div class="search-results-popup"></div>
-        </div>
+  <!-- Tools Catalog Header -->
+  <section style="padding: 60px 0 40px; text-align: center;">
+    <div class="container">
+      <h1>All PDF & Document Tools</h1>
+      <p style="font-size: var(--text-body-lg); color: var(--text-muted); max-width: 600px; margin: 12px auto 28px;">
+        Explore all 48 utilities to edit, organize, compress, convert, and process PDFs effortlessly.
+      </p>
 
-        <!-- Popular Tools Section -->
-        <div class="popular-tools-wrapper">
-          <div class="popular-tools-title">Popular Tools</div>
-          <div class="popular-chips-grid">
-            <a href="compress.html" class="popular-chip"><span class="chip-icon">↓</span> Compress PDF</a>
-            <a href="merge.html" class="popular-chip"><span class="chip-icon">＋</span> Merge PDF</a>
-            <a href="split.html" class="popular-chip"><span class="chip-icon">✂</span> Split PDF</a>
-            <a href="jpg-to-pdf.html" class="popular-chip"><span class="chip-icon">▧</span> JPG → PDF</a>
-            <a href="pdf-to-jpg.html" class="popular-chip"><span class="chip-icon">▤</span> PDF → JPG</a>
-            <a href="edit-pdf.html" class="popular-chip"><span class="chip-icon">✏️</span> Edit PDF</a>
-            <a href="protect-pdf.html" class="popular-chip"><span class="chip-icon">🔐</span> Protect PDF</a>
-            <a href="ocr-pdf.html" class="popular-chip"><span class="chip-icon">🔍</span> OCR PDF</a>
-          </div>
-        </div>
+      <!-- Live Search Box -->
+      <div style="max-width: 540px; margin: 0 auto;">
+        <input type="text" id="tool-search" class="input-text" placeholder="🔍 Search PDF tools (e.g., merge, compress, word, ocr)..." style="font-size: 16px; padding: 14px 20px; border-radius: var(--radius-pill);" />
       </div>
 
-      <!-- Browse by Category Section -->
-      <section class="browse-categories-wrapper">
-        <h2 style="font-size: 28px; margin-bottom: 20px;">Browse by Category</h2>
-        <div class="category-grid">
-          <a href="#organize" class="category-card">
-            <h3>🗂 Organize PDF <span>→</span></h3>
-            <p>Merge, split, reorder, delete and extract pages</p>
-          </a>
-          <a href="#compress" class="category-card">
-            <h3>📦 Compress & Optimize <span>→</span></h3>
-            <p>Reduce size, repair and optimize PDFs</p>
-          </a>
-          <a href="#convert-to" class="category-card">
-            <h3>🔄 Convert to PDF <span>→</span></h3>
-            <p>Images, Word, Excel, PowerPoint → PDF</p>
-          </a>
-          <a href="#convert-from" class="category-card">
-            <h3>🔃 Convert from PDF <span>→</span></h3>
-            <p>PDF → Word, Excel, JPG, PNG and more</p>
-          </a>
-          <a href="#edit" class="category-card">
-            <h3>✏️ Edit PDF <span>→</span></h3>
-            <p>Edit, annotate, crop, watermark and more</p>
-          </a>
-          <a href="#security" class="category-card">
-            <h3>🔐 Security & Privacy <span>→</span></h3>
-            <p>Protect, unlock, redact and remove metadata</p>
-          </a>
-          <a href="#sign" class="category-card">
-            <h3>✍️ Sign & Forms <span>→</span></h3>
-            <p>Fill, sign and manage PDF forms</p>
-          </a>
-          <a href="#ocr" class="category-card">
-            <h3>🔍 OCR & Extract <span>→</span></h3>
-            <p>OCR, extract text, images and tables</p>
-          </a>
-          <a href="#ai" class="category-card">
-            <h3>🤖 AI PDF <span>→</span></h3>
-            <p>Summarize, chat, translate and analyze</p>
-          </a>
-        </div>
-      </section>
-
-      <!-- Section Title for All Tools -->
-      <h2 id="all-tools" style="margin: 64px 0 24px 0; font-size: 32px; border-bottom: 1px solid var(--line); padding-bottom: 16px;">All Tools</h2>
-
-      <!-- Category 1: 🗂 Organize PDF -->
-      <h2 id="organize" class="category-section-title">🗂 Organize PDF</h2>
-      <div class="tool-grid">
-        <a class="tool-card" href="merge.html">
-          <span class="tool-icon">＋</span>
-          <div>
-            <h3>Merge PDF</h3>
-            <p>Combine multiple files into one PDF.</p>
-          </div>
-        </a>
-        <a class="tool-card" href="split.html">
-          <span class="tool-icon">✂</span>
-          <div>
-            <h3>Split PDF</h3>
-            <p>Separate pages or selected page ranges.</p>
-          </div>
-        </a>
-        <a class="tool-card" href="organize.html">
-          <span class="tool-icon">⇄</span>
-          <div>
-            <h3>Organize PDF</h3>
-            <p>Reorder & shuffle pages.</p>
-          </div>
-        </a>
-        <a class="tool-card" href="delete-pages.html">
-          <span class="tool-icon">🗑</span>
-          <div>
-            <h3>Delete Pages</h3>
-            <p>Remove unwanted pages or ranges.</p>
-          </div>
-        </a>
-        <a class="tool-card" href="extract-pages.html">
-          <span class="tool-icon">⎘</span>
-          <div>
-            <h3>Extract Pages</h3>
-            <p>Save pages to new PDF file.</p>
-          </div>
-        </a>
-        <a class="tool-card" href="rotate.html">
-          <span class="tool-icon">↻</span>
-          <div>
-            <h3>Rotate PDF</h3>
-            <p>Turn pages 90°, 180°, 270°.</p>
-          </div>
-        </a>
+      <!-- Category Chips -->
+      <div class="popular-chips" style="justify-content: center; margin-top: 28px;">
+        <button class="chip active-tab" data-filter="all">All Tools</button>
+        <button class="chip" data-filter="convert">Convert</button>
+        <button class="chip" data-filter="organize">Organize</button>
+        <button class="chip" data-filter="compress">Compress</button>
+        <button class="chip" data-filter="security">Security</button>
+        <button class="chip" data-filter="ai">AI PDF</button>
       </div>
+    </div>
+  </section>
 
-      <!-- Category 2: 📦 Compress & Optimize -->
-      <h2 id="compress" class="category-section-title">📦 Compress & Optimize</h2>
-      <div class="tool-grid">
-        <a class="tool-card featured" href="compress.html">
-          <span class="tool-icon">↓</span>
-          <div>
-            <h3>Compress PDF</h3>
-            <p>Reduce file size while keeping clear visual quality.</p>
-          </div>
-        </a>
-        <a class="tool-card" href="repair-pdf.html">
-          <span class="tool-icon">🛠️</span>
-          <div>
-            <h3>Repair PDF</h3>
-            <p>Fix corrupt XREF tables & syntax errors.</p>
-          </div>
-        </a>
-        <a class="tool-card" href="flatten-pdf.html">
-          <span class="tool-icon">📄</span>
-          <div>
-            <h3>Flatten PDF</h3>
-            <p>Bake forms & annotations into graphics.</p>
-          </div>
-        </a>
-        <a class="tool-card" href="pdf-to-pdfa.html">
-          <span class="tool-icon">📁</span>
-          <div>
-            <h3>PDF → PDF/A</h3>
-            <p>Convert for ISO long-term archiving.</p>
-          </div>
-        </a>
-      </div>
+  <!-- Tools Grid -->
+  <section style="padding: 20px 0 80px;">
+    <div class="container">
+      <div class="tool-grid" id="tools-container" style="display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 24px;">
 
-      <!-- Category 3: 🔄 Convert TO PDF -->
-      <h2 id="convert-to" class="category-section-title">🔄 Convert to PDF</h2>
-      <div class="tool-grid">
-        <a class="tool-card" href="jpg-to-pdf.html">
-          <span class="tool-icon">▧</span>
-          <div>
-            <h3>JPG / PNG → PDF</h3>
-            <p>Turn images into a single PDF document.</p>
-          </div>
+        <!-- Convert -->
+        <a href="pdf-to-word.html" class="tool-card" data-category="convert">
+          <div class="tool-card-icon">📝</div>
+          <div class="tool-card-title">PDF to Word</div>
+          <p class="tool-card-desc">Convert PDF files to editable Microsoft Word documents.</p>
+          <div class="tool-card-arrow">Open tool →</div>
         </a>
-        <a class="tool-card" href="word-to-pdf.html">
-          <span class="tool-icon">📄</span>
-          <div>
-            <h3>Word → PDF</h3>
-            <p>Convert .docx to clean PDF.</p>
-          </div>
-        </a>
-        <a class="tool-card" href="excel-to-pdf.html">
-          <span class="tool-icon">📊</span>
-          <div>
-            <h3>Excel → PDF</h3>
-            <p>Convert spreadsheets to PDF tables.</p>
-          </div>
-        </a>
-        <a class="tool-card" href="pptx-to-pdf.html">
-          <span class="tool-icon">📈</span>
-          <div>
-            <h3>PowerPoint → PDF</h3>
-            <p>Convert slides to PDF deck.</p>
-          </div>
-        </a>
-        <a class="tool-card" href="html-to-pdf.html">
-          <span class="tool-icon">🌐</span>
-          <div>
-            <h3>HTML → PDF</h3>
-            <p>Render web pages to PDF.</p>
-          </div>
-        </a>
-      </div>
 
-      <!-- Category 4: 🔃 Convert FROM PDF -->
-      <h2 id="convert-from" class="category-section-title">🔃 Convert from PDF</h2>
-      <div class="tool-grid">
-        <a class="tool-card" href="pdf-to-jpg.html">
-          <span class="tool-icon">▤</span>
-          <div>
-            <h3>PDF → JPG</h3>
-            <p>Convert pages into images.</p>
-          </div>
+        <a href="word-to-pdf.html" class="tool-card" data-category="convert">
+          <div class="tool-card-icon">📄</div>
+          <div class="tool-card-title">Word to PDF</div>
+          <p class="tool-card-desc">Convert DOC and DOCX files into PDF format.</p>
+          <div class="tool-card-arrow">Open tool →</div>
         </a>
-        <a class="tool-card" href="pdf-to-png.html">
-          <span class="tool-icon">🖼</span>
-          <div>
-            <h3>PDF → PNG</h3>
-            <p>Export pages to high-res PNG.</p>
-          </div>
-        </a>
-        <a class="tool-card" href="pdf-to-word.html">
-          <span class="tool-icon">📝</span>
-          <div>
-            <h3>PDF → Word</h3>
-            <p>Export to editable .docx.</p>
-          </div>
-        </a>
-        <a class="tool-card" href="pdf-to-excel.html">
-          <span class="tool-icon">📗</span>
-          <div>
-            <h3>PDF → Excel</h3>
-            <p>Extract tables to .xlsx.</p>
-          </div>
-        </a>
-        <a class="tool-card" href="pdf-to-pptx.html">
-          <span class="tool-icon">📊</span>
-          <div>
-            <h3>PDF → PowerPoint</h3>
-            <p>Convert pages to slides.</p>
-          </div>
-        </a>
-        <a class="tool-card" href="pdf-to-txt.html">
-          <span class="tool-icon">📃</span>
-          <div>
-            <h3>PDF → Text</h3>
-            <p>Extract clean raw text.</p>
-          </div>
-        </a>
-        <a class="tool-card" href="pdf-to-html.html">
-          <span class="tool-icon">🌐</span>
-          <div>
-            <h3>PDF → HTML</h3>
-            <p>Convert pages to web HTML.</p>
-          </div>
-        </a>
-        <a class="tool-card" href="pdf-to-markdown.html">
-          <span class="tool-icon">📑</span>
-          <div>
-            <h3>PDF → Markdown</h3>
-            <p>Export to GitHub Markdown .md.</p>
-          </div>
-        </a>
-      </div>
 
-      <!-- Category 5: ✏️ Edit PDF -->
-      <h2 id="edit" class="category-section-title">✏️ Edit PDF</h2>
-      <div class="tool-grid">
-        <a class="tool-card" href="edit-pdf.html">
-          <span class="tool-icon">✏️</span>
-          <div>
-            <h3>Edit PDF</h3>
-            <p>Add custom text overlays.</p>
-          </div>
+        <a href="pdf-to-excel.html" class="tool-card" data-category="convert">
+          <div class="tool-card-icon">📊</div>
+          <div class="tool-card-title">PDF to Excel</div>
+          <p class="tool-card-desc">Extract tables and spreadsheets from PDF into XLS format.</p>
+          <div class="tool-card-arrow">Open tool →</div>
         </a>
-        <a class="tool-card" href="add-image.html">
-          <span class="tool-icon">🖼️</span>
-          <div>
-            <h3>Add Image / Signature</h3>
-            <p>Stamp logos & signature PNGs.</p>
-          </div>
-        </a>
-        <a class="tool-card" href="add-links.html">
-          <span class="tool-icon">🔗</span>
-          <div>
-            <h3>Add Links</h3>
-            <p>Insert web hyperlinks.</p>
-          </div>
-        </a>
-        <a class="tool-card" href="highlight-pdf.html">
-          <span class="tool-icon">🖍️</span>
-          <div>
-            <h3>Highlight PDF</h3>
-            <p>Highlight text search terms.</p>
-          </div>
-        </a>
-        <a class="tool-card" href="annotate-pdf.html">
-          <span class="tool-icon">💬</span>
-          <div>
-            <h3>Annotate PDF</h3>
-            <p>Add sticky note comments.</p>
-          </div>
-        </a>
-        <a class="tool-card" href="crop.html">
-          <span class="tool-icon">⬚</span>
-          <div>
-            <h3>Crop PDF</h3>
-            <p>Trim margins & borders.</p>
-          </div>
-        </a>
-        <a class="tool-card" href="resize-pages.html">
-          <span class="tool-icon">📐</span>
-          <div>
-            <h3>Resize Pages</h3>
-            <p>Scale to A4, Letter, Legal, A3.</p>
-          </div>
-        </a>
-        <a class="tool-card" href="watermark.html">
-          <span class="tool-icon">💧</span>
-          <div>
-            <h3>Watermark PDF</h3>
-            <p>Add security stamps & text.</p>
-          </div>
-        </a>
-        <a class="tool-card" href="page-numbers.html">
-          <span class="tool-icon">#</span>
-          <div>
-            <h3>Page Numbers</h3>
-            <p>Add header & footer numbers.</p>
-          </div>
-        </a>
-        <a class="tool-card" href="overlay-pdf.html">
-          <span class="tool-icon">📑</span>
-          <div>
-            <h3>PDF Overlay</h3>
-            <p>Stamp letterheads & grids.</p>
-          </div>
-        </a>
-      </div>
 
-      <!-- Category 6: 🔐 Security & Privacy -->
-      <h2 id="security" class="category-section-title">🔐 Security & Privacy</h2>
-      <div class="tool-grid">
-        <a class="tool-card" href="protect-pdf.html">
-          <span class="tool-icon">🔐</span>
-          <div>
-            <h3>Protect PDF</h3>
-            <p>Add password protection.</p>
-          </div>
+        <a href="pdf-to-jpg.html" class="tool-card" data-category="convert">
+          <div class="tool-card-icon">🖼️</div>
+          <div class="tool-card-title">PDF to JPG</div>
+          <p class="tool-card-desc">Extract images or save PDF pages as high quality JPGs.</p>
+          <div class="tool-card-arrow">Open tool →</div>
         </a>
-        <a class="tool-card" href="unlock-pdf.html">
-          <span class="tool-icon">🔓</span>
-          <div>
-            <h3>Unlock PDF</h3>
-            <p>Remove password lock.</p>
-          </div>
-        </a>
-        <a class="tool-card" href="encrypt-pdf.html">
-          <span class="tool-icon">🛡</span>
-          <div>
-            <h3>Encrypt PDF</h3>
-            <p>AES-256 & permissions.</p>
-          </div>
-        </a>
-        <a class="tool-card" href="redact-pdf.html">
-          <span class="tool-icon">🕵️</span>
-          <div>
-            <h3>Redact PDF</h3>
-            <p>Black out sensitive text.</p>
-          </div>
-        </a>
-        <a class="tool-card" href="remove-metadata.html">
-          <span class="tool-icon">🧹</span>
-          <div>
-            <h3>Remove Metadata</h3>
-            <p>Strip hidden properties.</p>
-          </div>
-        </a>
-      </div>
 
-      <!-- Category 7: ✍️ Sign & Forms -->
-      <h2 id="sign" class="category-section-title">✍️ Sign & Forms</h2>
-      <div class="tool-grid">
-        <a class="tool-card" href="add-image.html">
-          <span class="tool-icon">✍️</span>
-          <div>
-            <h3>Sign PDF</h3>
-            <p>Stamp signatures & initials.</p>
-          </div>
+        <!-- Organize -->
+        <a href="merge.html" class="tool-card" data-category="organize">
+          <div class="tool-card-icon">📑</div>
+          <div class="tool-card-title">Merge PDF</div>
+          <p class="tool-card-desc">Combine multiple PDFs into a single file in any order.</p>
+          <div class="tool-card-arrow">Open tool →</div>
         </a>
-        <a class="tool-card" href="flatten-pdf.html">
-          <span class="tool-icon">📄</span>
-          <div>
-            <h3>Flatten Form</h3>
-            <p>Bake form inputs into PDF.</p>
-          </div>
-        </a>
-      </div>
 
-      <!-- Category 8: 🔍 OCR & Extract -->
-      <h2 id="ocr" class="category-section-title">🔍 OCR & Extract</h2>
-      <div class="tool-grid">
-        <a class="tool-card" href="ocr-pdf.html">
-          <span class="tool-icon">🔍</span>
-          <div>
-            <h3>OCR PDF</h3>
-            <p>Make scans searchable.</p>
-          </div>
+        <a href="split.html" class="tool-card" data-category="organize">
+          <div class="tool-card-icon">✂️</div>
+          <div class="tool-card-title">Split PDF</div>
+          <p class="tool-card-desc">Separate pages or split PDF into independent files.</p>
+          <div class="tool-card-arrow">Open tool →</div>
         </a>
-        <a class="tool-card" href="scanned-pdf-to-text.html">
-          <span class="tool-icon">📄</span>
-          <div>
-            <h3>Scanned PDF → Text</h3>
-            <p>Extract text from image scans.</p>
-          </div>
-        </a>
-        <a class="tool-card" href="extract-images.html">
-          <span class="tool-icon">🖼️</span>
-          <div>
-            <h3>Extract Images</h3>
-            <p>Export embedded PNG/JPG to ZIP.</p>
-          </div>
-        </a>
-      </div>
 
-      <!-- Category 9: 🤖 AI PDF -->
-      <h2 id="ai" class="category-section-title">🤖 AI PDF</h2>
-      <div class="tool-grid">
-        <a class="tool-card featured" href="ai-summarize.html">
-          <span class="tool-icon">🧠</span>
-          <div>
-            <h3>AI PDF Summarizer</h3>
-            <p>Executive summaries & key takeaways.</p>
-          </div>
+        <a href="rotate.html" class="tool-card" data-category="organize">
+          <div class="tool-card-icon">🔄</div>
+          <div class="tool-card-title">Rotate PDF</div>
+          <p class="tool-card-desc">Rotate PDF pages clockwise or counterclockwise easily.</p>
+          <div class="tool-card-arrow">Open tool →</div>
         </a>
-        <a class="tool-card" href="chat-pdf.html">
-          <span class="tool-icon">💬</span>
-          <div>
-            <h3>Chat with PDF</h3>
-            <p>Q&A with page citations.</p>
-          </div>
-        </a>
-        <a class="tool-card" href="translate-pdf.html">
-          <span class="tool-icon">🌐</span>
-          <div>
-            <h3>Translate PDF</h3>
-            <p>Multi-language translation.</p>
-          </div>
-        </a>
-        <a class="tool-card" href="pdf-to-markdown.html">
-          <span class="tool-icon">📑</span>
-          <div>
-            <h3>PDF → Markdown</h3>
-            <p>Export to GitHub Markdown .md.</p>
-          </div>
-        </a>
-      </div>
 
-      <!-- Section 10: 🔎 View & Analyze -->
-      <h2 id="view" class="category-section-title">🔎 View & Analyze</h2>
-      <div class="tool-grid">
-        <a class="tool-card" href="compare-pdfs.html">
-          <span class="tool-icon">📊</span>
-          <div>
-            <h3>Compare PDFs</h3>
-            <p>Side-by-side diff report.</p>
-          </div>
+        <a href="delete-pages.html" class="tool-card" data-category="organize">
+          <div class="tool-card-icon">🗑️</div>
+          <div class="tool-card-title">Delete Pages</div>
+          <p class="tool-card-desc">Remove unwanted pages from your PDF document.</p>
+          <div class="tool-card-arrow">Open tool →</div>
         </a>
-        <a class="tool-card" href="pdf-bookmarks.html">
-          <span class="tool-icon">🔖</span>
-          <div>
-            <h3>Bookmarks / TOC</h3>
-            <p>Manage Table of Contents.</p>
-          </div>
-        </a>
-        <a class="tool-card" href="metadata-editor.html">
-          <span class="tool-icon">⚙️</span>
-          <div>
-            <h3>Metadata Editor</h3>
-            <p>Edit Title, Author & Subject.</p>
-          </div>
-        </a>
-      </div>
-    </main>
 
-    <footer style="margin-top: 80px;">
-      <div class="container footer">
-        <div>
-          <a class="brand" href="../index.html"
-            ><img
-              src="../Assests/Logo-icon.png"
-              alt="NextGen PDF Logo"
-              class="brand-logo-icon"
-            /><span>NextGen <b>PDF</b></span></a
-          >
-          <p style="margin-top: 8px; font-size: 0.88rem; color: var(--muted)">
-            Secure, private, in-browser PDF utilities built for speed.
-          </p>
-        </div>
-        <div class="footer-links">
-          <a href="tools.html">Tools</a>
-          <a href="about.html">About</a>
-          <a href="privacy.html">Privacy</a>
-        </div>
+        <!-- Compress -->
+        <a href="compress.html" class="tool-card" data-category="compress">
+          <div class="tool-card-icon">📦</div>
+          <div class="tool-card-title">Compress PDF</div>
+          <p class="tool-card-desc">Shrink PDF file size while optimizing quality.</p>
+          <div class="tool-card-arrow">Open tool →</div>
+        </a>
+
+        <!-- Security -->
+        <a href="protect-pdf.html" class="tool-card" data-category="security">
+          <div class="tool-card-icon">🔒</div>
+          <div class="tool-card-title">Protect PDF</div>
+          <p class="tool-card-desc">Add passwords and permissions to restrict access.</p>
+          <div class="tool-card-arrow">Open tool →</div>
+        </a>
+
+        <a href="unlock-pdf.html" class="tool-card" data-category="security">
+          <div class="tool-card-icon">🔓</div>
+          <div class="tool-card-title">Unlock PDF</div>
+          <p class="tool-card-desc">Remove password security from protected PDF files.</p>
+          <div class="tool-card-arrow">Open tool →</div>
+        </a>
+
+        <!-- AI PDF -->
+        <a href="ai-summarize.html" class="tool-card" data-category="ai">
+          <div class="tool-card-icon">⚡</div>
+          <div class="tool-card-title">AI Summarizer</div>
+          <p class="tool-card-desc">Generate instant key takeaways and summaries using AI.</p>
+          <div class="tool-card-arrow">Open tool →</div>
+        </a>
+
+        <a href="chat-pdf.html" class="tool-card" data-category="ai">
+          <div class="tool-card-icon">💬</div>
+          <div class="tool-card-title">Chat with PDF</div>
+          <p class="tool-card-desc">Ask questions and analyze documents interactively.</p>
+          <div class="tool-card-arrow">Open tool →</div>
+        </a>
+
       </div>
-      <div
-        class="container"
-        style="
-          border-top: 1px solid var(--line);
-          padding-top: 20px;
-          margin-top: 20px;
-          font-size: 0.82rem;
-          color: var(--muted);
-          text-align: center;
-        "
-      >
-        © 2026 NextGen PDF. All rights reserved.
-      </div>
-    </footer>
-    <script src="../js/theme.js"></script>
-    <script src="../js/app.js"></script>
-  </body>
+    </div>
+  </section>
+
+  <script src="../js/components.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const searchInput = document.getElementById('tool-search');
+      const cards = document.querySelectorAll('.tool-card');
+      const filterChips = document.querySelectorAll('[data-filter]');
+
+      searchInput.addEventListener('input', (e) => {
+        const val = e.target.value.toLowerCase();
+        cards.forEach(card => {
+          const text = card.textContent.toLowerCase();
+          card.style.display = text.includes(val) ? 'flex' : 'none';
+        });
+      });
+
+      filterChips.forEach(chip => {
+        chip.addEventListener('click', () => {
+          const category = chip.getAttribute('data-filter');
+          cards.forEach(card => {
+            if (category === 'all' || card.getAttribute('data-category') === category) {
+              card.style.display = 'flex';
+            } else {
+              card.style.display = 'none';
+            }
+          });
+        });
+      });
+    });
+  </script>
+</body>
 </html>

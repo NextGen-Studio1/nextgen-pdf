@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>API Keys & Integration — NextGen PDF</title>
+  <link rel="icon" type="image/png" href="../../../Assests/Logo-icon.png" />
+  <link rel="stylesheet" href="../../../css/style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container nav-bar" style="width: 100%; max-width: 100%; padding: 0 24px;">
+      <a href="../../../index.html" class="brand-logo">
+        <img src="../../../Assests/Logo-icon.png" alt="NextGen PDF" />
+        <span>NextGen <b class="text-gradient">PDF</b></span>
+      </a>
+      <button class="theme-btn" data-theme-toggle aria-label="Toggle Theme">🌙</button>
+    </div>
+  </header>
+
+  <div class="dashboard-layout">
+    <aside class="sidebar-nav">
+      <a href="index.html" class="sidebar-item">🏢 Overview</a>
+      <a href="team.html" class="sidebar-item">👥 Team Members</a>
+      <a href="api.html" class="sidebar-item active">🔑 API Keys</a>
+      <a href="billing.html" class="sidebar-item">💳 Enterprise Billing</a>
+      <a href="settings.html" class="sidebar-item">⚙️ Org Settings</a>
+    </aside>
+
+    <main class="dashboard-content">
+      <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 24px;">
+        <h2>API Keys</h2>
+        <button class="btn btn-primary btn-sm" onclick="Toast.show({ message: 'New API Key generated', type: 'success' })">+ Create New Secret Key</button>
+      </div>
+
+      <div class="card">
+        <table style="width: 100%; border-collapse: collapse; text-align: left; font-size: 14px;">
+          <thead>
+            <tr style="border-bottom: 1px solid var(--border); color: var(--text-muted);">
+              <th style="padding: 12px;">Name</th>
+              <th style="padding: 12px;">Key Prefix</th>
+              <th style="padding: 12px;">Created</th>
+              <th style="padding: 12px; text-align: right;">Action</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr style="border-bottom: 1px solid var(--border);">
+              <td style="padding: 12px; font-weight: 700;">Production Key</td>
+              <td style="padding: 12px; font-family: monospace;">ng_live_89a7...</td>
+              <td style="padding: 12px; color: var(--text-muted);">Aug 14, 2026</td>
+              <td style="padding: 12px; text-align: right;"><button class="btn btn-danger btn-sm" onclick="Toast.show({ message: 'Key Revoked', type: 'error' })">Revoke</button></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </main>
+  </div>
+
+  <script src="../../../js/components.js"></script>
+</body>
+</html>

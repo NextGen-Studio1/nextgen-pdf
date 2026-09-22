@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>404 — Page Not Found | NextGen PDF</title>
+  <meta name="robots" content="noindex, follow" />
+  <link rel="icon" type="image/png" href="Assests/Logo-icon.png" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body style="display: flex; flex-direction: column; min-height: 100vh;">
+
+  <!-- Header -->
+  <header class="site-header">
+    <div class="container nav-bar">
+      <a href="index.html" class="brand-logo">
+        <img src="Assests/Logo-icon.png" alt="NextGen PDF" />
+        <span>NextGen <b class="text-gradient">PDF</b></span>
+      </a>
+
+      <div style="display: flex; align-items: center; gap: 12px;">
+        <button class="theme-btn" data-theme-toggle aria-label="Toggle Theme">🌙</button>
+        <a href="pages/tools.html" class="btn btn-primary btn-sm">Browse 48 Tools</a>
+      </div>
+    </div>
+  </header>
+
+  <main style="flex: 1; display: grid; place-items: center; padding: 60px 16px; text-align: center;">
+    <div class="card" style="width: min(520px, 100%); padding: 40px;">
+      <div style="font-size: 64px; font-weight: 800; color: var(--primary); margin-bottom: 12px;">404</div>
+      <h2>Page Not Found</h2>
+      <p style="margin: 12px 0 24px 0; color: var(--text-muted);">
+        The page you are looking for doesn't exist or may have been moved. Try using one of our popular PDF utilities below.
+      </p>
+
+      <div style="display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; margin-bottom: 24px;">
+        <a href="pages/merge.html" class="chip">📄 Merge PDF</a>
+        <a href="pages/compress.html" class="chip">📦 Compress PDF</a>
+        <a href="pages/pdf-to-word.html" class="chip">📝 PDF to Word</a>
+        <a href="pages/split.html" class="chip">✂️ Split PDF</a>
+      </div>
+
+      <a href="index.html" class="btn btn-primary btn-lg" style="width: 100%;">Return to Homepage</a>
+    </div>
+  </main>
+
+  <script src="js/components.js"></script>
+</body>
+</html>

@@ -1,4 +1,8 @@
-﻿User-agent: *
+# NextGen PDF Robots Directive
+User-agent: *
 Allow: /
+Disallow: /pages/dashboard/
+Disallow: /pages/auth/
+Disallow: /api/
 
 Sitemap: https://nextgen-pdf.web.app/sitemap.xml
